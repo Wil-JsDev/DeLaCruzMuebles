@@ -53,11 +53,28 @@
     End Sub
 
     Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-
+        Pnl1.Visible = False
+        pnl2.Visible = False
+        pnl3.Visible = False
+        pnl4.Visible = True
+        pnl5.Visible = False
+        pnlInicio.Visible = False
+        pnlRegistro.Visible = False
+        pnlVentas.Visible = False
+        pnlArticulos.Visible = True
     End Sub
 
     Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
-
+        Pnl1.Visible = False
+        pnl2.Visible = False
+        pnl3.Visible = False
+        pnl4.Visible = False
+        pnl5.Visible = True
+        pnlInicio.Visible = False
+        pnlRegistro.Visible = False
+        pnlVentas.Visible = False
+        pnlArticulos.Visible = False
+        pnlFacturacion.Visible = True
     End Sub
 
     Private Sub btn2salir_Click(sender As Object, e As EventArgs) Handles btn2salir.Click
@@ -77,10 +94,6 @@
         SetPlaceholder(txtCedula, "Cedula")
     End Sub
 
-    Private Sub SetPlaceholder(txtBox As TextBox, placeholder As String)
-        txtBox.Text = placeholder
-        txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
-    End Sub
 
     Private Sub txtCodigo_Enter(sender As Object, e As EventArgs) Handles txtCodigo.Enter
         ClearPlaceholder(txtCodigo, "Codigo")
@@ -130,6 +143,11 @@
         SetPlaceholderOnLeave(txtCedula, "Cedula")
     End Sub
 
+    Private Sub SetPlaceholder(txtBox As TextBox, placeholder As String)
+        txtBox.Text = placeholder
+        txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
+    End Sub
+
     Private Sub ClearPlaceholder(txtBox As TextBox, placeholder As String)
         If txtBox.Text = placeholder Then
             txtBox.Text = ""
@@ -143,9 +161,6 @@
             txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
         End If
     End Sub
-
-
-
 
 
 #End Region
