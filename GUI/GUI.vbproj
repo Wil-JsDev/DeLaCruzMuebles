@@ -80,10 +80,17 @@
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,6 +106,12 @@
   <ItemGroup>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.aa-DJ.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -120,7 +133,43 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\waveOF %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waveOF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixelcut-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intento1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intento1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vectorpaint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vectorpaint %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vectorpaint %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
