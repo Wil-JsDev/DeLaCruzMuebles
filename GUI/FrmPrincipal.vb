@@ -24,9 +24,10 @@
         pnl3.Visible = False
         pnl4.Visible = False
         pnl5.Visible = False
-        pnlInicio.Visible = False
+        pnlInicio.Visible = True
         pnlRegistro.Visible = False
         pnlVentas.Visible = False
+
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
@@ -77,7 +78,7 @@
         pnlFacturacion.Visible = True
     End Sub
 
-    Private Sub btn2salir_Click(sender As Object, e As EventArgs) Handles btn2salir.Click
+    Private Sub btn2salir_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -95,51 +96,51 @@
     End Sub
 
 
-    Private Sub txtCodigo_Enter(sender As Object, e As EventArgs) Handles txtCodigo.Enter
+    Private Sub txtCodigo_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtCodigo, "Codigo")
     End Sub
 
-    Private Sub txtNombre_Enter(sender As Object, e As EventArgs) Handles txtNombre.Enter
+    Private Sub txtNombre_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtNombre, "Nombre")
     End Sub
 
-    Private Sub txtSexo_Enter(sender As Object, e As EventArgs) Handles txtSexo.Enter
+    Private Sub txtSexo_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtSexo, "Sexo")
     End Sub
 
-    Private Sub txtTelefono_Enter(sender As Object, e As EventArgs) Handles txtTelefono.Enter
+    Private Sub txtTelefono_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtTelefono, "Telefono")
     End Sub
 
-    Private Sub txtDireccion_Enter(sender As Object, e As EventArgs) Handles txtDireccion.Enter
+    Private Sub txtDireccion_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtDireccion, "Direccion")
     End Sub
 
-    Private Sub txtCedula_Enter(sender As Object, e As EventArgs) Handles txtCedula.Enter
+    Private Sub txtCedula_Enter(sender As Object, e As EventArgs)
         ClearPlaceholder(txtCedula, "Cedula")
     End Sub
 
-    Private Sub txtCodigo_Leave(sender As Object, e As EventArgs) Handles txtCodigo.Leave
+    Private Sub txtCodigo_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtCodigo, "Codigo")
     End Sub
 
-    Private Sub txtNombre_Leave(sender As Object, e As EventArgs) Handles txtNombre.Leave
+    Private Sub txtNombre_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtNombre, "Nombre")
     End Sub
 
-    Private Sub txtSexo_Leave(sender As Object, e As EventArgs) Handles txtSexo.Leave
+    Private Sub txtSexo_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtSexo, "Sexo")
     End Sub
 
-    Private Sub txtTelefono_Leave(sender As Object, e As EventArgs) Handles txtTelefono.Leave
+    Private Sub txtTelefono_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtTelefono, "Telefono")
     End Sub
 
-    Private Sub txtDireccion_Leave(sender As Object, e As EventArgs) Handles txtDireccion.Leave
+    Private Sub txtDireccion_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtDireccion, "Direccion")
     End Sub
 
-    Private Sub txtCedula_Leave(sender As Object, e As EventArgs) Handles txtCedula.Leave
+    Private Sub txtCedula_Leave(sender As Object, e As EventArgs)
         SetPlaceholderOnLeave(txtCedula, "Cedula")
     End Sub
 
