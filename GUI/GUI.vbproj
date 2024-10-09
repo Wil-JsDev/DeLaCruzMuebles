@@ -171,5 +171,11 @@
   <ItemGroup>
     <None Include="Resources\usuario %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cambiar-la-contrasena.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -14,9 +14,9 @@
     Private Sub BInicioSesion_Click(sender As Object, e As EventArgs)
 
         Dim userName As String = "Admin"
-        Dim password As String = "Muebles"
+        Dim password As String = "Papo"
 
-        If txtUserName.Text = "Admin" And txtPassword.Text = "Muebles" Then
+        If txtUserName.Text = "Admin" And txtPassword.Text = "Papo" Then
             Me.Hide()
             Dim frm As New frmPrincipal
             frm.ShowDialog(Me)
@@ -27,6 +27,8 @@
     End Sub
 
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
+        txtUserName.Clear()
+        txtPassword.Clear()
 
     End Sub
 
