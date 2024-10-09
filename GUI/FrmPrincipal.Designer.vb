@@ -91,6 +91,30 @@ Partial Class frmPrincipal
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.TxtIdEmpleado = New System.Windows.Forms.TextBox()
         Me.Panel35 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnFacturar = New System.Windows.Forms.Button()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -122,15 +146,6 @@ Partial Class frmPrincipal
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.btn2salir = New System.Windows.Forms.PictureBox()
-        Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.BtnFacturar = New System.Windows.Forms.Button()
-        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.btn5 = New System.Windows.Forms.Button()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnVentas = New System.Windows.Forms.Button()
@@ -139,12 +154,32 @@ Partial Class frmPrincipal
         Me.btnSalir = New System.Windows.Forms.PictureBox()
         Me.btnInicio = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dtCodigoCliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtDescuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtSubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.pnlInicio.SuspendLayout()
         Me.pnlRegistro.SuspendLayout()
         Me.pnlVentas.SuspendLayout()
         Me.pnlFacturacion.SuspendLayout()
         Me.pnlArticulos.SuspendLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,16 +203,10 @@ Partial Class frmPrincipal
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn2salir, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -277,7 +306,7 @@ Partial Class frmPrincipal
         Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 80.0!)
         Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblHora.Location = New System.Drawing.Point(472, 208)
+        Me.lblHora.Location = New System.Drawing.Point(163, 174)
         Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(559, 181)
@@ -290,7 +319,7 @@ Partial Class frmPrincipal
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblFecha.Location = New System.Drawing.Point(568, 403)
+        Me.lblFecha.Location = New System.Drawing.Point(259, 369)
         Me.lblFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(176, 58)
@@ -636,8 +665,22 @@ Partial Class frmPrincipal
         '
         'pnlFacturacion
         '
+        Me.pnlFacturacion.Controls.Add(Me.DataGridView1)
+        Me.pnlFacturacion.Controls.Add(Me.PictureBox20)
+        Me.pnlFacturacion.Controls.Add(Me.Panel19)
+        Me.pnlFacturacion.Controls.Add(Me.TextBox10)
+        Me.pnlFacturacion.Controls.Add(Me.PictureBox19)
+        Me.pnlFacturacion.Controls.Add(Me.Panel18)
+        Me.pnlFacturacion.Controls.Add(Me.TextBox9)
+        Me.pnlFacturacion.Controls.Add(Me.PictureBox18)
+        Me.pnlFacturacion.Controls.Add(Me.Panel17)
+        Me.pnlFacturacion.Controls.Add(Me.TextBox8)
+        Me.pnlFacturacion.Controls.Add(Me.PictureBox17)
+        Me.pnlFacturacion.Controls.Add(Me.Panel16)
+        Me.pnlFacturacion.Controls.Add(Me.TextBox7)
         Me.pnlFacturacion.Controls.Add(Me.BtnModificar)
         Me.pnlFacturacion.Controls.Add(Me.BtnFacturar)
+        Me.pnlFacturacion.Controls.Add(Me.PictureBox16)
         Me.pnlFacturacion.Controls.Add(Me.PictureBox30)
         Me.pnlFacturacion.Controls.Add(Me.PictureBox31)
         Me.pnlFacturacion.Controls.Add(Me.Panel29)
@@ -653,7 +696,9 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.Controls.Add(Me.TextBox22)
         Me.pnlFacturacion.Controls.Add(Me.PictureBox35)
         Me.pnlFacturacion.Controls.Add(Me.Panel33)
+        Me.pnlFacturacion.Controls.Add(Me.Panel9)
         Me.pnlFacturacion.Controls.Add(Me.TextBox23)
+        Me.pnlFacturacion.Controls.Add(Me.TextBox1)
         Me.pnlFacturacion.Controls.Add(Me.Panel34)
         Me.pnlFacturacion.Controls.Add(Me.TextBox24)
         Me.pnlFacturacion.Controls.Add(Me.PictureBox36)
@@ -667,7 +712,7 @@ Partial Class frmPrincipal
         'Panel29
         '
         Me.Panel29.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel29.Location = New System.Drawing.Point(194, 518)
+        Me.Panel29.Location = New System.Drawing.Point(104, 446)
         Me.Panel29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(370, 5)
@@ -679,7 +724,7 @@ Partial Class frmPrincipal
         Me.TextBox19.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox19.Location = New System.Drawing.Point(196, 478)
+        Me.TextBox19.Location = New System.Drawing.Point(106, 406)
         Me.TextBox19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox19.Multiline = True
         Me.TextBox19.Name = "TextBox19"
@@ -689,7 +734,7 @@ Partial Class frmPrincipal
         'Panel30
         '
         Me.Panel30.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel30.Location = New System.Drawing.Point(194, 443)
+        Me.Panel30.Location = New System.Drawing.Point(104, 371)
         Me.Panel30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(370, 5)
@@ -701,7 +746,7 @@ Partial Class frmPrincipal
         Me.TextBox20.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox20.Location = New System.Drawing.Point(194, 403)
+        Me.TextBox20.Location = New System.Drawing.Point(104, 331)
         Me.TextBox20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox20.Multiline = True
         Me.TextBox20.Name = "TextBox20"
@@ -711,7 +756,7 @@ Partial Class frmPrincipal
         'Panel31
         '
         Me.Panel31.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel31.Location = New System.Drawing.Point(194, 371)
+        Me.Panel31.Location = New System.Drawing.Point(104, 299)
         Me.Panel31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(370, 5)
@@ -723,7 +768,7 @@ Partial Class frmPrincipal
         Me.TextBox21.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox21.Location = New System.Drawing.Point(196, 331)
+        Me.TextBox21.Location = New System.Drawing.Point(106, 259)
         Me.TextBox21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox21.Multiline = True
         Me.TextBox21.Name = "TextBox21"
@@ -733,7 +778,7 @@ Partial Class frmPrincipal
         'Panel32
         '
         Me.Panel32.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel32.Location = New System.Drawing.Point(194, 295)
+        Me.Panel32.Location = New System.Drawing.Point(104, 223)
         Me.Panel32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel32.Name = "Panel32"
         Me.Panel32.Size = New System.Drawing.Size(370, 5)
@@ -745,7 +790,7 @@ Partial Class frmPrincipal
         Me.TextBox22.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox22.Location = New System.Drawing.Point(194, 255)
+        Me.TextBox22.Location = New System.Drawing.Point(104, 183)
         Me.TextBox22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox22.Multiline = True
         Me.TextBox22.Name = "TextBox22"
@@ -755,7 +800,7 @@ Partial Class frmPrincipal
         'Panel33
         '
         Me.Panel33.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel33.Location = New System.Drawing.Point(194, 218)
+        Me.Panel33.Location = New System.Drawing.Point(104, 146)
         Me.Panel33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Size = New System.Drawing.Size(370, 5)
@@ -767,7 +812,7 @@ Partial Class frmPrincipal
         Me.TextBox23.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox23.Location = New System.Drawing.Point(194, 178)
+        Me.TextBox23.Location = New System.Drawing.Point(104, 106)
         Me.TextBox23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox23.Multiline = True
         Me.TextBox23.Name = "TextBox23"
@@ -777,7 +822,7 @@ Partial Class frmPrincipal
         'Panel34
         '
         Me.Panel34.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel34.Location = New System.Drawing.Point(194, 143)
+        Me.Panel34.Location = New System.Drawing.Point(104, 71)
         Me.Panel34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Size = New System.Drawing.Size(370, 5)
@@ -789,7 +834,7 @@ Partial Class frmPrincipal
         Me.TextBox24.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TextBox24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox24.Location = New System.Drawing.Point(194, 103)
+        Me.TextBox24.Location = New System.Drawing.Point(104, 31)
         Me.TextBox24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox24.Multiline = True
         Me.TextBox24.Name = "TextBox24"
@@ -1005,6 +1050,285 @@ Partial Class frmPrincipal
         Me.Panel35.Size = New System.Drawing.Size(370, 5)
         Me.Panel35.TabIndex = 14
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(608, 35)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(370, 46)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Panel9.Location = New System.Drawing.Point(608, 75)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(370, 5)
+        Me.Panel9.TabIndex = 11
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Panel16.Location = New System.Drawing.Point(104, 517)
+        Me.Panel16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(370, 5)
+        Me.Panel16.TabIndex = 31
+        '
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TextBox7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBox7.Location = New System.Drawing.Point(106, 477)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(370, 46)
+        Me.TextBox7.TabIndex = 30
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Panel17.Location = New System.Drawing.Point(103, 594)
+        Me.Panel17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(370, 5)
+        Me.Panel17.TabIndex = 34
+        '
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TextBox8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBox8.Location = New System.Drawing.Point(105, 554)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox8.Multiline = True
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(370, 46)
+        Me.TextBox8.TabIndex = 33
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Panel18.Location = New System.Drawing.Point(608, 183)
+        Me.Panel18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Size = New System.Drawing.Size(370, 5)
+        Me.Panel18.TabIndex = 37
+        '
+        'TextBox9
+        '
+        Me.TextBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBox9.Location = New System.Drawing.Point(610, 143)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox9.Multiline = True
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(370, 46)
+        Me.TextBox9.TabIndex = 36
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Panel19.Location = New System.Drawing.Point(608, 260)
+        Me.Panel19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Size = New System.Drawing.Size(370, 5)
+        Me.Panel19.TabIndex = 40
+        '
+        'TextBox10
+        '
+        Me.TextBox10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TextBox10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBox10.Location = New System.Drawing.Point(610, 220)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox10.Multiline = True
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(370, 46)
+        Me.TextBox10.TabIndex = 39
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Image = Global.GUI.My.Resources.Resources.precios
+        Me.PictureBox20.Location = New System.Drawing.Point(556, 216)
+        Me.PictureBox20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox20.TabIndex = 41
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio1
+        Me.PictureBox19.Location = New System.Drawing.Point(556, 139)
+        Me.PictureBox19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox19.TabIndex = 38
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Image = Global.GUI.My.Resources.Resources.cantidad
+        Me.PictureBox18.Location = New System.Drawing.Point(51, 550)
+        Me.PictureBox18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox18.TabIndex = 35
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.Image = Global.GUI.My.Resources.Resources.web
+        Me.PictureBox17.Location = New System.Drawing.Point(52, 473)
+        Me.PictureBox17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox17.TabIndex = 32
+        Me.PictureBox17.TabStop = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(785, 284)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(193, 67)
+        Me.BtnModificar.TabIndex = 29
+        Me.BtnModificar.Text = "   Modificar"
+        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'BtnFacturar
+        '
+        Me.BtnFacturar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnFacturar.FlatAppearance.BorderSize = 0
+        Me.BtnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnFacturar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnFacturar.Image = CType(resources.GetObject("BtnFacturar.Image"), System.Drawing.Image)
+        Me.BtnFacturar.Location = New System.Drawing.Point(556, 284)
+        Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnFacturar.Name = "BtnFacturar"
+        Me.BtnFacturar.Size = New System.Drawing.Size(193, 67)
+        Me.BtnFacturar.TabIndex = 8
+        Me.BtnFacturar.Text = "   Facturar"
+        Me.BtnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnFacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnFacturar.UseVisualStyleBackColor = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Image = Global.GUI.My.Resources.Resources.simbolo_de_numero
+        Me.PictureBox16.Location = New System.Drawing.Point(556, 29)
+        Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(50, 51)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox16.TabIndex = 28
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.Image = CType(resources.GetObject("PictureBox30.Image"), System.Drawing.Image)
+        Me.PictureBox30.Location = New System.Drawing.Point(52, 25)
+        Me.PictureBox30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(50, 51)
+        Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox30.TabIndex = 28
+        Me.PictureBox30.TabStop = False
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.Image = Global.GUI.My.Resources.Resources.tarjeta_de_identificacion
+        Me.PictureBox31.Location = New System.Drawing.Point(52, 402)
+        Me.PictureBox31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox31.TabIndex = 27
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox32
+        '
+        Me.PictureBox32.Image = CType(resources.GetObject("PictureBox32.Image"), System.Drawing.Image)
+        Me.PictureBox32.Location = New System.Drawing.Point(51, 326)
+        Me.PictureBox32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(50, 51)
+        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox32.TabIndex = 24
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.Image = CType(resources.GetObject("PictureBox33.Image"), System.Drawing.Image)
+        Me.PictureBox33.Location = New System.Drawing.Point(52, 254)
+        Me.PictureBox33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(46, 49)
+        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox33.TabIndex = 21
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.Image = Global.GUI.My.Resources.Resources.calendario
+        Me.PictureBox34.Location = New System.Drawing.Point(51, 179)
+        Me.PictureBox34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(52, 51)
+        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox34.TabIndex = 18
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox35
+        '
+        Me.PictureBox35.Image = CType(resources.GetObject("PictureBox35.Image"), System.Drawing.Image)
+        Me.PictureBox35.Location = New System.Drawing.Point(51, 102)
+        Me.PictureBox35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(52, 51)
+        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox35.TabIndex = 15
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox36
+        '
+        Me.PictureBox36.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox36.Image = CType(resources.GetObject("PictureBox36.Image"), System.Drawing.Image)
+        Me.PictureBox36.Location = New System.Drawing.Point(987, 9)
+        Me.PictureBox36.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(30, 38)
+        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox36.TabIndex = 8
+        Me.PictureBox36.TabStop = False
+        '
         'BtnBuscar
         '
         Me.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
@@ -1018,7 +1342,7 @@ Partial Class frmPrincipal
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(306, 82)
         Me.BtnBuscar.TabIndex = 29
-        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.Text = "   Buscar"
         Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBuscar.UseVisualStyleBackColor = False
@@ -1036,7 +1360,7 @@ Partial Class frmPrincipal
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(306, 82)
         Me.BtnEliminar.TabIndex = 29
-        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.Text = "   Eliminar"
         Me.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnEliminar.UseVisualStyleBackColor = False
@@ -1168,7 +1492,7 @@ Partial Class frmPrincipal
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(306, 82)
         Me.BtnCancelar.TabIndex = 8
-        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.Text = "   Cancelar"
         Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCancelar.UseVisualStyleBackColor = False
@@ -1186,7 +1510,7 @@ Partial Class frmPrincipal
         Me.BtnRealizar.Name = "BtnRealizar"
         Me.BtnRealizar.Size = New System.Drawing.Size(306, 82)
         Me.BtnRealizar.TabIndex = 8
-        Me.BtnRealizar.Text = "Realizar"
+        Me.BtnRealizar.Text = "   Realizar"
         Me.BtnRealizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnRealizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRealizar.UseVisualStyleBackColor = False
@@ -1405,120 +1729,6 @@ Partial Class frmPrincipal
         Me.btn2salir.TabIndex = 8
         Me.btn2salir.TabStop = False
         '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.BtnModificar.FlatAppearance.BorderSize = 0
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.BtnModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
-        Me.BtnModificar.Location = New System.Drawing.Point(623, 208)
-        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(306, 82)
-        Me.BtnModificar.TabIndex = 29
-        Me.BtnModificar.Text = "   Modificar"
-        Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnModificar.UseVisualStyleBackColor = False
-        '
-        'BtnFacturar
-        '
-        Me.BtnFacturar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.BtnFacturar.FlatAppearance.BorderSize = 0
-        Me.BtnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.BtnFacturar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.BtnFacturar.Image = CType(resources.GetObject("BtnFacturar.Image"), System.Drawing.Image)
-        Me.BtnFacturar.Location = New System.Drawing.Point(623, 103)
-        Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnFacturar.Name = "BtnFacturar"
-        Me.BtnFacturar.Size = New System.Drawing.Size(306, 82)
-        Me.BtnFacturar.TabIndex = 8
-        Me.BtnFacturar.Text = "Facturar"
-        Me.BtnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnFacturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnFacturar.UseVisualStyleBackColor = False
-        '
-        'PictureBox30
-        '
-        Me.PictureBox30.Image = CType(resources.GetObject("PictureBox30.Image"), System.Drawing.Image)
-        Me.PictureBox30.Location = New System.Drawing.Point(142, 97)
-        Me.PictureBox30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.Size = New System.Drawing.Size(50, 51)
-        Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox30.TabIndex = 28
-        Me.PictureBox30.TabStop = False
-        '
-        'PictureBox31
-        '
-        Me.PictureBox31.Image = CType(resources.GetObject("PictureBox31.Image"), System.Drawing.Image)
-        Me.PictureBox31.Location = New System.Drawing.Point(142, 474)
-        Me.PictureBox31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.Size = New System.Drawing.Size(46, 49)
-        Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox31.TabIndex = 27
-        Me.PictureBox31.TabStop = False
-        '
-        'PictureBox32
-        '
-        Me.PictureBox32.Image = CType(resources.GetObject("PictureBox32.Image"), System.Drawing.Image)
-        Me.PictureBox32.Location = New System.Drawing.Point(141, 398)
-        Me.PictureBox32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.Size = New System.Drawing.Size(50, 51)
-        Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox32.TabIndex = 24
-        Me.PictureBox32.TabStop = False
-        '
-        'PictureBox33
-        '
-        Me.PictureBox33.Image = CType(resources.GetObject("PictureBox33.Image"), System.Drawing.Image)
-        Me.PictureBox33.Location = New System.Drawing.Point(142, 326)
-        Me.PictureBox33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(46, 49)
-        Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox33.TabIndex = 21
-        Me.PictureBox33.TabStop = False
-        '
-        'PictureBox34
-        '
-        Me.PictureBox34.Image = CType(resources.GetObject("PictureBox34.Image"), System.Drawing.Image)
-        Me.PictureBox34.Location = New System.Drawing.Point(141, 251)
-        Me.PictureBox34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(52, 51)
-        Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox34.TabIndex = 18
-        Me.PictureBox34.TabStop = False
-        '
-        'PictureBox35
-        '
-        Me.PictureBox35.Image = CType(resources.GetObject("PictureBox35.Image"), System.Drawing.Image)
-        Me.PictureBox35.Location = New System.Drawing.Point(141, 174)
-        Me.PictureBox35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(52, 51)
-        Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox35.TabIndex = 15
-        Me.PictureBox35.TabStop = False
-        '
-        'PictureBox36
-        '
-        Me.PictureBox36.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox36.Image = CType(resources.GetObject("PictureBox36.Image"), System.Drawing.Image)
-        Me.PictureBox36.Location = New System.Drawing.Point(987, 9)
-        Me.PictureBox36.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(30, 38)
-        Me.PictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox36.TabIndex = 8
-        Me.PictureBox36.TabStop = False
-        '
         'btn5
         '
         Me.btn5.FlatAppearance.BorderSize = 0
@@ -1638,17 +1848,77 @@ Partial Class frmPrincipal
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtCodigoCliente, Me.dtNombre, Me.dtCantidad, Me.dtPrecio, Me.dtDescuento, Me.dtSubTotal, Me.dtTotal})
+        Me.DataGridView1.Location = New System.Drawing.Point(556, 365)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(429, 235)
+        Me.DataGridView1.TabIndex = 42
+        '
+        'dtCodigoCliente
+        '
+        Me.dtCodigoCliente.HeaderText = "Codigo Cliente"
+        Me.dtCodigoCliente.MinimumWidth = 70
+        Me.dtCodigoCliente.Name = "dtCodigoCliente"
+        Me.dtCodigoCliente.Width = 80
+        '
+        'dtNombre
+        '
+        Me.dtNombre.HeaderText = "Nombre"
+        Me.dtNombre.MinimumWidth = 70
+        Me.dtNombre.Name = "dtNombre"
+        Me.dtNombre.Width = 80
+        '
+        'dtCantidad
+        '
+        Me.dtCantidad.HeaderText = "Cantidad"
+        Me.dtCantidad.MinimumWidth = 70
+        Me.dtCantidad.Name = "dtCantidad"
+        Me.dtCantidad.Width = 80
+        '
+        'dtPrecio
+        '
+        Me.dtPrecio.HeaderText = "Precio"
+        Me.dtPrecio.MinimumWidth = 70
+        Me.dtPrecio.Name = "dtPrecio"
+        Me.dtPrecio.Width = 80
+        '
+        'dtDescuento
+        '
+        Me.dtDescuento.HeaderText = "Descuento"
+        Me.dtDescuento.MinimumWidth = 70
+        Me.dtDescuento.Name = "dtDescuento"
+        Me.dtDescuento.Width = 80
+        '
+        'dtSubTotal
+        '
+        Me.dtSubTotal.HeaderText = "SubTotal"
+        Me.dtSubTotal.MinimumWidth = 70
+        Me.dtSubTotal.Name = "dtSubTotal"
+        Me.dtSubTotal.Width = 80
+        '
+        'dtTotal
+        '
+        Me.dtTotal.HeaderText = "Total"
+        Me.dtTotal.MinimumWidth = 70
+        Me.dtTotal.Name = "dtTotal"
+        Me.dtTotal.Width = 80
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1335, 769)
-        Me.Controls.Add(Me.pnlFacturacion)
         Me.Controls.Add(Me.pnlInicio)
         Me.Controls.Add(Me.pnlRegistro)
         Me.Controls.Add(Me.pnlVentas)
         Me.Controls.Add(Me.pnlArticulos)
+        Me.Controls.Add(Me.pnlFacturacion)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -1666,6 +1936,18 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.PerformLayout()
         Me.pnlArticulos.ResumeLayout(False)
         Me.pnlArticulos.PerformLayout()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1689,16 +1971,10 @@ Partial Class frmPrincipal
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn2salir, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1818,4 +2094,27 @@ Partial Class frmPrincipal
     Friend WithEvents PictureBox38 As PictureBox
     Friend WithEvents Panel35 As Panel
     Friend WithEvents TxtIdEmpleado As TextBox
+    Friend WithEvents PictureBox16 As PictureBox
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PictureBox17 As PictureBox
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents PictureBox18 As PictureBox
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents PictureBox20 As PictureBox
+    Friend WithEvents Panel19 As Panel
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents PictureBox19 As PictureBox
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dtCodigoCliente As DataGridViewTextBoxColumn
+    Friend WithEvents dtNombre As DataGridViewTextBoxColumn
+    Friend WithEvents dtCantidad As DataGridViewTextBoxColumn
+    Friend WithEvents dtPrecio As DataGridViewTextBoxColumn
+    Friend WithEvents dtDescuento As DataGridViewTextBoxColumn
+    Friend WithEvents dtSubTotal As DataGridViewTextBoxColumn
+    Friend WithEvents dtTotal As DataGridViewTextBoxColumn
 End Class
