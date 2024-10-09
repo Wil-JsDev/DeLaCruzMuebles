@@ -16,9 +16,10 @@
         lblFecha.Text = DateTime.Now.ToString("ddd MMM yyy")
     End Sub
 
-    Private Sub ShowPanel(panelToShow As Panel)
-        ' Hide all panels
-        Pnl1.Visible = False
+
+
+    Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+        Pnl1.Visible = True
         pnl2.Visible = False
         pnl3.Visible = False
         pnl4.Visible = False
@@ -26,38 +27,43 @@
         pnlInicio.Visible = False
         pnlRegistro.Visible = False
         pnlVentas.Visible = False
-
-
-        panelToShow.Visible = True
-    End Sub
-
-    Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
-        ShowPanel(Pnl1)
-        pnlInicio.Visible = True
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
-        ShowPanel(pnl2)
+        Pnl1.Visible = False
+        pnl2.Visible = True
+        pnl3.Visible = False
+        pnl4.Visible = False
+        pnl5.Visible = False
+        pnlInicio.Visible = False
         pnlRegistro.Visible = True
+        pnlVentas.Visible = False
     End Sub
 
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        ShowPanel(pnl3)
-
+        Pnl1.Visible = False
+        pnl2.Visible = False
+        pnl3.Visible = True
+        pnl4.Visible = False
+        pnl5.Visible = False
+        pnlInicio.Visible = False
+        pnlRegistro.Visible = False
         pnlVentas.Visible = True
+
     End Sub
 
-    Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btn4.Click
-        ShowPanel(pnl4)
+    Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+
     End Sub
 
     Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        ShowPanel(pnl5)
+
     End Sub
 
     Private Sub btn2salir_Click(sender As Object, e As EventArgs) Handles btn2salir.Click
-        pnlRegistro.Visible = False
+
     End Sub
+
 
 
 #Region "label Eventos"
