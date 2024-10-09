@@ -107,6 +107,8 @@ Partial Class frmPrincipal
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.pnlInicio = New System.Windows.Forms.Panel()
+        Me.lblFecha = New System.Windows.Forms.Label()
+        Me.lblHora = New System.Windows.Forms.Label()
         Me.pnlRegistro = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -129,8 +131,6 @@ Partial Class frmPrincipal
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.btn2salir = New System.Windows.Forms.PictureBox()
-        Me.lblFecha = New System.Windows.Forms.Label()
-        Me.lblHora = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1149,7 +1149,31 @@ Partial Class frmPrincipal
         Me.pnlInicio.Name = "pnlInicio"
         Me.pnlInicio.Size = New System.Drawing.Size(690, 464)
         Me.pnlInicio.TabIndex = 39
-        Me.pnlInicio.Visible = False
+        '
+        'lblFecha
+        '
+        Me.lblFecha.AutoSize = True
+        Me.lblFecha.Font = New System.Drawing.Font("Kanit Black", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.lblFecha.Location = New System.Drawing.Point(186, 223)
+        Me.lblFecha.Name = "lblFecha"
+        Me.lblFecha.Size = New System.Drawing.Size(187, 79)
+        Me.lblFecha.TabIndex = 43
+        Me.lblFecha.Text = "Label1"
+        Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHora
+        '
+        Me.lblHora.AutoSize = True
+        Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblHora.Font = New System.Drawing.Font("Kanit Black", 80.0!)
+        Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.lblHora.Location = New System.Drawing.Point(114, 93)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(403, 169)
+        Me.lblHora.TabIndex = 45
+        Me.lblHora.Text = "Label1"
+        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlRegistro
         '
@@ -1407,31 +1431,6 @@ Partial Class frmPrincipal
         Me.btn2salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btn2salir.TabIndex = 8
         Me.btn2salir.TabStop = False
-        '
-        'lblFecha
-        '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Font = New System.Drawing.Font("Kanit Black", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblFecha.Location = New System.Drawing.Point(186, 223)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(187, 79)
-        Me.lblFecha.TabIndex = 43
-        Me.lblFecha.Text = "Label1"
-        Me.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblHora
-        '
-        Me.lblHora.AutoSize = True
-        Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblHora.Font = New System.Drawing.Font("Kanit Black", 80.0!)
-        Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblHora.Location = New System.Drawing.Point(114, 93)
-        Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(403, 169)
-        Me.lblHora.TabIndex = 45
-        Me.lblHora.Text = "Label1"
-        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmPrincipal
         '
