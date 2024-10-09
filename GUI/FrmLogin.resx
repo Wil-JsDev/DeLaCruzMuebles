@@ -122,17 +122,21 @@
     <value>Arial Narrow, 12pt, style=Bold</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 302</value>
+    <value>595, 473</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtPassword.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 31</value>
+    <value>296, 48</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
     <value>txtPassword</value>
@@ -150,16 +154,19 @@
     <value>Arial Narrow, 12pt, style=Bold</value>
   </data>
   <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 235</value>
+    <value>595, 370</value>
+  </data>
+  <data name="txtUserName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="txtUserName.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 31</value>
+    <value>296, 48</value>
   </data>
   <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
     <value>txtUserName</value>
@@ -174,10 +181,13 @@
     <value>1</value>
   </data>
   <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 339</value>
+    <value>525, 522</value>
+  </data>
+  <data name="Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 3</value>
+    <value>370, 5</value>
   </data>
   <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -200,15 +210,17 @@
   <data name="LExit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Narrow, 12pt, style=Bold</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="LExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 413</value>
+    <value>662, 635</value>
+  </data>
+  <data name="LExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="LExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 20</value>
+    <value>49, 29</value>
   </data>
   <data name="LExit.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -238,10 +250,13 @@
     <value>NoControl</value>
   </data>
   <data name="Limpiar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>544, 345</value>
+    <value>816, 531</value>
+  </data>
+  <data name="Limpiar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="Limpiar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
+    <value>84, 29</value>
   </data>
   <data name="Limpiar.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -271,13 +286,16 @@
     <value>NoControl</value>
   </data>
   <data name="BInicioSesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 378</value>
+    <value>510, 582</value>
+  </data>
+  <data name="BInicioSesion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="BInicioSesion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 32</value>
+    <value>392, 49</value>
   </data>
   <data name="BInicioSesion.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>3</value>
   </data>
   <data name="BInicioSesion.Text" xml:space="preserve">
     <value>Inicio Sesion</value>
@@ -295,10 +313,13 @@
     <value>5</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 272</value>
+    <value>525, 418</value>
+  </data>
+  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 3</value>
+    <value>370, 5</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -319,10 +340,16 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 298</value>
+    <value>510, 473</value>
+  </data>
+  <data name="PictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 35</value>
+    <value>80, 54</value>
+  </data>
+  <data name="PictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="PictureBox3.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -343,10 +370,16 @@
     <value>NoControl</value>
   </data>
   <data name="PUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 235</value>
+    <value>510, 362</value>
+  </data>
+  <data name="PUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="PUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 35</value>
+    <value>80, 62</value>
+  </data>
+  <data name="PUser.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="PUser.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -367,13 +400,13 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 11</value>
+    <value>0, 0</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
   </data>
   <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>24</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
     <value>PictureBox1</value>
@@ -391,13 +424,10 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 11</value>
-  </data>
-  <data name="PictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>554, 17</value>
   </data>
   <data name="PictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 135</value>
+    <value>297, 208</value>
   </data>
   <data name="PictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -427,13 +457,10 @@
     <value>NoControl</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 167</value>
-  </data>
-  <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>657, 257</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 37</value>
+    <value>132, 57</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -459,8 +486,11 @@
   <data name="PContenedor.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="PContenedor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="PContenedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 461</value>
+    <value>1311, 709</value>
   </data>
   <data name="PContenedor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -481,13 +511,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>9, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>874, 461</value>
+    <value>1311, 709</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 3, 5, 3</value>
+    <value>8, 5, 8, 5</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

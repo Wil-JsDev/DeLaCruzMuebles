@@ -171,5 +171,56 @@
   <ItemGroup>
     <None Include="Resources\usuario %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cambiar-la-contrasena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numerico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta-del-precio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorizacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simbolo-de-numero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-identificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cantidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta-del-precio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\precios.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
