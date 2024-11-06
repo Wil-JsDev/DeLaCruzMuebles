@@ -145,7 +145,7 @@
 
 #Region "Panel Ventas"
     Private Sub Form1_Load2(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Establecer los placeholders predeterminados al cargar el formulario
+
         SetPlaceholderOnLeave(txtDireccion, "Direccion")
         SetPlaceholderOnLeave(txtCedula, "Cedula")
         SetPlaceholderOnLeave(txtCodigo, "Codigo")
@@ -228,7 +228,7 @@
 #Region "Articulo"
 
     Private Sub Form1_Load_Articulo(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Establecer los placeholders predeterminados al cargar el formulario
+
         SetPlaceholderOnLeave(TxtIdCodigoArticulo, "ID Código Artículo")
         SetPlaceholderOnLeave(TxtNombreArticulo, "Nombre Artículo")
         SetPlaceholderOnLeave(TxtProveedorArticulo, "Proveedor Artículo")
@@ -290,7 +290,7 @@
 #Region "Facturacion"
 
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Establecer los placeholders iniciales
+
         SetPlaceholder(TxtIdFacturacion, "ID Facturación")
         SetPlaceholder(TtxNombreFacturacion, "Nombre Facturación")
         SetPlaceholder(TxtFechaFacturacion, "Fecha Facturación")
@@ -303,7 +303,7 @@
         SetPlaceholder(TxtDescuentoFacturacion, "Descuento Facturación")
         SetPlaceholder(TxtNumeroFactura, "Número de Factura")
 
-        ' Opcional: Limpiar campos o inicializar valores
+
     End Sub
 
     Private Sub TxtIdFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtIdFacturacion.Enter
