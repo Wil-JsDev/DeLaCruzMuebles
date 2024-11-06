@@ -222,5 +222,11 @@
   <ItemGroup>
     <None Include="Resources\precios.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.vbproj">
+      <Project>{3856ee72-5972-4825-8187-2812b64b36e3}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
