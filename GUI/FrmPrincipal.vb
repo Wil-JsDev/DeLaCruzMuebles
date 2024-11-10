@@ -1,4 +1,4 @@
-﻿Public Class frmPrincipal
+﻿    Public Class frmPrincipal
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub

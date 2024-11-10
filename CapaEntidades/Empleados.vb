@@ -8,6 +8,6 @@
 
     Public Property Direccion As String
 
-    Public Property Cedula As String
+    Public Property Cedula As Integer
 
 End Class
