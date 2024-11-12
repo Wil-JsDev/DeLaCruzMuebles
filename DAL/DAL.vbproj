@@ -67,6 +67,7 @@
     <Compile Include="Categoria\CategoriaCrud.vb" />
     <Compile Include="Ciudad\CiudadCrud.vb" />
     <Compile Include="Cliente\ClienteCrud.vb" />
+    <Compile Include="Conexion\Conexion.vb" />
     <Compile Include="Empleado\EmpleadoCrud.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -104,6 +105,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.vbproj">
+      <Project>{3856EE72-5972-4825-8187-2812B64B36E3}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
