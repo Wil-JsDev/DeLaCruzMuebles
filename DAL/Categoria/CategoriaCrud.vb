@@ -62,12 +62,12 @@ Public Class CategoriaCrud
 
     End Function
 
-    Public Function EliminarCategoria(categoria As Categoria) As Boolean
+    Public Function EliminarCategoria(IdCategoria As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
             Dim cmd As New SqlCommand("CategoriaCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 4)
-            cmd.Parameters.AddWithValue("IdCategoria", categoria.IdCategoria)
+            cmd.Parameters.AddWithValue("IdCategoria", IdCategoria)
 
             conexionSql.Open()
             Dim filasEliminadas As Integer = cmd.ExecuteNonQuery()

@@ -71,12 +71,12 @@ Public Class ProveedorCrud
         End Using
     End Function
 
-    Public Function EliminarProveedor(proveedor As Proveedor) As Boolean
+    Public Function EliminarProveedor(IdProveedor As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
             Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 4)
-            cmd.Parameters.AddWithValue("@IdProveedor", proveedor.IdProveedor)
+            cmd.Parameters.AddWithValue("@IdProveedor", IdProveedor)
 
             conexionSql.Open()
 

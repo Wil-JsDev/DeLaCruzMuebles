@@ -71,12 +71,12 @@ Public Class ProductoCrud
         End Using
     End Function
 
-    Public Function EliminarProducto(producto As Producto) As Boolean
+    Public Function EliminarProducto(IdProducto As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
             Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 4)
-            cmd.Parameters.AddWithValue("@IdProducto", producto.IdProducto)
+            cmd.Parameters.AddWithValue("@IdProducto", IdProducto)
 
             conexionSql.Open()
 

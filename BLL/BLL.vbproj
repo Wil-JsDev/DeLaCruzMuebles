@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F9FD667-1FE1-435A-8646-9062AA2B27C7}</ProjectGuid>
+    <ProjectGuid>{DDF94E03-1D8B-4A2F-8724-80FAF4AC140C}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>DAL.xml</DocumentationFile>
+    <DocumentationFile>BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,7 +28,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>DAL.xml</DocumentationFile>
+    <DocumentationFile>BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -64,11 +64,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categoria\CategoriaCrud.vb" />
-    <Compile Include="Ciudad\CiudadCrud.vb" />
-    <Compile Include="Cliente\ClienteCrud.vb" />
-    <Compile Include="Conexion\Conexion.vb" />
-    <Compile Include="Empleado\EmpleadoCrud.vb" />
+    <Compile Include="Services\CategoriaServices.vb" />
+    <Compile Include="Services\CiudadService.vb" />
+    <Compile Include="Services\ClienteService.vb" />
+    <Compile Include="Services\EmpleadoService.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,8 +83,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Producto\ProductoCrud.vb" />
-    <Compile Include="Proveedor\ProveedorCrud.vb" />
+    <Compile Include="Services\ProductoService.vb" />
+    <Compile Include="Services\ProveedorService.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -108,8 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.vbproj">
-      <Project>{3856EE72-5972-4825-8187-2812B64B36E3}</Project>
+      <Project>{3856ee72-5972-4825-8187-2812b64b36e3}</Project>
       <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.vbproj">
+      <Project>{7f9fd667-1fe1-435a-8646-9062aa2b27c7}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

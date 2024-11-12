@@ -58,12 +58,12 @@ Public Class CiudadCrud
 
     End Function
 
-    Public Function EliminarCiudad(ciudad As Ciudad) As Boolean
+    Public Function EliminarCiudad(IdCiudad As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
             Dim cmd As New SqlCommand("CiudadCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 4)
-            cmd.Parameters.AddWithValue("@IdCiudad", ciudad.IdCiudad)
+            cmd.Parameters.AddWithValue("@IdCiudad", IdCiudad)
 
             conexionSql.Open()
             Dim filasEliminadas As Integer = cmd.ExecuteNonQuery()
