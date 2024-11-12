@@ -31,11 +31,11 @@ Partial Class FrmLogin
         Me.Limpiar = New System.Windows.Forms.Label()
         Me.BInicioSesion = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PUser = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PContenedor.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PUser, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,13 +110,6 @@ Partial Class FrmLogin
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Label1.Name = "Label1"
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.GUI.My.Resources.Resources.cambiar_la_contrasena
@@ -144,6 +137,13 @@ Partial Class FrmLogin
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.Label1.Name = "Label1"
+        '
         'FrmLogin
         '
         resources.ApplyResources(Me, "$this")
@@ -163,7 +163,6 @@ Partial Class FrmLogin
     End Sub
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PContenedor As Panel
-    Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtUserName As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents LExit As Label
@@ -175,4 +174,5 @@ Partial Class FrmLogin
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtPassword As TextBox
 End Class
