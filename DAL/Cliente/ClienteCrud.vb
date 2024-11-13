@@ -6,10 +6,11 @@ Public Class ClienteCrud
 
     Public Function InsertarCliente(cliente As Cliente) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion()
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("ClienteCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente)
             cmd.Parameters.AddWithValue("@Nombre", cliente.Nombre)
             cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula)
             cmd.Parameters.AddWithValue("@Direccion", cliente.Direccion)
@@ -29,21 +30,21 @@ Public Class ClienteCrud
         Dim cliente As New List(Of Cliente)
 
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("LeerClientes", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@LeerClientes")''
             conexionSql.Open()
 
             Dim leer As SqlDataReader = cmd.ExecuteReader()
 
             While leer.Read()
                 cliente.Add(New Cliente With {
-                             .IdCliente = Convert.ToInt32(leer("IdCliente")),
-                             .Nombre = leer("Nombre"),
-                             .Cedula = leer("Cedula"),
-                             .Direccion = leer("Direccion"),
-                             .Telefono = leer("Telefono")
-                })
+                         .IdCliente = Convert.ToInt32(leer("Id_Cliente")),
+                         .Nombre = leer("Nombre"),
+                         .Cedula = leer("Cedula"),
+                         .Direccion = leer("Direccion"),
+                         .Telefono = leer("Telefono")
+            })
             End While
             Return cliente
         End Using
@@ -51,9 +52,10 @@ Public Class ClienteCrud
 
     Public Function ActualizarCliente(cliente As Cliente) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("ClienteCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 3)
+            cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente)
             cmd.Parameters.AddWithValue("@Nombre", cliente.Nombre)
             cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula)
             cmd.Parameters.AddWithValue("@Direccion", cliente.Direccion)
@@ -70,9 +72,9 @@ Public Class ClienteCrud
 
     Public Function EliminarCliente(IdCliente As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("EliminarCliente", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 4)
+            ''cmd.Parameters.AddWithValue("@opcion", 4)''
             cmd.Parameters.AddWithValue("@IdCliente", IdCliente)
 
             conexionSql.Open()

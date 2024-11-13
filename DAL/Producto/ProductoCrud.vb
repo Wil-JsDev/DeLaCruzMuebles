@@ -10,6 +10,7 @@ Public Class ProductoCrud
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdProducto", producto.IdProducto)
             cmd.Parameters.AddWithValue("@Nombre_Producto", producto.NombreProducto)
             cmd.Parameters.AddWithValue("@Precio", producto.Precio)
             cmd.Parameters.AddWithValue("@Cantidad", producto.Cantidad)
@@ -30,21 +31,21 @@ Public Class ProductoCrud
         Dim producto As New List(Of Producto)
 
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("LeerProdcuctos", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@opcion", 2)''
             conexionSql.Open()
 
             Dim leer As SqlDataReader = cmd.ExecuteReader()
 
             While leer.Read()
                 producto.Add(New Producto With {
-                             .IdProducto = Convert.ToInt32(leer("IdProducto")),
-                             .NombreProducto = leer("NombreProducto"),
+                             .IdProducto = Convert.ToInt32(leer("Id_Producto")),
+                             .NombreProducto = leer("Nombre_Producto"),
                              .Precio = Convert.ToDecimal(leer("Precio")),
                              .Cantidad = Convert.ToInt32(leer("Cantidad")),
-                             .IdCategoria = Convert.ToInt32(leer("IdCategoria")),
-                             .IdProveedor = Convert.ToInt32(leer("IdProducto"))
+                             .IdCategoria = Convert.ToInt32(leer("Id_Categoria")),
+                             .IdProveedor = Convert.ToInt32(leer("Id_Proveedor"))
                 })
             End While
             Return producto
@@ -56,7 +57,8 @@ Public Class ProductoCrud
             Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 3)
-            cmd.Parameters.AddWithValue("@NombreProducto", producto.NombreProducto)
+            cmd.Parameters.AddWithValue("@IdProducto", producto.IdProducto)
+            cmd.Parameters.AddWithValue("@Nombre_Producto", producto.NombreProducto)
             cmd.Parameters.AddWithValue("@Precio", producto.Precio)
             cmd.Parameters.AddWithValue("@Cantidad", producto.Cantidad)
             cmd.Parameters.AddWithValue("@IdCategoria", producto.IdCategoria)
@@ -73,9 +75,9 @@ Public Class ProductoCrud
 
     Public Function EliminarProducto(IdProducto As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("EliminarProducto", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 4)
+            ''cmd.Parameters.AddWithValue("@opcion", 4)''
             cmd.Parameters.AddWithValue("@IdProducto", IdProducto)
 
             conexionSql.Open()
