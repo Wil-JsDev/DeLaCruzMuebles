@@ -1,4 +1,6 @@
-﻿Public Class FrmLogin
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class FrmLogin
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -7,16 +9,6 @@
         If Me.PContenedor.Controls.Count > 0 Then
             Me.PContenedor.Controls.RemoveAt(0)
         End If
-    End Sub
-
-    Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
-        txtUserName.Clear()
-        txtPassword.Clear()
-
-    End Sub
-
-    Private Sub LExit_Click(sender As Object, e As EventArgs) Handles LExit.Click
-        Application.Exit()
     End Sub
 
     Private Sub BInicioSesion_Click_1(sender As Object, e As EventArgs) Handles BInicioSesion.Click
@@ -61,4 +53,20 @@
         End If
     End Sub
 
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub imgEye_Click(sender As Object, e As EventArgs) Handles imgEye.Click
+        txtPassword.PasswordChar = Chr(0) ' Quita la máscara de la contraseña
+        imgEye.Visible = False ' Oculta el "ojo abierto"
+        imgHidden.Visible = True
+    End Sub
+
+
+    Private Sub imgHidden_Click_1(sender As Object, e As EventArgs) Handles imgHidden.Click
+        txtPassword.PasswordChar = "*"c ' Aplica la máscara de la contraseña
+        imgHidden.Visible = False ' Oculta el "ojo cerrado"
+        imgEye.Visible = True
+    End Sub
 End Class

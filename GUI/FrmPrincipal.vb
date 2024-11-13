@@ -24,65 +24,48 @@ Public Class frmPrincipal
 
 
     Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
-        Pnl1.Visible = True
-        pnl2.Visible = False
-        pnl3.Visible = False
-        pnl4.Visible = False
-        pnl5.Visible = False
-        pnlInicio.Visible = False
-        pnlRegistro.Visible = False
-        pnlVentas.Visible = False
+        MostrarPanel(Pnl1, pnlInicio)
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
-        Pnl1.Visible = False
-        pnl2.Visible = True
-        pnl3.Visible = False
-        pnl4.Visible = False
-        pnl5.Visible = False
-        pnlInicio.Visible = False
-        pnlRegistro.Visible = True
-        pnlVentas.Visible = False
+        MostrarPanel(pnl2, pnlRegistro)
     End Sub
 
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        Pnl1.Visible = False
-        pnl2.Visible = False
-        pnl3.Visible = True
-        pnl4.Visible = False
-        pnl5.Visible = False
-        pnlInicio.Visible = False
-        pnlRegistro.Visible = False
-        pnlVentas.Visible = True
-
+        MostrarPanel(pnl3, pnlVentas)
     End Sub
 
-    Private Sub btn4_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        Pnl1.Visible = False
-        pnl2.Visible = False
-        pnl3.Visible = False
-        pnl4.Visible = True
-        pnl5.Visible = False
-        pnlInicio.Visible = False
-        pnlRegistro.Visible = False
-        pnlVentas.Visible = False
-        pnlArticulos.Visible = True
+    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+        MostrarPanel(pnl4, pnlArticulos)
     End Sub
 
-    Private Sub btn5_Click(sender As Object, e As EventArgs) Handles btn5.Click
+    Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        MostrarPanel(pnl5, pnlFacturacion)
+    End Sub
+
+    Private Sub MostrarPanel(panel1 As Panel, panel2 As Panel)
         Pnl1.Visible = False
         pnl2.Visible = False
         pnl3.Visible = False
         pnl4.Visible = False
-        pnl5.Visible = True
+        pnl5.Visible = False
         pnlInicio.Visible = False
         pnlRegistro.Visible = False
         pnlVentas.Visible = False
         pnlArticulos.Visible = False
-        pnlFacturacion.Visible = True
+        pnlFacturacion.Visible = False
+
+        panel1.Visible = True
+        panel2.Visible = True
+
+        Me.Refresh()
     End Sub
 
-    Private Sub btn2salir_Click(sender As Object, e As EventArgs) Handles btn2salir.Click
+
+
+
+
+    Private Sub btn2salir_Click(sender As Object, e As EventArgs)
 
     End Sub
 
