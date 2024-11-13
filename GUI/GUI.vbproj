@@ -223,10 +223,59 @@
     <None Include="Resources\precios.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.vbproj">
+      <Project>{ddf94e03-1d8b-4a2f-8724-80faf4ac140c}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.vbproj">
       <Project>{3856ee72-5972-4825-8187-2812b64b36e3}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8219573_travel_outdoors_outside_exit_door_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8219573_travel_outdoors_outside_exit_door_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8219573_travel_outdoors_outside_exit_door_icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8219573_travel_outdoors_outside_exit_door_icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon-scatter-haikei %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave %283%29 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave__3___1_-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave__3___1_-removebg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-moon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wave__4___1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receptionist-45.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
