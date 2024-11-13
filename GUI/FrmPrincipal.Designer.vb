@@ -44,8 +44,11 @@ Partial Class frmPrincipal
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.fechaHora = New System.Windows.Forms.Timer(Me.components)
         Me.pnlRegistro = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnObtenerRegistro = New System.Windows.Forms.Button()
+        Me.BtnEliminarRegistro = New System.Windows.Forms.Button()
+        Me.dgvRegistro = New System.Windows.Forms.DataGridView()
+        Me.BtnModificarRegistro = New System.Windows.Forms.Button()
+        Me.BtnGuardarR = New System.Windows.Forms.Button()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -56,9 +59,6 @@ Partial Class frmPrincipal
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.txtSexo = New System.Windows.Forms.TextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -139,14 +139,15 @@ Partial Class frmPrincipal
         Me.TxtIdFacturacion = New System.Windows.Forms.TextBox()
         Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.pnlArticulos = New System.Windows.Forms.Panel()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.dgvArticulos = New System.Windows.Forms.DataGridView()
+        Me.BtnObtenerArticulos = New System.Windows.Forms.Button()
+        Me.BtnEliminarArticulo = New System.Windows.Forms.Button()
+        Me.BtnModificarArticulo = New System.Windows.Forms.Button()
+        Me.BtnGuardarArticulos = New System.Windows.Forms.Button()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.Panel23 = New System.Windows.Forms.Panel()
-        Me.txtEstadosArticulo = New System.Windows.Forms.TextBox()
+        Me.txtCantidadArticulo = New System.Windows.Forms.TextBox()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.TxtPrecioArticulos = New System.Windows.Forms.TextBox()
@@ -168,11 +169,11 @@ Partial Class frmPrincipal
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlInicio.SuspendLayout()
         Me.pnlRegistro.SuspendLayout()
+        CType(Me.dgvRegistro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btn2salir, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlVentas.SuspendLayout()
@@ -200,6 +201,7 @@ Partial Class frmPrincipal
         CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlArticulos.SuspendLayout()
+        CType(Me.dgvArticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -425,7 +427,7 @@ Partial Class frmPrincipal
         Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 80.0!)
         Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblHora.Location = New System.Drawing.Point(163, 174)
+        Me.lblHora.Location = New System.Drawing.Point(164, 174)
         Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(559, 181)
@@ -438,7 +440,7 @@ Partial Class frmPrincipal
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblFecha.Location = New System.Drawing.Point(259, 369)
+        Me.lblFecha.Location = New System.Drawing.Point(260, 369)
         Me.lblFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(176, 58)
@@ -452,8 +454,11 @@ Partial Class frmPrincipal
         '
         'pnlRegistro
         '
-        Me.pnlRegistro.Controls.Add(Me.Button2)
-        Me.pnlRegistro.Controls.Add(Me.Button1)
+        Me.pnlRegistro.Controls.Add(Me.BtnObtenerRegistro)
+        Me.pnlRegistro.Controls.Add(Me.BtnEliminarRegistro)
+        Me.pnlRegistro.Controls.Add(Me.dgvRegistro)
+        Me.pnlRegistro.Controls.Add(Me.BtnModificarRegistro)
+        Me.pnlRegistro.Controls.Add(Me.BtnGuardarR)
         Me.pnlRegistro.Controls.Add(Me.PictureBox9)
         Me.pnlRegistro.Controls.Add(Me.PictureBox4)
         Me.pnlRegistro.Controls.Add(Me.Panel7)
@@ -464,9 +469,6 @@ Partial Class frmPrincipal
         Me.pnlRegistro.Controls.Add(Me.PictureBox6)
         Me.pnlRegistro.Controls.Add(Me.Panel5)
         Me.pnlRegistro.Controls.Add(Me.txtTelefono)
-        Me.pnlRegistro.Controls.Add(Me.PictureBox7)
-        Me.pnlRegistro.Controls.Add(Me.Panel6)
-        Me.pnlRegistro.Controls.Add(Me.txtSexo)
         Me.pnlRegistro.Controls.Add(Me.PictureBox5)
         Me.pnlRegistro.Controls.Add(Me.Panel4)
         Me.pnlRegistro.Controls.Add(Me.txtNombre)
@@ -481,46 +483,92 @@ Partial Class frmPrincipal
         Me.pnlRegistro.TabIndex = 4
         Me.pnlRegistro.Visible = False
         '
-        'Button2
+        'BtnObtenerRegistro
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(621, 374)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(306, 82)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "   Modificar"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnObtenerRegistro.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnObtenerRegistro.FlatAppearance.BorderSize = 0
+        Me.BtnObtenerRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnObtenerRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnObtenerRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnObtenerRegistro.Image = CType(resources.GetObject("BtnObtenerRegistro.Image"), System.Drawing.Image)
+        Me.BtnObtenerRegistro.Location = New System.Drawing.Point(478, 331)
+        Me.BtnObtenerRegistro.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnObtenerRegistro.Name = "BtnObtenerRegistro"
+        Me.BtnObtenerRegistro.Size = New System.Drawing.Size(306, 82)
+        Me.BtnObtenerRegistro.TabIndex = 32
+        Me.BtnObtenerRegistro.Text = "   Obtener"
+        Me.BtnObtenerRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnObtenerRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnObtenerRegistro.UseVisualStyleBackColor = False
         '
-        'Button1
+        'BtnEliminarRegistro
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(621, 260)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(306, 82)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "   Agregar"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnEliminarRegistro.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnEliminarRegistro.FlatAppearance.BorderSize = 0
+        Me.BtnEliminarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminarRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnEliminarRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnEliminarRegistro.Image = CType(resources.GetObject("BtnEliminarRegistro.Image"), System.Drawing.Image)
+        Me.BtnEliminarRegistro.Location = New System.Drawing.Point(478, 232)
+        Me.BtnEliminarRegistro.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnEliminarRegistro.Name = "BtnEliminarRegistro"
+        Me.BtnEliminarRegistro.Size = New System.Drawing.Size(306, 82)
+        Me.BtnEliminarRegistro.TabIndex = 31
+        Me.BtnEliminarRegistro.Text = "   Eliminar"
+        Me.BtnEliminarRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnEliminarRegistro.UseVisualStyleBackColor = False
+        '
+        'dgvRegistro
+        '
+        Me.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegistro.Location = New System.Drawing.Point(20, 474)
+        Me.dgvRegistro.Name = "dgvRegistro"
+        Me.dgvRegistro.RowHeadersWidth = 62
+        Me.dgvRegistro.RowTemplate.Height = 28
+        Me.dgvRegistro.Size = New System.Drawing.Size(952, 205)
+        Me.dgvRegistro.TabIndex = 30
+        '
+        'BtnModificarRegistro
+        '
+        Me.BtnModificarRegistro.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnModificarRegistro.FlatAppearance.BorderSize = 0
+        Me.BtnModificarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificarRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnModificarRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnModificarRegistro.Image = CType(resources.GetObject("BtnModificarRegistro.Image"), System.Drawing.Image)
+        Me.BtnModificarRegistro.Location = New System.Drawing.Point(478, 138)
+        Me.BtnModificarRegistro.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnModificarRegistro.Name = "BtnModificarRegistro"
+        Me.BtnModificarRegistro.Size = New System.Drawing.Size(306, 82)
+        Me.BtnModificarRegistro.TabIndex = 29
+        Me.BtnModificarRegistro.Text = "   Modificar"
+        Me.BtnModificarRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnModificarRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnModificarRegistro.UseVisualStyleBackColor = False
+        '
+        'BtnGuardarR
+        '
+        Me.BtnGuardarR.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGuardarR.FlatAppearance.BorderSize = 0
+        Me.BtnGuardarR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnGuardarR.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnGuardarR.Image = CType(resources.GetObject("BtnGuardarR.Image"), System.Drawing.Image)
+        Me.BtnGuardarR.Location = New System.Drawing.Point(478, 45)
+        Me.BtnGuardarR.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnGuardarR.Name = "BtnGuardarR"
+        Me.BtnGuardarR.Size = New System.Drawing.Size(306, 82)
+        Me.BtnGuardarR.TabIndex = 8
+        Me.BtnGuardarR.Text = "   Agregar"
+        Me.BtnGuardarR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnGuardarR.UseVisualStyleBackColor = False
         '
         'PictureBox9
         '
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(142, 97)
+        Me.PictureBox9.Location = New System.Drawing.Point(21, 18)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(50, 51)
@@ -531,7 +579,7 @@ Partial Class frmPrincipal
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(142, 474)
+        Me.PictureBox4.Location = New System.Drawing.Point(20, 322)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(46, 49)
@@ -542,7 +590,7 @@ Partial Class frmPrincipal
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(194, 518)
+        Me.Panel7.Location = New System.Drawing.Point(70, 366)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(370, 5)
@@ -554,7 +602,7 @@ Partial Class frmPrincipal
         Me.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCedula.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCedula.Location = New System.Drawing.Point(196, 478)
+        Me.txtCedula.Location = New System.Drawing.Point(74, 326)
         Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCedula.Multiline = True
         Me.txtCedula.Name = "txtCedula"
@@ -564,7 +612,7 @@ Partial Class frmPrincipal
         'PictureBox8
         '
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(141, 398)
+        Me.PictureBox8.Location = New System.Drawing.Point(18, 246)
         Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(50, 51)
@@ -575,7 +623,7 @@ Partial Class frmPrincipal
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(194, 443)
+        Me.Panel8.Location = New System.Drawing.Point(70, 291)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(370, 5)
@@ -587,7 +635,7 @@ Partial Class frmPrincipal
         Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtDireccion.Location = New System.Drawing.Point(194, 403)
+        Me.txtDireccion.Location = New System.Drawing.Point(70, 251)
         Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDireccion.Multiline = True
         Me.txtDireccion.Name = "txtDireccion"
@@ -597,7 +645,7 @@ Partial Class frmPrincipal
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(142, 326)
+        Me.PictureBox6.Location = New System.Drawing.Point(20, 174)
         Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(46, 49)
@@ -608,7 +656,7 @@ Partial Class frmPrincipal
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(194, 371)
+        Me.Panel5.Location = New System.Drawing.Point(70, 218)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(370, 5)
@@ -620,50 +668,17 @@ Partial Class frmPrincipal
         Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtTelefono.Location = New System.Drawing.Point(196, 331)
+        Me.txtTelefono.Location = New System.Drawing.Point(74, 178)
         Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefono.Multiline = True
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(370, 46)
         Me.txtTelefono.TabIndex = 19
         '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(141, 251)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(52, 51)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 18
-        Me.PictureBox7.TabStop = False
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(194, 295)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(370, 5)
-        Me.Panel6.TabIndex = 17
-        '
-        'txtSexo
-        '
-        Me.txtSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.txtSexo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.txtSexo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtSexo.Location = New System.Drawing.Point(194, 255)
-        Me.txtSexo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtSexo.Multiline = True
-        Me.txtSexo.Name = "txtSexo"
-        Me.txtSexo.Size = New System.Drawing.Size(370, 46)
-        Me.txtSexo.TabIndex = 16
-        '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(141, 174)
+        Me.PictureBox5.Location = New System.Drawing.Point(20, 95)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(52, 51)
@@ -674,7 +689,7 @@ Partial Class frmPrincipal
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(194, 218)
+        Me.Panel4.Location = New System.Drawing.Point(74, 140)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(370, 5)
@@ -686,7 +701,7 @@ Partial Class frmPrincipal
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(194, 178)
+        Me.txtNombre.Location = New System.Drawing.Point(74, 100)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombre.Multiline = True
         Me.txtNombre.Name = "txtNombre"
@@ -696,7 +711,7 @@ Partial Class frmPrincipal
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(194, 143)
+        Me.Panel3.Location = New System.Drawing.Point(74, 65)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(370, 5)
@@ -708,7 +723,7 @@ Partial Class frmPrincipal
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCodigo.Location = New System.Drawing.Point(194, 103)
+        Me.txtCodigo.Location = New System.Drawing.Point(74, 25)
         Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigo.Multiline = True
         Me.txtCodigo.Name = "txtCodigo"
@@ -772,7 +787,7 @@ Partial Class frmPrincipal
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
-        Me.BtnCancelar.Location = New System.Drawing.Point(595, 259)
+        Me.BtnCancelar.Location = New System.Drawing.Point(596, 258)
         Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(306, 82)
@@ -790,7 +805,7 @@ Partial Class frmPrincipal
         Me.BtnRealizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnRealizar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnRealizar.Image = CType(resources.GetObject("BtnRealizar.Image"), System.Drawing.Image)
-        Me.BtnRealizar.Location = New System.Drawing.Point(595, 143)
+        Me.BtnRealizar.Location = New System.Drawing.Point(596, 143)
         Me.BtnRealizar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnRealizar.Name = "BtnRealizar"
         Me.BtnRealizar.Size = New System.Drawing.Size(306, 82)
@@ -814,7 +829,7 @@ Partial Class frmPrincipal
         'PictureBox37
         '
         Me.PictureBox37.Image = Global.GUI.My.Resources.Resources.etiqueta
-        Me.PictureBox37.Location = New System.Drawing.Point(469, 590)
+        Me.PictureBox37.Location = New System.Drawing.Point(470, 591)
         Me.PictureBox37.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox37.Name = "PictureBox37"
         Me.PictureBox37.Size = New System.Drawing.Size(46, 49)
@@ -825,7 +840,7 @@ Partial Class frmPrincipal
         'Panel22
         '
         Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel22.Location = New System.Drawing.Point(521, 634)
+        Me.Panel22.Location = New System.Drawing.Point(520, 634)
         Me.Panel22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(370, 5)
@@ -848,7 +863,7 @@ Partial Class frmPrincipal
         Me.TxtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtTotal.Location = New System.Drawing.Point(523, 594)
+        Me.TxtTotal.Location = New System.Drawing.Point(524, 594)
         Me.TxtTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtTotal.Multiline = True
         Me.TxtTotal.Name = "TxtTotal"
@@ -858,7 +873,7 @@ Partial Class frmPrincipal
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(78, 630)
+        Me.Panel10.Location = New System.Drawing.Point(78, 631)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(370, 5)
@@ -870,7 +885,7 @@ Partial Class frmPrincipal
         Me.txtPrecioPorPago.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrecioPorPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtPrecioPorPago.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtPrecioPorPago.Location = New System.Drawing.Point(80, 590)
+        Me.txtPrecioPorPago.Location = New System.Drawing.Point(80, 591)
         Me.txtPrecioPorPago.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPrecioPorPago.Multiline = True
         Me.txtPrecioPorPago.Name = "txtPrecioPorPago"
@@ -1185,7 +1200,7 @@ Partial Class frmPrincipal
         'PictureBox20
         '
         Me.PictureBox20.Image = Global.GUI.My.Resources.Resources.precios
-        Me.PictureBox20.Location = New System.Drawing.Point(556, 216)
+        Me.PictureBox20.Location = New System.Drawing.Point(556, 215)
         Me.PictureBox20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.Size = New System.Drawing.Size(46, 49)
@@ -1218,7 +1233,7 @@ Partial Class frmPrincipal
         'PictureBox19
         '
         Me.PictureBox19.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio1
-        Me.PictureBox19.Location = New System.Drawing.Point(556, 139)
+        Me.PictureBox19.Location = New System.Drawing.Point(556, 138)
         Me.PictureBox19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(46, 49)
@@ -1251,7 +1266,7 @@ Partial Class frmPrincipal
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.GUI.My.Resources.Resources.cantidad
-        Me.PictureBox18.Location = New System.Drawing.Point(51, 550)
+        Me.PictureBox18.Location = New System.Drawing.Point(51, 551)
         Me.PictureBox18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(46, 49)
@@ -1262,7 +1277,7 @@ Partial Class frmPrincipal
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel17.Location = New System.Drawing.Point(103, 594)
+        Me.Panel17.Location = New System.Drawing.Point(104, 594)
         Me.Panel17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(370, 5)
@@ -1284,7 +1299,7 @@ Partial Class frmPrincipal
         'PictureBox17
         '
         Me.PictureBox17.Image = Global.GUI.My.Resources.Resources.web
-        Me.PictureBox17.Location = New System.Drawing.Point(52, 473)
+        Me.PictureBox17.Location = New System.Drawing.Point(52, 472)
         Me.PictureBox17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(46, 49)
@@ -1322,10 +1337,10 @@ Partial Class frmPrincipal
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
-        Me.BtnModificar.Location = New System.Drawing.Point(785, 284)
+        Me.BtnModificar.Location = New System.Drawing.Point(784, 285)
         Me.BtnModificar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(193, 67)
+        Me.BtnModificar.Size = New System.Drawing.Size(194, 68)
         Me.BtnModificar.TabIndex = 29
         Me.BtnModificar.Text = "   Modificar"
         Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1340,10 +1355,10 @@ Partial Class frmPrincipal
         Me.BtnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnFacturar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnFacturar.Image = CType(resources.GetObject("BtnFacturar.Image"), System.Drawing.Image)
-        Me.BtnFacturar.Location = New System.Drawing.Point(556, 284)
+        Me.BtnFacturar.Location = New System.Drawing.Point(556, 285)
         Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnFacturar.Name = "BtnFacturar"
-        Me.BtnFacturar.Size = New System.Drawing.Size(193, 67)
+        Me.BtnFacturar.Size = New System.Drawing.Size(194, 68)
         Me.BtnFacturar.TabIndex = 8
         Me.BtnFacturar.Text = "   Facturar"
         Me.BtnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1452,7 +1467,7 @@ Partial Class frmPrincipal
         'Panel31
         '
         Me.Panel31.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel31.Location = New System.Drawing.Point(104, 299)
+        Me.Panel31.Location = New System.Drawing.Point(104, 298)
         Me.Panel31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(370, 5)
@@ -1464,7 +1479,7 @@ Partial Class frmPrincipal
         Me.TxtTipoDePagoFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTipoDePagoFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtTipoDePagoFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtTipoDePagoFacturacion.Location = New System.Drawing.Point(106, 259)
+        Me.TxtTipoDePagoFacturacion.Location = New System.Drawing.Point(106, 258)
         Me.TxtTipoDePagoFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtTipoDePagoFacturacion.Multiline = True
         Me.TxtTipoDePagoFacturacion.Name = "TxtTipoDePagoFacturacion"
@@ -1474,7 +1489,7 @@ Partial Class frmPrincipal
         'PictureBox34
         '
         Me.PictureBox34.Image = Global.GUI.My.Resources.Resources.calendario
-        Me.PictureBox34.Location = New System.Drawing.Point(51, 179)
+        Me.PictureBox34.Location = New System.Drawing.Point(51, 178)
         Me.PictureBox34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox34.Name = "PictureBox34"
         Me.PictureBox34.Size = New System.Drawing.Size(52, 51)
@@ -1595,14 +1610,15 @@ Partial Class frmPrincipal
         '
         'pnlArticulos
         '
-        Me.pnlArticulos.Controls.Add(Me.BtnBuscar)
-        Me.pnlArticulos.Controls.Add(Me.BtnEliminar)
-        Me.pnlArticulos.Controls.Add(Me.Button7)
-        Me.pnlArticulos.Controls.Add(Me.Button8)
+        Me.pnlArticulos.Controls.Add(Me.dgvArticulos)
+        Me.pnlArticulos.Controls.Add(Me.BtnObtenerArticulos)
+        Me.pnlArticulos.Controls.Add(Me.BtnEliminarArticulo)
+        Me.pnlArticulos.Controls.Add(Me.BtnModificarArticulo)
+        Me.pnlArticulos.Controls.Add(Me.BtnGuardarArticulos)
         Me.pnlArticulos.Controls.Add(Me.PictureBox23)
         Me.pnlArticulos.Controls.Add(Me.PictureBox24)
         Me.pnlArticulos.Controls.Add(Me.Panel23)
-        Me.pnlArticulos.Controls.Add(Me.txtEstadosArticulo)
+        Me.pnlArticulos.Controls.Add(Me.txtCantidadArticulo)
         Me.pnlArticulos.Controls.Add(Me.PictureBox25)
         Me.pnlArticulos.Controls.Add(Me.Panel24)
         Me.pnlArticulos.Controls.Add(Me.TxtPrecioArticulos)
@@ -1626,82 +1642,92 @@ Partial Class frmPrincipal
         Me.pnlArticulos.TabIndex = 37
         Me.pnlArticulos.Visible = False
         '
-        'BtnBuscar
+        'dgvArticulos
         '
-        Me.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.BtnBuscar.FlatAppearance.BorderSize = 0
-        Me.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.BtnBuscar.Image = CType(resources.GetObject("BtnBuscar.Image"), System.Drawing.Image)
-        Me.BtnBuscar.Location = New System.Drawing.Point(580, 474)
-        Me.BtnBuscar.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(306, 82)
-        Me.BtnBuscar.TabIndex = 29
-        Me.BtnBuscar.Text = "   Buscar"
-        Me.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnBuscar.UseVisualStyleBackColor = False
+        Me.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvArticulos.Location = New System.Drawing.Point(70, 473)
+        Me.dgvArticulos.Name = "dgvArticulos"
+        Me.dgvArticulos.RowHeadersWidth = 62
+        Me.dgvArticulos.RowTemplate.Height = 28
+        Me.dgvArticulos.Size = New System.Drawing.Size(843, 164)
+        Me.dgvArticulos.TabIndex = 30
         '
-        'BtnEliminar
+        'BtnObtenerArticulos
         '
-        Me.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.BtnEliminar.FlatAppearance.BorderSize = 0
-        Me.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.BtnEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.BtnEliminar.Image = CType(resources.GetObject("BtnEliminar.Image"), System.Drawing.Image)
-        Me.BtnEliminar.Location = New System.Drawing.Point(580, 351)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(0)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(306, 82)
-        Me.BtnEliminar.TabIndex = 29
-        Me.BtnEliminar.Text = "   Eliminar"
-        Me.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnEliminar.UseVisualStyleBackColor = False
+        Me.BtnObtenerArticulos.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnObtenerArticulos.FlatAppearance.BorderSize = 0
+        Me.BtnObtenerArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnObtenerArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnObtenerArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnObtenerArticulos.Image = CType(resources.GetObject("BtnObtenerArticulos.Image"), System.Drawing.Image)
+        Me.BtnObtenerArticulos.Location = New System.Drawing.Point(546, 376)
+        Me.BtnObtenerArticulos.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnObtenerArticulos.Name = "BtnObtenerArticulos"
+        Me.BtnObtenerArticulos.Size = New System.Drawing.Size(306, 82)
+        Me.BtnObtenerArticulos.TabIndex = 29
+        Me.BtnObtenerArticulos.Text = "   Obtener"
+        Me.BtnObtenerArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnObtenerArticulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnObtenerArticulos.UseVisualStyleBackColor = False
         '
-        'Button7
+        'BtnEliminarArticulo
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(580, 237)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(306, 82)
-        Me.Button7.TabIndex = 29
-        Me.Button7.Text = "   Modificar"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.BtnEliminarArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnEliminarArticulo.FlatAppearance.BorderSize = 0
+        Me.BtnEliminarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEliminarArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnEliminarArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnEliminarArticulo.Image = CType(resources.GetObject("BtnEliminarArticulo.Image"), System.Drawing.Image)
+        Me.BtnEliminarArticulo.Location = New System.Drawing.Point(546, 253)
+        Me.BtnEliminarArticulo.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnEliminarArticulo.Name = "BtnEliminarArticulo"
+        Me.BtnEliminarArticulo.Size = New System.Drawing.Size(306, 82)
+        Me.BtnEliminarArticulo.TabIndex = 29
+        Me.BtnEliminarArticulo.Text = "   Eliminar"
+        Me.BtnEliminarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnEliminarArticulo.UseVisualStyleBackColor = False
         '
-        'Button8
+        'BtnModificarArticulo
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.Location = New System.Drawing.Point(580, 126)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(306, 82)
-        Me.Button8.TabIndex = 8
-        Me.Button8.Text = "   Agregar"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.BtnModificarArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnModificarArticulo.FlatAppearance.BorderSize = 0
+        Me.BtnModificarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificarArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnModificarArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnModificarArticulo.Image = CType(resources.GetObject("BtnModificarArticulo.Image"), System.Drawing.Image)
+        Me.BtnModificarArticulo.Location = New System.Drawing.Point(546, 139)
+        Me.BtnModificarArticulo.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnModificarArticulo.Name = "BtnModificarArticulo"
+        Me.BtnModificarArticulo.Size = New System.Drawing.Size(306, 82)
+        Me.BtnModificarArticulo.TabIndex = 29
+        Me.BtnModificarArticulo.Text = "   Modificar"
+        Me.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnModificarArticulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnModificarArticulo.UseVisualStyleBackColor = False
+        '
+        'BtnGuardarArticulos
+        '
+        Me.BtnGuardarArticulos.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGuardarArticulos.FlatAppearance.BorderSize = 0
+        Me.BtnGuardarArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardarArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.BtnGuardarArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.BtnGuardarArticulos.Image = CType(resources.GetObject("BtnGuardarArticulos.Image"), System.Drawing.Image)
+        Me.BtnGuardarArticulos.Location = New System.Drawing.Point(546, 29)
+        Me.BtnGuardarArticulos.Margin = New System.Windows.Forms.Padding(0)
+        Me.BtnGuardarArticulos.Name = "BtnGuardarArticulos"
+        Me.BtnGuardarArticulos.Size = New System.Drawing.Size(306, 82)
+        Me.BtnGuardarArticulos.TabIndex = 8
+        Me.BtnGuardarArticulos.Text = "   Agregar"
+        Me.BtnGuardarArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarArticulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnGuardarArticulos.UseVisualStyleBackColor = False
         '
         'PictureBox23
         '
         Me.PictureBox23.Image = CType(resources.GetObject("PictureBox23.Image"), System.Drawing.Image)
-        Me.PictureBox23.Location = New System.Drawing.Point(142, 97)
+        Me.PictureBox23.Location = New System.Drawing.Point(32, 12)
         Me.PictureBox23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox23.Name = "PictureBox23"
         Me.PictureBox23.Size = New System.Drawing.Size(50, 51)
@@ -1712,7 +1738,7 @@ Partial Class frmPrincipal
         'PictureBox24
         '
         Me.PictureBox24.Image = Global.GUI.My.Resources.Resources.cheque
-        Me.PictureBox24.Location = New System.Drawing.Point(142, 474)
+        Me.PictureBox24.Location = New System.Drawing.Point(32, 389)
         Me.PictureBox24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox24.Name = "PictureBox24"
         Me.PictureBox24.Size = New System.Drawing.Size(46, 49)
@@ -1723,29 +1749,29 @@ Partial Class frmPrincipal
         'Panel23
         '
         Me.Panel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel23.Location = New System.Drawing.Point(194, 518)
+        Me.Panel23.Location = New System.Drawing.Point(82, 434)
         Me.Panel23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(370, 5)
         Me.Panel23.TabIndex = 26
         '
-        'txtEstadosArticulo
+        'txtCantidadArticulo
         '
-        Me.txtEstadosArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.txtEstadosArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtEstadosArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.txtEstadosArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtEstadosArticulo.Location = New System.Drawing.Point(196, 478)
-        Me.txtEstadosArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtEstadosArticulo.Multiline = True
-        Me.txtEstadosArticulo.Name = "txtEstadosArticulo"
-        Me.txtEstadosArticulo.Size = New System.Drawing.Size(370, 46)
-        Me.txtEstadosArticulo.TabIndex = 25
+        Me.txtCantidadArticulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.txtCantidadArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCantidadArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.txtCantidadArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.txtCantidadArticulo.Location = New System.Drawing.Point(86, 394)
+        Me.txtCantidadArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtCantidadArticulo.Multiline = True
+        Me.txtCantidadArticulo.Name = "txtCantidadArticulo"
+        Me.txtCantidadArticulo.Size = New System.Drawing.Size(370, 46)
+        Me.txtCantidadArticulo.TabIndex = 25
         '
         'PictureBox25
         '
         Me.PictureBox25.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio
-        Me.PictureBox25.Location = New System.Drawing.Point(141, 398)
+        Me.PictureBox25.Location = New System.Drawing.Point(30, 314)
         Me.PictureBox25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox25.Name = "PictureBox25"
         Me.PictureBox25.Size = New System.Drawing.Size(50, 51)
@@ -1756,7 +1782,7 @@ Partial Class frmPrincipal
         'Panel24
         '
         Me.Panel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel24.Location = New System.Drawing.Point(194, 443)
+        Me.Panel24.Location = New System.Drawing.Point(82, 358)
         Me.Panel24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(370, 5)
@@ -1768,7 +1794,7 @@ Partial Class frmPrincipal
         Me.TxtPrecioArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPrecioArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtPrecioArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtPrecioArticulos.Location = New System.Drawing.Point(194, 403)
+        Me.TxtPrecioArticulos.Location = New System.Drawing.Point(82, 318)
         Me.TxtPrecioArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtPrecioArticulos.Multiline = True
         Me.TxtPrecioArticulos.Name = "TxtPrecioArticulos"
@@ -1778,7 +1804,7 @@ Partial Class frmPrincipal
         'PictureBox26
         '
         Me.PictureBox26.Image = Global.GUI.My.Resources.Resources.categorizacion
-        Me.PictureBox26.Location = New System.Drawing.Point(142, 326)
+        Me.PictureBox26.Location = New System.Drawing.Point(32, 242)
         Me.PictureBox26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox26.Name = "PictureBox26"
         Me.PictureBox26.Size = New System.Drawing.Size(46, 49)
@@ -1789,7 +1815,7 @@ Partial Class frmPrincipal
         'Panel25
         '
         Me.Panel25.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel25.Location = New System.Drawing.Point(194, 371)
+        Me.Panel25.Location = New System.Drawing.Point(82, 286)
         Me.Panel25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(370, 5)
@@ -1801,7 +1827,7 @@ Partial Class frmPrincipal
         Me.TxtCategoriaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCategoriaArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtCategoriaArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtCategoriaArticulos.Location = New System.Drawing.Point(196, 331)
+        Me.TxtCategoriaArticulos.Location = New System.Drawing.Point(86, 246)
         Me.TxtCategoriaArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtCategoriaArticulos.Multiline = True
         Me.TxtCategoriaArticulos.Name = "TxtCategoriaArticulos"
@@ -1811,7 +1837,7 @@ Partial Class frmPrincipal
         'PictureBox27
         '
         Me.PictureBox27.Image = Global.GUI.My.Resources.Resources.proveedor
-        Me.PictureBox27.Location = New System.Drawing.Point(141, 251)
+        Me.PictureBox27.Location = New System.Drawing.Point(30, 166)
         Me.PictureBox27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox27.Name = "PictureBox27"
         Me.PictureBox27.Size = New System.Drawing.Size(52, 51)
@@ -1822,7 +1848,7 @@ Partial Class frmPrincipal
         'Panel26
         '
         Me.Panel26.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel26.Location = New System.Drawing.Point(194, 295)
+        Me.Panel26.Location = New System.Drawing.Point(82, 211)
         Me.Panel26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(370, 5)
@@ -1834,7 +1860,7 @@ Partial Class frmPrincipal
         Me.TxtProveedorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtProveedorArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtProveedorArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtProveedorArticulo.Location = New System.Drawing.Point(194, 255)
+        Me.TxtProveedorArticulo.Location = New System.Drawing.Point(82, 171)
         Me.TxtProveedorArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtProveedorArticulo.Multiline = True
         Me.TxtProveedorArticulo.Name = "TxtProveedorArticulo"
@@ -1844,7 +1870,7 @@ Partial Class frmPrincipal
         'PictureBox28
         '
         Me.PictureBox28.Image = CType(resources.GetObject("PictureBox28.Image"), System.Drawing.Image)
-        Me.PictureBox28.Location = New System.Drawing.Point(141, 174)
+        Me.PictureBox28.Location = New System.Drawing.Point(30, 89)
         Me.PictureBox28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox28.Name = "PictureBox28"
         Me.PictureBox28.Size = New System.Drawing.Size(52, 51)
@@ -1855,7 +1881,7 @@ Partial Class frmPrincipal
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel27.Location = New System.Drawing.Point(194, 218)
+        Me.Panel27.Location = New System.Drawing.Point(82, 134)
         Me.Panel27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(370, 5)
@@ -1867,7 +1893,7 @@ Partial Class frmPrincipal
         Me.TxtNombreArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtNombreArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtNombreArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtNombreArticulo.Location = New System.Drawing.Point(194, 178)
+        Me.TxtNombreArticulo.Location = New System.Drawing.Point(82, 94)
         Me.TxtNombreArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtNombreArticulo.Multiline = True
         Me.TxtNombreArticulo.Name = "TxtNombreArticulo"
@@ -1877,7 +1903,7 @@ Partial Class frmPrincipal
         'Panel28
         '
         Me.Panel28.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel28.Location = New System.Drawing.Point(194, 143)
+        Me.Panel28.Location = New System.Drawing.Point(82, 58)
         Me.Panel28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(370, 5)
@@ -1889,7 +1915,7 @@ Partial Class frmPrincipal
         Me.TxtIdCodigoArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdCodigoArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdCodigoArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdCodigoArticulo.Location = New System.Drawing.Point(194, 103)
+        Me.TxtIdCodigoArticulo.Location = New System.Drawing.Point(82, 18)
         Me.TxtIdCodigoArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdCodigoArticulo.Multiline = True
         Me.TxtIdCodigoArticulo.Name = "TxtIdCodigoArticulo"
@@ -1914,10 +1940,10 @@ Partial Class frmPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1335, 769)
-        Me.Controls.Add(Me.pnlInicio)
         Me.Controls.Add(Me.pnlRegistro)
-        Me.Controls.Add(Me.pnlVentas)
         Me.Controls.Add(Me.pnlArticulos)
+        Me.Controls.Add(Me.pnlVentas)
+        Me.Controls.Add(Me.pnlInicio)
         Me.Controls.Add(Me.pnlFacturacion)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -1933,11 +1959,11 @@ Partial Class frmPrincipal
         Me.pnlInicio.PerformLayout()
         Me.pnlRegistro.ResumeLayout(False)
         Me.pnlRegistro.PerformLayout()
+        CType(Me.dgvRegistro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn2salir, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlVentas.ResumeLayout(False)
@@ -1968,6 +1994,7 @@ Partial Class frmPrincipal
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlArticulos.ResumeLayout(False)
         Me.pnlArticulos.PerformLayout()
+        CType(Me.dgvArticulos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2004,9 +2031,6 @@ Partial Class frmPrincipal
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents txtTelefono As TextBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents txtSexo As TextBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents txtNombre As TextBox
@@ -2017,8 +2041,8 @@ Partial Class frmPrincipal
     Friend WithEvents Panel8 As Panel
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnModificarRegistro As Button
+    Friend WithEvents BtnGuardarR As Button
     Friend WithEvents pnlVentas As Panel
     Friend WithEvents BtnRealizar As Button
     Friend WithEvents PictureBox2 As PictureBox
@@ -2061,12 +2085,12 @@ Partial Class frmPrincipal
     Friend WithEvents Panel34 As Panel
     Friend WithEvents TxtIdFacturacion As TextBox
     Friend WithEvents pnlArticulos As Panel
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents BtnModificarArticulo As Button
+    Friend WithEvents BtnGuardarArticulos As Button
     Friend WithEvents PictureBox23 As PictureBox
     Friend WithEvents PictureBox24 As PictureBox
     Friend WithEvents Panel23 As Panel
-    Friend WithEvents txtEstadosArticulo As TextBox
+    Friend WithEvents txtCantidadArticulo As TextBox
     Friend WithEvents PictureBox25 As PictureBox
     Friend WithEvents Panel24 As Panel
     Friend WithEvents TxtPrecioArticulos As TextBox
@@ -2085,8 +2109,8 @@ Partial Class frmPrincipal
     Friend WithEvents PictureBox15 As PictureBox
     Friend WithEvents PictureBox36 As PictureBox
     Friend WithEvents PictureBox29 As PictureBox
-    Friend WithEvents BtnEliminar As Button
-    Friend WithEvents BtnBuscar As Button
+    Friend WithEvents BtnEliminarArticulo As Button
+    Friend WithEvents BtnObtenerArticulos As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents PictureBox37 As PictureBox
     Friend WithEvents Panel22 As Panel
@@ -2117,4 +2141,8 @@ Partial Class frmPrincipal
     Friend WithEvents dtDescuento As DataGridViewTextBoxColumn
     Friend WithEvents dtSubTotal As DataGridViewTextBoxColumn
     Friend WithEvents dtTotal As DataGridViewTextBoxColumn
+    Friend WithEvents dgvRegistro As DataGridView
+    Friend WithEvents BtnEliminarRegistro As Button
+    Friend WithEvents BtnObtenerRegistro As Button
+    Friend WithEvents dgvArticulos As DataGridView
 End Class
