@@ -1,4 +1,9 @@
-﻿    Public Class frmPrincipal
+﻿Imports BLL
+Imports CapaEntidades
+
+Public Class frmPrincipal
+    Private _bll As New ClienteService()
+    Private _bllProducto As New ProductoService()
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
@@ -71,7 +76,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetPlaceholder(txtCodigo, "Codigo")
         SetPlaceholder(txtNombre, "Nombre")
-        SetPlaceholder(txtSexo, "Sexo")
+        '' SetPlaceholder(txtSexo, "Sexo")''
         SetPlaceholder(txtTelefono, "Telefono")
         SetPlaceholder(txtDireccion, "Direccion")
         SetPlaceholder(txtCedula, "Cedula")
@@ -86,8 +91,8 @@
         ClearPlaceholder(txtNombre, "Nombre")
     End Sub
 
-    Private Sub txtSexo_Enter(sender As Object, e As EventArgs) Handles txtSexo.Enter
-        ClearPlaceholder(txtSexo, "Sexo")
+    Private Sub txtSexo_Enter(sender As Object, e As EventArgs)
+        ''ClearPlaceholder(txtSexo, "Sexo")''
     End Sub
 
     Private Sub txtTelefono_Enter(sender As Object, e As EventArgs) Handles txtTelefono.Enter
@@ -110,8 +115,8 @@
         SetPlaceholderOnLeave(txtNombre, "Nombre")
     End Sub
 
-    Private Sub txtSexo_Leave(sender As Object, e As EventArgs) Handles txtSexo.Leave
-        SetPlaceholderOnLeave(txtSexo, "Sexo")
+    Private Sub txtSexo_Leave(sender As Object, e As EventArgs)
+        ''//SetPlaceholderOnLeave(txtSexo, "Sexo")''
     End Sub
 
     Private Sub txtTelefono_Leave(sender As Object, e As EventArgs) Handles txtTelefono.Leave
@@ -217,7 +222,7 @@
         SetPlaceholderOnLeave(TxtProveedorArticulo, "Proveedor Artículo")
         SetPlaceholderOnLeave(TxtCategoriaArticulos, "Categoría Artículos")
         SetPlaceholderOnLeave(TxtPrecioArticulos, "Precio Artículos")
-        SetPlaceholderOnLeave(txtEstadosArticulo, "Estados Artículo")
+        SetPlaceholderOnLeave(txtCantidadArticulo, "Cantidad Artículo")
     End Sub
 
     Private Sub TxtIdCodigoArticulo_Enter(sender As Object, e As EventArgs) Handles TxtIdCodigoArticulo.Enter
@@ -260,12 +265,12 @@
         SetPlaceholderOnLeave(TxtPrecioArticulos, "Precio Artículos")
     End Sub
 
-    Private Sub txtEstadosArticulo_Enter(sender As Object, e As EventArgs) Handles txtEstadosArticulo.Enter
-        ClearPlaceholder(txtEstadosArticulo, "Estados Artículo")
+    Private Sub txtEstadosArticulo_Enter(sender As Object, e As EventArgs) Handles txtCantidadArticulo.Enter
+        ClearPlaceholder(txtCantidadArticulo, "Cantidad Artículo")
     End Sub
 
-    Private Sub txtEstadosArticulo_Leave(sender As Object, e As EventArgs) Handles txtEstadosArticulo.Leave
-        SetPlaceholderOnLeave(txtEstadosArticulo, "Estados Artículo")
+    Private Sub txtEstadosArticulo_Leave(sender As Object, e As EventArgs) Handles txtCantidadArticulo.Leave
+        SetPlaceholderOnLeave(txtCantidadArticulo, "Cantidad Artículo")
     End Sub
 
 #End Region
@@ -404,4 +409,136 @@
 
 #End Region
 
+#Region "btn Registro"
+    Private Sub BtnGuardarR_Click(sender As Object, e As EventArgs) Handles BtnGuardarR.Click
+
+        Try
+            Dim cliente As New Cliente With {
+       .IdCliente = txtCodigo.Text,
+       .Nombre = txtNombre.Text,
+       .Telefono = txtTelefono.Text,
+       .Direccion = txtDireccion.Text,
+       .Cedula = txtCedula.Text
+       }
+            _bll.InsertarClienteService(cliente)
+            dgvRegistro.DataSource = _bll.ObtenerClientesService()
+
+            LimpiarTextos(txtCodigo, txtNombre, txtTelefono, txtDireccion, txtCedula)
+        Catch ex As Exception
+            MessageBox.Show("Los campos no se pueden quedar vacios")
+        End Try
+
+
+    End Sub
+
+
+
+    Private Sub BtnGuardarRegistro_Click(sender As Object, e As EventArgs) Handles BtnModificarRegistro.Click 'Actualizar'
+
+        Try
+            Dim cliente As New Cliente With {
+        .IdCliente = txtCodigo.Text,
+        .Nombre = txtNombre.Text,
+        .Telefono = txtTelefono.Text,
+        .Direccion = txtDireccion.Text,
+        .Cedula = txtCedula.Text
+        }
+            _bll.ActualizarClienteService(cliente)
+            dgvRegistro.DataSource = _bll.ObtenerClientesService()
+            LimpiarTextos(txtCodigo, txtNombre, txtTelefono, txtDireccion, txtCedula)
+
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+    End Sub
+
+    Private Sub BtnEliminarRegistro_Click(sender As Object, e As EventArgs) Handles BtnEliminarRegistro.Click
+        Try
+            Dim id As Integer = CInt(txtCodigo.Text)
+            _bll.EliminarClienteService(id)
+            dgvRegistro.DataSource = _bll.ObtenerClientesService()
+        Catch Ex As Exception
+            MessageBox.Show("El campo Id es obligatorio")
+        End Try
+    End Sub
+
+    Private Sub pnlRegistro_Paint(sender As Object, e As PaintEventArgs) Handles pnlRegistro.Paint
+
+    End Sub
+
+    Private Sub BtnNuevoRegistro_Click(sender As Object, e As EventArgs) Handles BtnObtenerRegistro.Click
+        _bll.ObtenerClientesService()
+        dgvRegistro.DataSource = _bll.ObtenerClientesService()
+    End Sub
+
+    ''Private Sub pnlRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ''dgvRegistro.DataSource = _bll.ObtenerClientesService()''
+    ''End Sub''
+#End Region
+
+#Region "Articulos"
+    Private Sub BtnGuardarArticulos_Click(sender As Object, e As EventArgs) Handles BtnGuardarArticulos.Click
+        Try
+            Dim producto As New Producto With {
+        .IdProducto = TxtIdCodigoArticulo.Text,
+        .NombreProducto = TxtNombreArticulo.Text,
+        .IdProveedor = TxtProveedorArticulo.Text,
+        .IdCategoria = TxtCategoriaArticulos.Text,
+        .Precio = TxtPrecioArticulos.Text,
+        .Cantidad = txtCantidadArticulo.Text
+        }
+            _bllProducto.InsertarProductoService(producto)
+            dgvArticulos.DataSource = _bllProducto.ObtenerProductoService()
+            LimpiarTextos(TxtIdCodigoArticulo, TxtNombreArticulo, TxtProveedorArticulo, TxtCategoriaArticulos, TxtPrecioArticulos, txtCantidadArticulo)
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+    End Sub
+
+    Private Sub BtnModificarArticulo_Click(sender As Object, e As EventArgs) Handles BtnModificarArticulo.Click
+        Try
+            Dim producto As New Producto With {
+        .IdProducto = TxtIdCodigoArticulo.Text,
+        .NombreProducto = TxtNombreArticulo.Text,
+        .IdProveedor = TxtProveedorArticulo.Text,
+        .IdCategoria = TxtCategoriaArticulos.Text,
+        .Precio = TxtPrecioArticulos.Text,
+        .Cantidad = txtCantidadArticulo.Text
+        }
+
+            _bllProducto.ActualizarProductoService(producto)
+            dgvArticulos.DataSource = _bllProducto.ObtenerProductoService()
+            LimpiarTextos(TxtIdCodigoArticulo, TxtNombreArticulo, TxtProveedorArticulo, TxtCategoriaArticulos, TxtPrecioArticulos, txtCantidadArticulo)
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+    End Sub
+
+    Private Sub BtnEliminarArticulo_Click(sender As Object, e As EventArgs) Handles BtnEliminarArticulo.Click
+        Try
+            Dim id As Integer = CInt(TxtIdCodigoArticulo.Text)
+            _bllProducto.EliminarProductoService(id)
+            dgvArticulos.DataSource = _bllProducto.ObtenerProductoService()
+            LimpiarTextos(TxtIdCodigoArticulo, TxtNombreArticulo, TxtProveedorArticulo, TxtCategoriaArticulos, TxtPrecioArticulos, txtCantidadArticulo)
+        Catch Ex As Exception
+            MessageBox.Show("Debe de llenar el campo Id")
+        End Try
+    End Sub
+
+    Private Sub BtnObtenerArticulos_Click(sender As Object, e As EventArgs) Handles BtnObtenerArticulos.Click
+        _bllProducto.ObtenerProductoService()
+        dgvArticulos.DataSource = _bllProducto.ObtenerProductoService()
+    End Sub
+
+#End Region
+
+#Region "Private Method"
+    ''Dim form As New frmPrincipal''
+    Private Sub LimpiarTextos(ParamArray textBoxes() As TextBox)
+        For Each txt In textBoxes
+            txt.Text = ""
+        Next
+    End Sub
+
+#End Region
 End Class

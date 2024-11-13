@@ -223,6 +223,10 @@
     <None Include="Resources\precios.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.vbproj">
+      <Project>{ddf94e03-1d8b-4a2f-8724-80faf4ac140c}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.vbproj">
       <Project>{3856ee72-5972-4825-8187-2812b64b36e3}</Project>
       <Name>CapaEntidades</Name>
