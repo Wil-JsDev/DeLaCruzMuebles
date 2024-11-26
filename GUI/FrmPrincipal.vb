@@ -4,11 +4,13 @@ Imports CapaEntidades
 Public Class frmPrincipal
     Private _bll As New ClienteService()
     Private _bllProducto As New ProductoService()
+
+
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
 
@@ -22,38 +24,62 @@ Public Class frmPrincipal
     End Sub
 
 
-
     Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
         MostrarPanel(Pnl1, pnlInicio)
     End Sub
 
-    Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
-        MostrarPanel(pnl2, pnlRegistro)
-    End Sub
-
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        MostrarPanel(pnl3, pnlVentas)
+        MostrarPanel(pnl6, pnlVentas)
     End Sub
 
     Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        MostrarPanel(pnl4, pnlArticulos)
+        MostrarPanel(pnl2, pnlArticulos)
     End Sub
 
     Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        MostrarPanel(pnl5, pnlFacturacion)
+        MostrarPanel(pnl6, pnlFacturacion)
+    End Sub
+    Private Sub btnRegistros_Click(sender As Object, e As EventArgs) Handles btnRegistros.Click
+        RegistroTimer.Start()
+        MostrarPanel(pnl2, pnlInicio)
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
+        MostrarPanel(pnl2, pnlClientes)
+    End Sub
+
+    Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
+        MostrarPanel(pnl2, pnlCiudad)
+
+    End Sub
+
+    Private Sub btnProveedor_Click(sender As Object, e As EventArgs) Handles btnProveedor.Click
+        MostrarPanel(pnl2, pnlProveedor)
+    End Sub
+
+    Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
+        MostrarPanel(pnl6, pnlCategoria)
+    End Sub
+
+    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
+        MostrarPanel(pnl6, pnlInventario)
+    End Sub
+
+    Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
+        MantenimientoTimer.Start()
+        MostrarPanel(pnl6, pnlInicio)
     End Sub
 
     Private Sub MostrarPanel(panel1 As Panel, panel2 As Panel)
-        Pnl1.Visible = False
-        pnl2.Visible = False
-        pnl3.Visible = False
-        pnl4.Visible = False
-        pnl5.Visible = False
-        pnlInicio.Visible = False
-        pnlRegistro.Visible = False
-        pnlVentas.Visible = False
-        pnlArticulos.Visible = False
-        pnlFacturacion.Visible = False
+        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlVentas, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario}
+
+        For Each pnl In paneles
+            pnl.Visible = False
+        Next
 
         panel1.Visible = True
         panel2.Visible = True
@@ -63,20 +89,11 @@ Public Class frmPrincipal
 
 
 
-
-
-    Private Sub btn2salir_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-
 #Region "label Eventos"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetPlaceholder(txtCodigo, "Codigo")
         SetPlaceholder(txtNombre, "Nombre")
-        '' SetPlaceholder(txtSexo, "Sexo")''
         SetPlaceholder(txtTelefono, "Telefono")
         SetPlaceholder(txtDireccion, "Direccion")
         SetPlaceholder(txtCedula, "Cedula")
@@ -92,7 +109,6 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub txtSexo_Enter(sender As Object, e As EventArgs)
-        ''ClearPlaceholder(txtSexo, "Sexo")''
     End Sub
 
     Private Sub txtTelefono_Enter(sender As Object, e As EventArgs) Handles txtTelefono.Enter
@@ -116,7 +132,6 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub txtSexo_Leave(sender As Object, e As EventArgs)
-        ''//SetPlaceholderOnLeave(txtSexo, "Sexo")''
     End Sub
 
     Private Sub txtTelefono_Leave(sender As Object, e As EventArgs) Handles txtTelefono.Leave
@@ -462,7 +477,7 @@ Public Class frmPrincipal
         End Try
     End Sub
 
-    Private Sub pnlRegistro_Paint(sender As Object, e As PaintEventArgs) Handles pnlRegistro.Paint
+    Private Sub pnlRegistro_Paint(sender As Object, e As PaintEventArgs) Handles pnlClientes.Paint
 
     End Sub
 
@@ -533,12 +548,51 @@ Public Class frmPrincipal
 #End Region
 
 #Region "Private Method"
-    ''Dim form As New frmPrincipal''
+
     Private Sub LimpiarTextos(ParamArray textBoxes() As TextBox)
         For Each txt In textBoxes
             txt.Text = ""
         Next
     End Sub
+
+    Dim MantenimientoMenu As Boolean = False
+    Dim RegistroMenu As Boolean = False
+
+    Private Sub MantenimientoTimer_Tick(sender As Object, e As EventArgs) Handles MantenimientoTimer.Tick
+        If Not MantenimientoMenu Then
+            FlowLayoutContenedor.Height += 10
+            If FlowLayoutContenedor.Height >= 262 Then
+                MantenimientoTimer.Stop()
+                MantenimientoMenu = True
+            End If
+        Else
+            FlowLayoutContenedor.Height -= 10
+            If FlowLayoutContenedor.Height <= 56 Then
+                MantenimientoTimer.Stop()
+                MantenimientoMenu = False
+            End If
+        End If
+
+        FlowLayoutContenedor2.Top = FlowLayoutContenedor.Bottom + 10
+    End Sub
+
+    Private Sub RegistroTimer_Tick(sender As Object, e As EventArgs) Handles RegistroTimer.Tick
+        If Not RegistroMenu Then
+            FlowLayoutContenedor2.Height += 10
+            If FlowLayoutContenedor2.Height >= 318 Then
+                RegistroTimer.Stop()
+                RegistroMenu = True
+            End If
+        Else
+            FlowLayoutContenedor2.Height -= 10
+            If FlowLayoutContenedor2.Height <= 56 Then
+                RegistroTimer.Stop()
+                RegistroMenu = False
+            End If
+        End If
+    End Sub
+
+
 
 #End Region
 End Class
