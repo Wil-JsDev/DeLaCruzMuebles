@@ -277,5 +277,14 @@
   <ItemGroup>
     <None Include="Resources\receptionist-45.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2203520_circle_dot_record_round_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2203520_circle_dot_record_round_icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
