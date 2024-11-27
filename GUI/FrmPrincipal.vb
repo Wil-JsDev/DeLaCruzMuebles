@@ -4,6 +4,8 @@ Imports CapaEntidades
 Public Class frmPrincipal
     Private _bll As New ClienteService()
     Private _bllProducto As New ProductoService()
+    Private _bllCiudad As New CiudadService()
+    Private _bllCategoria As New CategoriaServices()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -595,4 +597,46 @@ Public Class frmPrincipal
 
 
 #End Region
+
+#Region "Ciudad"
+    Private Sub btnAgregarCiudad_Click(sender As Object, e As EventArgs) Handles btnAgregarCiudad.Click
+
+        Try
+            Dim ciudad As New Ciudad With {
+            .IdCiudad = txtIdCiudad.Text,
+            .Nombre = txtNombreCiudad.Text
+            }
+            _bllCiudad.InsertarCiudadService(ciudad)
+            dtCiudad.DataSource = _bllCiudad.ObtenerCiudadService()
+
+        Catch Ex As Exception
+            MessageBox.Show("Debe de llenar el campo Id")
+        End Try
+    End Sub
+
+    Private Sub btnObtenerCiudad_Click(sender As Object, e As EventArgs) Handles btnObtenerCiudad.Click
+        _bllCiudad.ObtenerCiudadService()
+        dtCiudad.DataSource = _bllCiudad.ObtenerCiudadService()
+    End Sub
+#End Region
+
+    Private Sub btnAgregarCategoria_Click(sender As Object, e As EventArgs) Handles btnAgregarCategoria.Click
+        Try
+            Dim categoria As New Categoria With {
+                .IdCategoria = txtIdCategoria.Text,
+                .Nombre = txtNombreCategoria.Text
+                }
+            _bllCategoria.InsertarCategoriaService(categoria)
+            dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
+        Catch ex As Exception
+            MessageBox.Show("No pueden estar vacios los campos")
+        End Try
+
+
+    End Sub
+
+    Private Sub btnObtenerCategoria_Click(sender As Object, e As EventArgs) Handles btnObtenerCategoria.Click
+        _bllCategoria.ObtenerCategoriaService()
+        dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
+    End Sub
 End Class
