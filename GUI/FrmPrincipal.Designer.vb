@@ -226,23 +226,14 @@ Partial Class frmPrincipal
         Me.pnlInventario = New System.Windows.Forms.Panel()
         Me.PictureBox42 = New System.Windows.Forms.PictureBox()
         Me.pnlProveedor = New System.Windows.Forms.Panel()
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.idProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombreProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.direccionProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rncProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.telefonoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idCiudadProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtProveedor = New System.Windows.Forms.DataGridView()
         Me.PictureBox44 = New System.Windows.Forms.PictureBox()
         Me.Panel45 = New System.Windows.Forms.Panel()
         Me.txtIdCiudadProveedor = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnModificarProveedor = New System.Windows.Forms.Button()
+        Me.btnFacturarProveedor = New System.Windows.Forms.Button()
         Me.PictureBox45 = New System.Windows.Forms.PictureBox()
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox47 = New System.Windows.Forms.PictureBox()
-        Me.Panel46 = New System.Windows.Forms.Panel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Panel47 = New System.Windows.Forms.Panel()
         Me.txtTelefonoProveedor = New System.Windows.Forms.TextBox()
         Me.PictureBox49 = New System.Windows.Forms.PictureBox()
@@ -317,11 +308,10 @@ Partial Class frmPrincipal
         Me.pnlInventario.SuspendLayout()
         CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlProveedor.SuspendLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dtProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -343,7 +333,7 @@ Partial Class frmPrincipal
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(300, 923)
+        Me.Panel1.Size = New System.Drawing.Size(300, 1000)
         Me.Panel1.TabIndex = 0
         '
         'pnl6
@@ -649,7 +639,7 @@ Partial Class frmPrincipal
         Me.pnlInicio.Location = New System.Drawing.Point(300, 55)
         Me.pnlInicio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlInicio.Name = "pnlInicio"
-        Me.pnlInicio.Size = New System.Drawing.Size(1035, 868)
+        Me.pnlInicio.Size = New System.Drawing.Size(1035, 945)
         Me.pnlInicio.TabIndex = 4
         '
         'lblHora
@@ -659,7 +649,7 @@ Partial Class frmPrincipal
         Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 80.0!)
         Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblHora.Location = New System.Drawing.Point(166, 286)
+        Me.lblHora.Location = New System.Drawing.Point(166, 324)
         Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(559, 181)
@@ -673,7 +663,7 @@ Partial Class frmPrincipal
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblFecha.Location = New System.Drawing.Point(262, 482)
+        Me.lblFecha.Location = New System.Drawing.Point(262, 520)
         Me.lblFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(176, 58)
@@ -711,7 +701,7 @@ Partial Class frmPrincipal
         Me.pnlClientes.Location = New System.Drawing.Point(300, 55)
         Me.pnlClientes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlClientes.Name = "pnlClientes"
-        Me.pnlClientes.Size = New System.Drawing.Size(1035, 868)
+        Me.pnlClientes.Size = New System.Drawing.Size(1035, 945)
         Me.pnlClientes.TabIndex = 4
         Me.pnlClientes.Visible = False
         '
@@ -1009,7 +999,7 @@ Partial Class frmPrincipal
         Me.pnlCiudad.Controls.Add(Me.txtNombreCiudad)
         Me.pnlCiudad.Controls.Add(Me.Panel37)
         Me.pnlCiudad.Controls.Add(Me.txtIdCiudad)
-        Me.pnlCiudad.Location = New System.Drawing.Point(4, 867)
+        Me.pnlCiudad.Location = New System.Drawing.Point(4, 1745)
         Me.pnlCiudad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlCiudad.Name = "pnlCiudad"
         Me.pnlCiudad.Size = New System.Drawing.Size(1035, 852)
@@ -1138,7 +1128,7 @@ Partial Class frmPrincipal
         Me.pnlCategoria.Controls.Add(Me.txtNombreCategoria)
         Me.pnlCategoria.Controls.Add(Me.Panel39)
         Me.pnlCategoria.Controls.Add(Me.txtIdCategoria)
-        Me.pnlCategoria.Location = New System.Drawing.Point(4, 5)
+        Me.pnlCategoria.Location = New System.Drawing.Point(4, 883)
         Me.pnlCategoria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlCategoria.Name = "pnlCategoria"
         Me.pnlCategoria.Size = New System.Drawing.Size(1035, 852)
@@ -1289,7 +1279,7 @@ Partial Class frmPrincipal
         Me.pnlVentas.Location = New System.Drawing.Point(300, 55)
         Me.pnlVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlVentas.Name = "pnlVentas"
-        Me.pnlVentas.Size = New System.Drawing.Size(1035, 868)
+        Me.pnlVentas.Size = New System.Drawing.Size(1035, 945)
         Me.pnlVentas.TabIndex = 32
         Me.pnlVentas.Visible = False
         '
@@ -1670,7 +1660,7 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.Controls.Add(Me.TxtNumeroFactura)
         Me.pnlFacturacion.Controls.Add(Me.Panel34)
         Me.pnlFacturacion.Controls.Add(Me.TxtIdFacturacion)
-        Me.pnlFacturacion.Location = New System.Drawing.Point(4, 1729)
+        Me.pnlFacturacion.Location = New System.Drawing.Point(4, 2607)
         Me.pnlFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlFacturacion.Name = "pnlFacturacion"
         Me.pnlFacturacion.Size = New System.Drawing.Size(1035, 868)
@@ -2165,7 +2155,7 @@ Partial Class frmPrincipal
         Me.pnlArticulos.Location = New System.Drawing.Point(300, 55)
         Me.pnlArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlArticulos.Name = "pnlArticulos"
-        Me.pnlArticulos.Size = New System.Drawing.Size(1035, 868)
+        Me.pnlArticulos.Size = New System.Drawing.Size(1035, 945)
         Me.pnlArticulos.TabIndex = 37
         Me.pnlArticulos.Visible = False
         '
@@ -2755,7 +2745,7 @@ Partial Class frmPrincipal
         Me.pnlInventario.Location = New System.Drawing.Point(300, 55)
         Me.pnlInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlInventario.Name = "pnlInventario"
-        Me.pnlInventario.Size = New System.Drawing.Size(1035, 868)
+        Me.pnlInventario.Size = New System.Drawing.Size(1035, 945)
         Me.pnlInventario.TabIndex = 38
         Me.pnlInventario.Visible = False
         '
@@ -2772,17 +2762,14 @@ Partial Class frmPrincipal
         '
         'pnlProveedor
         '
-        Me.pnlProveedor.Controls.Add(Me.DataGridView4)
+        Me.pnlProveedor.Controls.Add(Me.dtProveedor)
         Me.pnlProveedor.Controls.Add(Me.PictureBox44)
         Me.pnlProveedor.Controls.Add(Me.Panel45)
         Me.pnlProveedor.Controls.Add(Me.txtIdCiudadProveedor)
-        Me.pnlProveedor.Controls.Add(Me.Button1)
-        Me.pnlProveedor.Controls.Add(Me.Button2)
+        Me.pnlProveedor.Controls.Add(Me.btnModificarProveedor)
+        Me.pnlProveedor.Controls.Add(Me.btnFacturarProveedor)
         Me.pnlProveedor.Controls.Add(Me.PictureBox45)
         Me.pnlProveedor.Controls.Add(Me.PictureBox46)
-        Me.pnlProveedor.Controls.Add(Me.PictureBox47)
-        Me.pnlProveedor.Controls.Add(Me.Panel46)
-        Me.pnlProveedor.Controls.Add(Me.TextBox5)
         Me.pnlProveedor.Controls.Add(Me.Panel47)
         Me.pnlProveedor.Controls.Add(Me.txtTelefonoProveedor)
         Me.pnlProveedor.Controls.Add(Me.PictureBox49)
@@ -2796,70 +2783,27 @@ Partial Class frmPrincipal
         Me.pnlProveedor.Controls.Add(Me.txtNombreProveedor)
         Me.pnlProveedor.Controls.Add(Me.Panel52)
         Me.pnlProveedor.Controls.Add(Me.txtIdProveedor)
-        Me.pnlProveedor.Location = New System.Drawing.Point(4, 2607)
+        Me.pnlProveedor.Location = New System.Drawing.Point(4, 5)
         Me.pnlProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlProveedor.Name = "pnlProveedor"
         Me.pnlProveedor.Size = New System.Drawing.Size(1035, 868)
         Me.pnlProveedor.TabIndex = 39
         Me.pnlProveedor.Visible = False
         '
-        'DataGridView4
+        'dtProveedor
         '
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProveedor, Me.nombreProveedor, Me.direccionProveedor, Me.rncProveedor, Me.telefonoProveedor, Me.idCiudadProveedor})
-        Me.DataGridView4.Location = New System.Drawing.Point(52, 351)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.RowHeadersWidth = 62
-        Me.DataGridView4.RowTemplate.Height = 28
-        Me.DataGridView4.Size = New System.Drawing.Size(915, 400)
-        Me.DataGridView4.TabIndex = 42
-        '
-        'idProveedor
-        '
-        Me.idProveedor.HeaderText = "Id"
-        Me.idProveedor.MinimumWidth = 8
-        Me.idProveedor.Name = "idProveedor"
-        Me.idProveedor.Width = 150
-        '
-        'nombreProveedor
-        '
-        Me.nombreProveedor.HeaderText = "Nombre"
-        Me.nombreProveedor.MinimumWidth = 8
-        Me.nombreProveedor.Name = "nombreProveedor"
-        Me.nombreProveedor.Width = 150
-        '
-        'direccionProveedor
-        '
-        Me.direccionProveedor.HeaderText = "Direccion"
-        Me.direccionProveedor.MinimumWidth = 8
-        Me.direccionProveedor.Name = "direccionProveedor"
-        Me.direccionProveedor.Width = 150
-        '
-        'rncProveedor
-        '
-        Me.rncProveedor.HeaderText = "Rnc"
-        Me.rncProveedor.MinimumWidth = 8
-        Me.rncProveedor.Name = "rncProveedor"
-        Me.rncProveedor.Width = 150
-        '
-        'telefonoProveedor
-        '
-        Me.telefonoProveedor.HeaderText = "Telefono"
-        Me.telefonoProveedor.MinimumWidth = 8
-        Me.telefonoProveedor.Name = "telefonoProveedor"
-        Me.telefonoProveedor.Width = 150
-        '
-        'idCiudadProveedor
-        '
-        Me.idCiudadProveedor.HeaderText = "IdCiudad"
-        Me.idCiudadProveedor.MinimumWidth = 8
-        Me.idCiudadProveedor.Name = "idCiudadProveedor"
-        Me.idCiudadProveedor.Width = 150
+        Me.dtProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtProveedor.Location = New System.Drawing.Point(52, 351)
+        Me.dtProveedor.Name = "dtProveedor"
+        Me.dtProveedor.RowHeadersWidth = 62
+        Me.dtProveedor.RowTemplate.Height = 28
+        Me.dtProveedor.Size = New System.Drawing.Size(915, 400)
+        Me.dtProveedor.TabIndex = 42
         '
         'PictureBox44
         '
         Me.PictureBox44.Image = Global.GUI.My.Resources.Resources.web
-        Me.PictureBox44.Location = New System.Drawing.Point(525, 168)
+        Me.PictureBox44.Location = New System.Drawing.Point(522, 133)
         Me.PictureBox44.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox44.Name = "PictureBox44"
         Me.PictureBox44.Size = New System.Drawing.Size(46, 49)
@@ -2870,7 +2814,7 @@ Partial Class frmPrincipal
         'Panel45
         '
         Me.Panel45.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel45.Location = New System.Drawing.Point(576, 212)
+        Me.Panel45.Location = New System.Drawing.Point(573, 177)
         Me.Panel45.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel45.Name = "Panel45"
         Me.Panel45.Size = New System.Drawing.Size(370, 5)
@@ -2882,48 +2826,48 @@ Partial Class frmPrincipal
         Me.txtIdCiudadProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdCiudadProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdCiudadProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdCiudadProveedor.Location = New System.Drawing.Point(579, 172)
+        Me.txtIdCiudadProveedor.Location = New System.Drawing.Point(576, 137)
         Me.txtIdCiudadProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdCiudadProveedor.Multiline = True
         Me.txtIdCiudadProveedor.Name = "txtIdCiudadProveedor"
         Me.txtIdCiudadProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtIdCiudadProveedor.TabIndex = 30
         '
-        'Button1
+        'btnModificarProveedor
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(747, 237)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(202, 68)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "   Modificar"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnModificarProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.btnModificarProveedor.FlatAppearance.BorderSize = 0
+        Me.btnModificarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnModificarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.btnModificarProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnModificarProveedor.Image = CType(resources.GetObject("btnModificarProveedor.Image"), System.Drawing.Image)
+        Me.btnModificarProveedor.Location = New System.Drawing.Point(747, 237)
+        Me.btnModificarProveedor.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnModificarProveedor.Name = "btnModificarProveedor"
+        Me.btnModificarProveedor.Size = New System.Drawing.Size(202, 68)
+        Me.btnModificarProveedor.TabIndex = 29
+        Me.btnModificarProveedor.Text = "   Modificar"
+        Me.btnModificarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnModificarProveedor.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnFacturarProveedor
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(526, 238)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(206, 68)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "   Facturar"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnFacturarProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.btnFacturarProveedor.FlatAppearance.BorderSize = 0
+        Me.btnFacturarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFacturarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.btnFacturarProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnFacturarProveedor.Image = CType(resources.GetObject("btnFacturarProveedor.Image"), System.Drawing.Image)
+        Me.btnFacturarProveedor.Location = New System.Drawing.Point(526, 238)
+        Me.btnFacturarProveedor.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnFacturarProveedor.Name = "btnFacturarProveedor"
+        Me.btnFacturarProveedor.Size = New System.Drawing.Size(206, 68)
+        Me.btnFacturarProveedor.TabIndex = 8
+        Me.btnFacturarProveedor.Text = "   Facturar"
+        Me.btnFacturarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFacturarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnFacturarProveedor.UseVisualStyleBackColor = False
         '
         'PictureBox45
         '
@@ -2946,39 +2890,6 @@ Partial Class frmPrincipal
         Me.PictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox46.TabIndex = 28
         Me.PictureBox46.TabStop = False
-        '
-        'PictureBox47
-        '
-        Me.PictureBox47.Image = Global.GUI.My.Resources.Resources.tarjeta_de_identificacion
-        Me.PictureBox47.Location = New System.Drawing.Point(525, 97)
-        Me.PictureBox47.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox47.Name = "PictureBox47"
-        Me.PictureBox47.Size = New System.Drawing.Size(46, 49)
-        Me.PictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox47.TabIndex = 27
-        Me.PictureBox47.TabStop = False
-        '
-        'Panel46
-        '
-        Me.Panel46.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel46.Location = New System.Drawing.Point(576, 142)
-        Me.Panel46.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Panel46.Name = "Panel46"
-        Me.Panel46.Size = New System.Drawing.Size(370, 5)
-        Me.Panel46.TabIndex = 26
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TextBox5.Location = New System.Drawing.Point(579, 102)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(370, 46)
-        Me.TextBox5.TabIndex = 25
         '
         'Panel47
         '
@@ -3125,10 +3036,10 @@ Partial Class frmPrincipal
         '
         'contenedor
         '
+        Me.contenedor.Controls.Add(Me.pnlProveedor)
         Me.contenedor.Controls.Add(Me.pnlCategoria)
         Me.contenedor.Controls.Add(Me.pnlCiudad)
         Me.contenedor.Controls.Add(Me.pnlFacturacion)
-        Me.contenedor.Controls.Add(Me.pnlProveedor)
         Me.contenedor.Location = New System.Drawing.Point(303, 55)
         Me.contenedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.contenedor.Name = "contenedor"
@@ -3140,7 +3051,7 @@ Partial Class frmPrincipal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1335, 923)
+        Me.ClientSize = New System.Drawing.Size(1335, 1000)
         Me.Controls.Add(Me.pnlVentas)
         Me.Controls.Add(Me.pnlArticulos)
         Me.Controls.Add(Me.pnlInventario)
@@ -3222,11 +3133,10 @@ Partial Class frmPrincipal
         CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlProveedor.ResumeLayout(False)
         Me.pnlProveedor.PerformLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dtProveedor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox50, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox51, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3410,17 +3320,14 @@ Partial Class frmPrincipal
     Friend WithEvents pnlInventario As Panel
     Friend WithEvents PictureBox42 As PictureBox
     Friend WithEvents pnlProveedor As Panel
-    Friend WithEvents DataGridView4 As DataGridView
+    Friend WithEvents dtProveedor As DataGridView
     Friend WithEvents PictureBox44 As PictureBox
     Friend WithEvents Panel45 As Panel
     Friend WithEvents txtIdCiudadProveedor As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnModificarProveedor As Button
+    Friend WithEvents btnFacturarProveedor As Button
     Friend WithEvents PictureBox45 As PictureBox
     Friend WithEvents PictureBox46 As PictureBox
-    Friend WithEvents PictureBox47 As PictureBox
-    Friend WithEvents Panel46 As Panel
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Panel47 As Panel
     Friend WithEvents txtTelefonoProveedor As TextBox
     Friend WithEvents PictureBox49 As PictureBox
@@ -3444,12 +3351,6 @@ Partial Class frmPrincipal
     Friend WithEvents telefonoCliente As DataGridViewTextBoxColumn
     Friend WithEvents direccionClientes As DataGridViewTextBoxColumn
     Friend WithEvents cedula As DataGridViewTextBoxColumn
-    Friend WithEvents idProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents nombreProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents direccionProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents rncProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents telefonoProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents idCiudadProveedor As DataGridViewTextBoxColumn
     Friend WithEvents idProductoArticulo As DataGridViewTextBoxColumn
     Friend WithEvents NombreProducto As DataGridViewTextBoxColumn
     Friend WithEvents IdProveedorProducto As DataGridViewTextBoxColumn
