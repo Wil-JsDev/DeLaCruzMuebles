@@ -10,6 +10,7 @@ Public Class ProveedorCrud
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdProveedor", proveedor.IdProveedor)
             cmd.Parameters.AddWithValue("@Nombre", proveedor.Nombre)
             cmd.Parameters.AddWithValue("@Direccion", proveedor.Direccion)
             cmd.Parameters.AddWithValue("@Rnc", proveedor.Rnc)
@@ -32,20 +33,21 @@ Public Class ProveedorCrud
         Dim proveedor As New List(Of Proveedor)
 
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("LeerProveedor", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@opcion", 2)''
             conexionSql.Open()
 
             Dim leer As SqlDataReader = cmd.ExecuteReader()
 
             While leer.Read()
                 proveedor.Add(New Proveedor With {
-                             .IdProveedor = Convert.ToInt32(leer("IdProveedor")),
+                             .IdProveedor = Convert.ToInt32(leer("Id_Proveedor")),
                              .Nombre = leer("Nombre"),
                              .Direccion = leer("Direccion"),
                              .Rnc = Convert.ToInt32(leer("Rnc")),
-                             .Telefono = leer("Telefono")
+                             .Telefono = leer("Telefono"),
+                             .IdCiudad = Convert.ToInt32(leer("Id_Ciudad"))
                 })
             End While
             Return proveedor
@@ -54,13 +56,15 @@ Public Class ProveedorCrud
 
     Public Function ActualizarProveedor(proveedor As Proveedor) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("ProveedorCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 3)
+            cmd.Parameters.AddWithValue("@IdProveedor", proveedor.IdProveedor)
             cmd.Parameters.AddWithValue("@Nombre", proveedor.Nombre)
             cmd.Parameters.AddWithValue("@Direccion", proveedor.Direccion)
             cmd.Parameters.AddWithValue("@Rnc", proveedor.Rnc)
             cmd.Parameters.AddWithValue("@Telefono", proveedor.Telefono)
+            cmd.Parameters.AddWithValue("@IdCiudad", proveedor.IdCiudad)
 
             conexionSql.Open()
             Dim filasActualizadas As Integer = cmd.ExecuteNonQuery()

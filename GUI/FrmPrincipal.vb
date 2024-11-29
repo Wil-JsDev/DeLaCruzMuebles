@@ -6,6 +6,7 @@ Public Class frmPrincipal
     Private _bllProducto As New ProductoService()
     Private _bllCiudad As New CiudadService()
     Private _bllCategoria As New CategoriaServices()
+    Private _bllProveedor As New ProveedorService()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -620,6 +621,7 @@ Public Class frmPrincipal
     End Sub
 #End Region
 
+#Region "Categoria"
     Private Sub btnAgregarCategoria_Click(sender As Object, e As EventArgs) Handles btnAgregarCategoria.Click
         Try
             Dim categoria As New Categoria With {
@@ -639,4 +641,35 @@ Public Class frmPrincipal
         _bllCategoria.ObtenerCategoriaService()
         dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
     End Sub
+
+#End Region
+
+#Region "Proveedor"
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnFacturarProveedor.Click 'Facturar Proveedor'
+        Dim proveedor As New Proveedor With {
+                .IdProveedor = txtIdProveedor.Text,
+                .Nombre = txtNombreProveedor.Text,
+                .Direccion = txtDireccionProveedor.Text,
+                .Rnc = txtRnc.Text,
+                .Telefono = txtTelefonoProveedor.Text,
+                .IdCiudad = txtIdCiudadProveedor.Text
+                }
+        _bllProveedor.InsertarProveedorService(proveedor)
+        dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+
+    End Sub
+
+    Private Sub btnModificarProveedor_Click(sender As Object, e As EventArgs) Handles btnModificarProveedor.Click
+        Dim proveedor As New Proveedor With {
+                .IdProveedor = txtIdProveedor.Text,
+                .Nombre = txtNombreProveedor.Text,
+                .Direccion = txtDireccionProveedor.Text,
+                .Rnc = txtRnc.Text,
+                .Telefono = txtTelefonoProveedor.Text,
+                .IdCiudad = txtIdCiudadProveedor.Text
+                }
+        _bllProveedor.ActualizarProveedorService(proveedor)
+        dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+    End Sub
+#End Region
 End Class
