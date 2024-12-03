@@ -30,7 +30,7 @@ Public Class EmpleadoService
         If IdEmpleado <= 0 Then
             Throw New ArgumentNullException("empleado no enviado")
         Else
-            _dal.EliminarProducto(IdEmpleado)
+            _dal.EliminarEmpleado(IdEmpleado)
         End If
     End Sub
 

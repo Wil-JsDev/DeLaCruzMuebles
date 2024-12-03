@@ -2,11 +2,13 @@
 Imports CapaEntidades
 
 Public Class frmPrincipal
+
     Private _bll As New ClienteService()
     Private _bllProducto As New ProductoService()
     Private _bllCiudad As New CiudadService()
     Private _bllCategoria As New CategoriaServices()
     Private _bllProveedor As New ProveedorService()
+    Private _bllEmpleado As New EmpleadoService()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -26,22 +28,11 @@ Public Class frmPrincipal
         lblFecha.Text = DateTime.Now.ToString("ddd MMM yyy")
     End Sub
 
-
     Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
         MostrarPanel(Pnl1, pnlInicio)
     End Sub
 
-    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        MostrarPanel(pnl6, pnlVentas)
-    End Sub
-
-    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        MostrarPanel(pnl2, pnlArticulos)
-    End Sub
-
-    Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        MostrarPanel(pnl6, pnlFacturacion)
-    End Sub
+#Region "Mostrar Panel Registro"
     Private Sub btnRegistros_Click(sender As Object, e As EventArgs) Handles btnRegistros.Click
         RegistroTimer.Start()
         MostrarPanel(pnl2, pnlInicio)
@@ -57,12 +48,31 @@ Public Class frmPrincipal
 
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
         MostrarPanel(pnl2, pnlCiudad)
+    End Sub
 
+    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+        MostrarPanel(pnl2, pnlEmpleados)
     End Sub
 
     Private Sub btnProveedor_Click(sender As Object, e As EventArgs) Handles btnProveedor.Click
         MostrarPanel(pnl2, pnlProveedor)
     End Sub
+
+    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+        MostrarPanel(pnl2, pnlArticulos)
+    End Sub
+
+#End Region
+
+#Region "Mostrar Panel Mantenimiento"
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        MostrarPanel(pnl6, pnlVentas)
+    End Sub
+
+    Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        MostrarPanel(pnl6, pnlFacturacion)
+    End Sub
+
 
     Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
         MostrarPanel(pnl6, pnlCategoria)
@@ -77,8 +87,11 @@ Public Class frmPrincipal
         MostrarPanel(pnl6, pnlInicio)
     End Sub
 
+#End Region
+
+
     Private Sub MostrarPanel(panel1 As Panel, panel2 As Panel)
-        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlVentas, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario}
+        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlVentas, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario, pnlEmpleados}
 
         For Each pnl In paneles
             pnl.Visible = False
@@ -671,5 +684,69 @@ Public Class frmPrincipal
         _bllProveedor.ActualizarProveedorService(proveedor)
         dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
     End Sub
+
+
 #End Region
+
+#Region "Empleados"
+    Private Sub btnAgregarEmpleado_Click(sender As Object, e As EventArgs) Handles btnAgregarEmpleado.Click
+        Try
+            Dim empleado As New Empleados With {
+            .Nombre = txtNombreEmpleado.Text,
+            .Telefono = txtTelefonoEmpleado.Text,
+            .Direccion = txtDireccionEmpleado.Text,
+            .Cedula = txtCedulaEmpleado.Text
+            }
+            _bllEmpleado.InsertarEmpleadoService(empleado)
+
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados, txtNombreEmpleado, txtDireccionEmpleado, txtTelefonoEmpleado, txtCedulaEmpleado)
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+
+    End Sub
+
+
+    Private Sub btnObtenerEmpleado_Click(sender As Object, e As EventArgs) Handles btnObtenerEmpleado.Click
+        _bllEmpleado.ObtenerEmpleadoService()
+        dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+
+    End Sub
+
+    Private Sub btnEliminarEmpleado_Click(sender As Object, e As EventArgs) Handles btnEliminarEmpleado.Click
+        Try
+
+            Dim id As Integer = CInt(txtIdEmpleados.Text)
+            _bllEmpleado.EliminarEmpleadoService(id)
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados)
+
+        Catch Ex As Exception
+            MessageBox.Show("Debe de llenar el campo Id")
+        End Try
+    End Sub
+
+    Private Sub btnModificarEmpleado_Click(sender As Object, e As EventArgs) Handles btnModificarEmpleado.Click
+        Try
+            Dim empleado As New Empleados With {
+        .IdEmpleado = txtIdEmpleados.Text,
+        .Nombre = txtNombreEmpleado.Text,
+        .Telefono = txtTelefonoEmpleado.Text,
+        .Direccion = txtDireccionEmpleado.Text,
+        .Cedula = txtCedulaEmpleado.Text
+        }
+
+            _bllEmpleado.ActualizarEmpleadoService(empleado)
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados, txtNombreEmpleado, txtDireccionEmpleado, txtTelefonoEmpleado, txtCedulaEmpleado)
+
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+
+    End Sub
+#End Region
+
+
 End Class

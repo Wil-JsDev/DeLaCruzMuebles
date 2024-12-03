@@ -2,7 +2,6 @@
 Imports System.Data.SqlClient
 
 Public Class EmpleadoCrud
-
     Private conexionString As New Conexion()
 
     Public Function InsertarEmpleado(empleados As Empleados) As Boolean
@@ -11,11 +10,11 @@ Public Class EmpleadoCrud
             cmd.CommandType = CommandType.StoredProcedure
 
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdEmpleado", empleados.IdEmpleado)
             cmd.Parameters.AddWithValue("@Nombre", empleados.Nombre)
             cmd.Parameters.AddWithValue("@Telefono", empleados.Telefono)
             cmd.Parameters.AddWithValue("@Direccion", empleados.Direccion)
             cmd.Parameters.AddWithValue("@Cedula", empleados.Cedula)
-
 
             conexionSql.Open()
             Dim filasInsertadas As Integer = cmd.ExecuteNonQuery()
@@ -27,24 +26,25 @@ Public Class EmpleadoCrud
 
 
 
+
     Public Function ObtenerEmpleados() As List(Of Empleados)
         Dim empleados As New List(Of Empleados)
 
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("LeerEmpleados", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@opcion", 2)
             conexionSql.Open()
 
             Dim leer As SqlDataReader = cmd.ExecuteReader()
 
             While leer.Read()
                 empleados.Add(New Empleados With {
-                             .IdEmpleado = Convert.ToInt32(leer("IdEmpleado")),
-                             .Nombre = leer("NombreProducto"),
+                             .IdEmpleado = Convert.ToInt32(leer("Id_Empleado")),
+                             .Nombre = leer("Nombre"),
                              .Telefono = leer("Telefono"),
                              .Direccion = leer("Direccion"),
-                             .Cedula = Convert.ToInt32(leer("IdEmpleado"))
+                             .Cedula = leer("Cedula")
                 })
             End While
             Return empleados
@@ -53,9 +53,10 @@ Public Class EmpleadoCrud
 
     Public Function ActualizarEmpleados(empleado As Empleados) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("ProductosCRUD", conexionSql)
+            Dim cmd As New SqlCommand("EmpleadoCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 3)
+            cmd.Parameters.AddWithValue("@IdEmpleado", empleado.IdEmpleado)
             cmd.Parameters.AddWithValue("@Nombre", empleado.Nombre)
             cmd.Parameters.AddWithValue("@Telefono", empleado.Telefono)
             cmd.Parameters.AddWithValue("@Direccion", empleado.Direccion)
@@ -71,11 +72,11 @@ Public Class EmpleadoCrud
         End Using
     End Function
 
-    Public Function EliminarProducto(IdEmpleado As Integer) As Boolean
+    Public Function EliminarEmpleado(IdEmpleado As Integer) As Boolean
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("EmpleadoCRUD", conexionSql)
+            Dim cmd As New SqlCommand("EliminarEmpleado", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 4)
+            '' cmd.Parameters.AddWithValue("@opcion", 4)
             cmd.Parameters.AddWithValue("@IdEmpleado", IdEmpleado)
 
             conexionSql.Open()
