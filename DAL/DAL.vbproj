@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Producto\ProductoCrud.vb" />
     <Compile Include="Proveedor\ProveedorCrud.vb" />
+    <Compile Include="Usuario\UsuarioCrud.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
