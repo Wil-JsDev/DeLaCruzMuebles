@@ -2,8 +2,6 @@
 
     Public Property IdFactura As Integer
 
-    Public Property Monto As Decimal
-
     Public Property Fecha As DateTime
 
     Public Property TipoDePago As String
