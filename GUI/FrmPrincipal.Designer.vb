@@ -28,13 +28,13 @@ Partial Class frmPrincipal
         Me.pnl6 = New System.Windows.Forms.Panel()
         Me.pnl2 = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.PictureBox()
-        Me.btnEmpleado = New System.Windows.Forms.Button()
         Me.FlowLayoutContenedor2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnRegistros = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnCiudad = New System.Windows.Forms.Button()
         Me.btnProveedor = New System.Windows.Forms.Button()
+        Me.btnEmpleado = New System.Windows.Forms.Button()
         Me.FlowLayoutContenedor = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnMantenimiento = New System.Windows.Forms.Button()
         Me.btnVentas = New System.Windows.Forms.Button()
@@ -147,13 +147,6 @@ Partial Class frmPrincipal
         Me.txtIdEmpleados = New System.Windows.Forms.TextBox()
         Me.pnlFacturacion = New System.Windows.Forms.Panel()
         Me.dtFacturacion = New System.Windows.Forms.DataGridView()
-        Me.idProveedorFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idFacturaProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.montoFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fechaFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.tipoDePagoFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idClienteFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.idEmpleadoFacturacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.Panel19 = New System.Windows.Forms.Panel()
         Me.TxtDescuentoFacturacion = New System.Windows.Forms.TextBox()
@@ -163,9 +156,6 @@ Partial Class frmPrincipal
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.TxtCantidad = New System.Windows.Forms.TextBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.TxtNombreArticuloFacturacion = New System.Windows.Forms.TextBox()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.BtnFacturar = New System.Windows.Forms.Button()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
@@ -185,7 +175,7 @@ Partial Class frmPrincipal
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
         Me.Panel33 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.TtxNombreFacturacion = New System.Windows.Forms.TextBox()
+        Me.TtxIdClienteFacturacion = New System.Windows.Forms.TextBox()
         Me.TxtNumeroFactura = New System.Windows.Forms.TextBox()
         Me.Panel34 = New System.Windows.Forms.Panel()
         Me.TxtIdFacturacion = New System.Windows.Forms.TextBox()
@@ -304,7 +294,6 @@ Partial Class frmPrincipal
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -351,7 +340,7 @@ Partial Class frmPrincipal
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 600)
         Me.Panel1.TabIndex = 0
@@ -384,24 +373,6 @@ Partial Class frmPrincipal
         Me.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnSalir.TabIndex = 8
         Me.btnSalir.TabStop = False
-        '
-        'btnEmpleado
-        '
-        Me.btnEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.btnEmpleado.FlatAppearance.BorderSize = 0
-        Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
-        Me.btnEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnEmpleado.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnEmpleado.Location = New System.Drawing.Point(0, 266)
-        Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnEmpleado.Name = "btnEmpleado"
-        Me.btnEmpleado.Size = New System.Drawing.Size(232, 53)
-        Me.btnEmpleado.TabIndex = 13
-        Me.btnEmpleado.Text = "   Empleados"
-        Me.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnEmpleado.UseVisualStyleBackColor = False
         '
         'FlowLayoutContenedor2
         '
@@ -504,6 +475,24 @@ Partial Class frmPrincipal
         Me.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnProveedor.UseVisualStyleBackColor = False
+        '
+        'btnEmpleado
+        '
+        Me.btnEmpleado.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.btnEmpleado.FlatAppearance.BorderSize = 0
+        Me.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
+        Me.btnEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnEmpleado.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
+        Me.btnEmpleado.Location = New System.Drawing.Point(0, 266)
+        Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnEmpleado.Name = "btnEmpleado"
+        Me.btnEmpleado.Size = New System.Drawing.Size(232, 53)
+        Me.btnEmpleado.TabIndex = 13
+        Me.btnEmpleado.Text = "   Empleados"
+        Me.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEmpleado.UseVisualStyleBackColor = False
         '
         'FlowLayoutContenedor
         '
@@ -648,7 +637,7 @@ Partial Class frmPrincipal
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-30, -30)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(256, 256)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -660,7 +649,7 @@ Partial Class frmPrincipal
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(181, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(200, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(690, 36)
         Me.Panel2.TabIndex = 1
@@ -776,7 +765,7 @@ Partial Class frmPrincipal
         Me.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistro.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdClientes, Me.nombreClientes, Me.telefonoCliente, Me.direccionClientes, Me.cedula})
         Me.dgvRegistro.Location = New System.Drawing.Point(12, 308)
-        Me.dgvRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvRegistro.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvRegistro.Name = "dgvRegistro"
         Me.dgvRegistro.RowHeadersWidth = 62
         Me.dgvRegistro.RowTemplate.Height = 28
@@ -1015,7 +1004,7 @@ Partial Class frmPrincipal
         Me.pnlCiudad.Controls.Add(Me.txtNombreCiudad)
         Me.pnlCiudad.Controls.Add(Me.Panel37)
         Me.pnlCiudad.Controls.Add(Me.txtIdCiudad)
-        Me.pnlCiudad.Location = New System.Drawing.Point(3, 1613)
+        Me.pnlCiudad.Location = New System.Drawing.Point(3, 2183)
         Me.pnlCiudad.Name = "pnlCiudad"
         Me.pnlCiudad.Size = New System.Drawing.Size(690, 554)
         Me.pnlCiudad.TabIndex = 33
@@ -1042,7 +1031,7 @@ Partial Class frmPrincipal
         '
         Me.dtCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtCiudad.Location = New System.Drawing.Point(10, 207)
-        Me.dtCiudad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtCiudad.Margin = New System.Windows.Forms.Padding(2)
         Me.dtCiudad.Name = "dtCiudad"
         Me.dtCiudad.RowHeadersWidth = 62
         Me.dtCiudad.RowTemplate.Height = 28
@@ -1138,7 +1127,7 @@ Partial Class frmPrincipal
         Me.pnlCategoria.Controls.Add(Me.txtNombreCategoria)
         Me.pnlCategoria.Controls.Add(Me.Panel39)
         Me.pnlCategoria.Controls.Add(Me.txtIdCategoria)
-        Me.pnlCategoria.Location = New System.Drawing.Point(3, 1053)
+        Me.pnlCategoria.Location = New System.Drawing.Point(3, 1623)
         Me.pnlCategoria.Name = "pnlCategoria"
         Me.pnlCategoria.Size = New System.Drawing.Size(690, 554)
         Me.pnlCategoria.TabIndex = 53
@@ -1165,7 +1154,7 @@ Partial Class frmPrincipal
         '
         Me.dtCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtCategoria.Location = New System.Drawing.Point(11, 196)
-        Me.dtCategoria.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtCategoria.Margin = New System.Windows.Forms.Padding(2)
         Me.dtCategoria.Name = "dtCategoria"
         Me.dtCategoria.RowHeadersWidth = 62
         Me.dtCategoria.RowTemplate.Height = 28
@@ -1290,7 +1279,7 @@ Partial Class frmPrincipal
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(40, 356)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 62
         Me.DataGridView2.RowTemplate.Height = 28
@@ -1595,8 +1584,8 @@ Partial Class frmPrincipal
         Me.pnlEmpleados.Controls.Add(Me.txtNombreEmpleado)
         Me.pnlEmpleados.Controls.Add(Me.Panel54)
         Me.pnlEmpleados.Controls.Add(Me.txtIdEmpleados)
-        Me.pnlEmpleados.Location = New System.Drawing.Point(2, 2)
-        Me.pnlEmpleados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlEmpleados.Location = New System.Drawing.Point(2, 572)
+        Me.pnlEmpleados.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlEmpleados.Name = "pnlEmpleados"
         Me.pnlEmpleados.Size = New System.Drawing.Size(690, 476)
         Me.pnlEmpleados.TabIndex = 33
@@ -1687,7 +1676,7 @@ Partial Class frmPrincipal
         '
         Me.dtEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtEmpleado.Location = New System.Drawing.Point(83, 342)
-        Me.dtEmpleado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.dtEmpleado.Name = "dtEmpleado"
         Me.dtEmpleado.RowHeadersWidth = 62
         Me.dtEmpleado.RowTemplate.Height = 28
@@ -1846,9 +1835,6 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.Controls.Add(Me.PictureBox18)
         Me.pnlFacturacion.Controls.Add(Me.Panel17)
         Me.pnlFacturacion.Controls.Add(Me.TxtCantidad)
-        Me.pnlFacturacion.Controls.Add(Me.PictureBox17)
-        Me.pnlFacturacion.Controls.Add(Me.Panel16)
-        Me.pnlFacturacion.Controls.Add(Me.TxtNombreArticuloFacturacion)
         Me.pnlFacturacion.Controls.Add(Me.BtnModificar)
         Me.pnlFacturacion.Controls.Add(Me.BtnFacturar)
         Me.pnlFacturacion.Controls.Add(Me.PictureBox16)
@@ -1868,11 +1854,11 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.Controls.Add(Me.PictureBox35)
         Me.pnlFacturacion.Controls.Add(Me.Panel33)
         Me.pnlFacturacion.Controls.Add(Me.Panel9)
-        Me.pnlFacturacion.Controls.Add(Me.TtxNombreFacturacion)
+        Me.pnlFacturacion.Controls.Add(Me.TtxIdClienteFacturacion)
         Me.pnlFacturacion.Controls.Add(Me.TxtNumeroFactura)
         Me.pnlFacturacion.Controls.Add(Me.Panel34)
         Me.pnlFacturacion.Controls.Add(Me.TxtIdFacturacion)
-        Me.pnlFacturacion.Location = New System.Drawing.Point(3, 2173)
+        Me.pnlFacturacion.Location = New System.Drawing.Point(3, 3)
         Me.pnlFacturacion.Name = "pnlFacturacion"
         Me.pnlFacturacion.Size = New System.Drawing.Size(690, 564)
         Me.pnlFacturacion.TabIndex = 36
@@ -1881,63 +1867,13 @@ Partial Class frmPrincipal
         'dtFacturacion
         '
         Me.dtFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtFacturacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProveedorFacturacion, Me.idFacturaProveedor, Me.montoFacturacion, Me.fechaFacturacion, Me.tipoDePagoFacturacion, Me.idClienteFacturacion, Me.idEmpleadoFacturacion})
         Me.dtFacturacion.Location = New System.Drawing.Point(34, 402)
-        Me.dtFacturacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtFacturacion.Margin = New System.Windows.Forms.Padding(2)
         Me.dtFacturacion.Name = "dtFacturacion"
         Me.dtFacturacion.RowHeadersWidth = 62
         Me.dtFacturacion.RowTemplate.Height = 28
         Me.dtFacturacion.Size = New System.Drawing.Size(636, 126)
         Me.dtFacturacion.TabIndex = 42
-        '
-        'idProveedorFacturacion
-        '
-        Me.idProveedorFacturacion.HeaderText = "ID"
-        Me.idProveedorFacturacion.MinimumWidth = 8
-        Me.idProveedorFacturacion.Name = "idProveedorFacturacion"
-        Me.idProveedorFacturacion.Width = 150
-        '
-        'idFacturaProveedor
-        '
-        Me.idFacturaProveedor.HeaderText = "IdFactura"
-        Me.idFacturaProveedor.MinimumWidth = 8
-        Me.idFacturaProveedor.Name = "idFacturaProveedor"
-        Me.idFacturaProveedor.Width = 150
-        '
-        'montoFacturacion
-        '
-        Me.montoFacturacion.HeaderText = "Monto"
-        Me.montoFacturacion.MinimumWidth = 8
-        Me.montoFacturacion.Name = "montoFacturacion"
-        Me.montoFacturacion.Width = 150
-        '
-        'fechaFacturacion
-        '
-        Me.fechaFacturacion.HeaderText = "Fecha"
-        Me.fechaFacturacion.MinimumWidth = 8
-        Me.fechaFacturacion.Name = "fechaFacturacion"
-        Me.fechaFacturacion.Width = 150
-        '
-        'tipoDePagoFacturacion
-        '
-        Me.tipoDePagoFacturacion.HeaderText = "TipoDePago"
-        Me.tipoDePagoFacturacion.MinimumWidth = 8
-        Me.tipoDePagoFacturacion.Name = "tipoDePagoFacturacion"
-        Me.tipoDePagoFacturacion.Width = 150
-        '
-        'idClienteFacturacion
-        '
-        Me.idClienteFacturacion.HeaderText = "IdCliente"
-        Me.idClienteFacturacion.MinimumWidth = 8
-        Me.idClienteFacturacion.Name = "idClienteFacturacion"
-        Me.idClienteFacturacion.Width = 150
-        '
-        'idEmpleadoFacturacion
-        '
-        Me.idEmpleadoFacturacion.HeaderText = "IdEmpleado"
-        Me.idEmpleadoFacturacion.MinimumWidth = 8
-        Me.idEmpleadoFacturacion.Name = "idEmpleadoFacturacion"
-        Me.idEmpleadoFacturacion.Width = 150
         '
         'PictureBox20
         '
@@ -2002,7 +1938,7 @@ Partial Class frmPrincipal
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.GUI.My.Resources.Resources.cantidad
-        Me.PictureBox18.Location = New System.Drawing.Point(34, 358)
+        Me.PictureBox18.Location = New System.Drawing.Point(34, 320)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(31, 32)
         Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -2012,7 +1948,7 @@ Partial Class frmPrincipal
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel17.Location = New System.Drawing.Point(69, 386)
+        Me.Panel17.Location = New System.Drawing.Point(69, 348)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(247, 3)
         Me.Panel17.TabIndex = 34
@@ -2023,41 +1959,11 @@ Partial Class frmPrincipal
         Me.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtCantidad.Location = New System.Drawing.Point(70, 360)
+        Me.TxtCantidad.Location = New System.Drawing.Point(70, 322)
         Me.TxtCantidad.Multiline = True
         Me.TxtCantidad.Name = "TxtCantidad"
         Me.TxtCantidad.Size = New System.Drawing.Size(247, 30)
         Me.TxtCantidad.TabIndex = 33
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.Image = Global.GUI.My.Resources.Resources.web
-        Me.PictureBox17.Location = New System.Drawing.Point(35, 307)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(31, 32)
-        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox17.TabIndex = 32
-        Me.PictureBox17.TabStop = False
-        '
-        'Panel16
-        '
-        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel16.Location = New System.Drawing.Point(69, 336)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(247, 3)
-        Me.Panel16.TabIndex = 31
-        '
-        'TxtNombreArticuloFacturacion
-        '
-        Me.TxtNombreArticuloFacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.TxtNombreArticuloFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtNombreArticuloFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.TxtNombreArticuloFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtNombreArticuloFacturacion.Location = New System.Drawing.Point(71, 310)
-        Me.TxtNombreArticuloFacturacion.Multiline = True
-        Me.TxtNombreArticuloFacturacion.Name = "TxtNombreArticuloFacturacion"
-        Me.TxtNombreArticuloFacturacion.Size = New System.Drawing.Size(247, 30)
-        Me.TxtNombreArticuloFacturacion.TabIndex = 30
         '
         'BtnModificar
         '
@@ -2261,17 +2167,17 @@ Partial Class frmPrincipal
         Me.Panel9.Size = New System.Drawing.Size(247, 3)
         Me.Panel9.TabIndex = 11
         '
-        'TtxNombreFacturacion
+        'TtxIdClienteFacturacion
         '
-        Me.TtxNombreFacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.TtxNombreFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TtxNombreFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.TtxNombreFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TtxNombreFacturacion.Location = New System.Drawing.Point(69, 69)
-        Me.TtxNombreFacturacion.Multiline = True
-        Me.TtxNombreFacturacion.Name = "TtxNombreFacturacion"
-        Me.TtxNombreFacturacion.Size = New System.Drawing.Size(247, 30)
-        Me.TtxNombreFacturacion.TabIndex = 13
+        Me.TtxIdClienteFacturacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.TtxIdClienteFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TtxIdClienteFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.TtxIdClienteFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TtxIdClienteFacturacion.Location = New System.Drawing.Point(69, 69)
+        Me.TtxIdClienteFacturacion.Multiline = True
+        Me.TtxIdClienteFacturacion.Name = "TtxIdClienteFacturacion"
+        Me.TtxIdClienteFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TtxIdClienteFacturacion.TabIndex = 13
         '
         'TxtNumeroFactura
         '
@@ -2341,7 +2247,7 @@ Partial Class frmPrincipal
         '
         Me.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvArticulos.Location = New System.Drawing.Point(22, 308)
-        Me.dgvArticulos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvArticulos.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvArticulos.Name = "dgvArticulos"
         Me.dgvArticulos.RowHeadersWidth = 62
         Me.dgvArticulos.RowTemplate.Height = 28
@@ -2795,7 +2701,7 @@ Partial Class frmPrincipal
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idInventario, Me.idcategoriaa, Me.idProductoInventario, Me.cantidadInventario})
         Me.DataGridView3.Location = New System.Drawing.Point(37, 304)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 62
         Me.DataGridView3.RowTemplate.Height = 28
@@ -2889,7 +2795,7 @@ Partial Class frmPrincipal
         Me.pnlProveedor.Controls.Add(Me.txtNombreProveedor)
         Me.pnlProveedor.Controls.Add(Me.Panel52)
         Me.pnlProveedor.Controls.Add(Me.txtIdProveedor)
-        Me.pnlProveedor.Location = New System.Drawing.Point(3, 483)
+        Me.pnlProveedor.Location = New System.Drawing.Point(3, 1053)
         Me.pnlProveedor.Name = "pnlProveedor"
         Me.pnlProveedor.Size = New System.Drawing.Size(690, 564)
         Me.pnlProveedor.TabIndex = 39
@@ -2899,7 +2805,7 @@ Partial Class frmPrincipal
         '
         Me.dtProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtProveedor.Location = New System.Drawing.Point(35, 228)
-        Me.dtProveedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtProveedor.Margin = New System.Windows.Forms.Padding(2)
         Me.dtProveedor.Name = "dtProveedor"
         Me.dtProveedor.RowHeadersWidth = 62
         Me.dtProveedor.RowTemplate.Height = 28
@@ -3124,11 +3030,11 @@ Partial Class frmPrincipal
         '
         'contenedor
         '
+        Me.contenedor.Controls.Add(Me.pnlFacturacion)
         Me.contenedor.Controls.Add(Me.pnlEmpleados)
         Me.contenedor.Controls.Add(Me.pnlProveedor)
         Me.contenedor.Controls.Add(Me.pnlCategoria)
         Me.contenedor.Controls.Add(Me.pnlCiudad)
-        Me.contenedor.Controls.Add(Me.pnlFacturacion)
         Me.contenedor.Location = New System.Drawing.Point(202, 36)
         Me.contenedor.Name = "contenedor"
         Me.contenedor.Size = New System.Drawing.Size(690, 540)
@@ -3149,7 +3055,7 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
@@ -3204,7 +3110,6 @@ Partial Class frmPrincipal
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3309,7 +3214,7 @@ Partial Class frmPrincipal
     Friend WithEvents TxtFechaFacturacion As TextBox
     Friend WithEvents PictureBox35 As PictureBox
     Friend WithEvents Panel33 As Panel
-    Friend WithEvents TtxNombreFacturacion As TextBox
+    Friend WithEvents TtxIdClienteFacturacion As TextBox
     Friend WithEvents Panel34 As Panel
     Friend WithEvents TxtIdFacturacion As TextBox
     Friend WithEvents pnlArticulos As Panel
@@ -3345,9 +3250,6 @@ Partial Class frmPrincipal
     Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents TxtNumeroFactura As TextBox
-    Friend WithEvents PictureBox17 As PictureBox
-    Friend WithEvents Panel16 As Panel
-    Friend WithEvents TxtNombreArticuloFacturacion As TextBox
     Friend WithEvents PictureBox18 As PictureBox
     Friend WithEvents Panel17 As Panel
     Friend WithEvents TxtCantidad As TextBox
@@ -3449,13 +3351,6 @@ Partial Class frmPrincipal
     Friend WithEvents direccionClientes As DataGridViewTextBoxColumn
     Friend WithEvents cedula As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents idProveedorFacturacion As DataGridViewTextBoxColumn
-    Friend WithEvents idFacturaProveedor As DataGridViewTextBoxColumn
-    Friend WithEvents montoFacturacion As DataGridViewTextBoxColumn
-    Friend WithEvents fechaFacturacion As DataGridViewTextBoxColumn
-    Friend WithEvents tipoDePagoFacturacion As DataGridViewTextBoxColumn
-    Friend WithEvents idClienteFacturacion As DataGridViewTextBoxColumn
-    Friend WithEvents idEmpleadoFacturacion As DataGridViewTextBoxColumn
     Friend WithEvents btnEmpleado As Button
     Friend WithEvents pnlEmpleados As Panel
     Friend WithEvents dtEmpleado As DataGridView

@@ -9,6 +9,8 @@ Public Class frmPrincipal
     Private _bllCategoria As New CategoriaServices()
     Private _bllProveedor As New ProveedorService()
     Private _bllEmpleado As New EmpleadoService()
+    Private _detallesList As New List(Of DetallerFactura)
+    Private _facturaBll As New FacturaService()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -311,12 +313,12 @@ Public Class frmPrincipal
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         SetPlaceholder(TxtIdFacturacion, "ID Facturación")
-        SetPlaceholder(TtxNombreFacturacion, "Nombre Facturación")
+        SetPlaceholder(TtxIdClienteFacturacion, "Nombre Facturación")
         SetPlaceholder(TxtFechaFacturacion, "Fecha Facturación")
         SetPlaceholder(TxtTipoDePagoFacturacion, "Tipo de Pago Facturación")
         SetPlaceholder(TxtIdEmpleadoFacturacion, "ID Empleado Facturación")
         SetPlaceholder(TxtIdArticulo, "ID Artículo")
-        SetPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
+        ' SetPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")''
         SetPlaceholder(TxtCantidad, "Cantidad")
         SetPlaceholder(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
         SetPlaceholder(TxtDescuentoFacturacion, "Descuento Facturación")
@@ -333,12 +335,12 @@ Public Class frmPrincipal
         SetPlaceholderOnLeave(TxtIdFacturacion, "ID Facturación")
     End Sub
 
-    Private Sub TtxNombreFacturacion_Enter(sender As Object, e As EventArgs) Handles TtxNombreFacturacion.Enter
-        ClearPlaceholder(TtxNombreFacturacion, "Nombre Facturación")
+    Private Sub TtxNombreFacturacion_Enter(sender As Object, e As EventArgs) Handles TtxIdClienteFacturacion.Enter
+        ClearPlaceholder(TtxIdClienteFacturacion, "Nombre Facturación")
     End Sub
 
-    Private Sub TtxNombreFacturacion_Leave(sender As Object, e As EventArgs) Handles TtxNombreFacturacion.Leave
-        SetPlaceholderOnLeave(TtxNombreFacturacion, "Nombre Facturación")
+    Private Sub TtxNombreFacturacion_Leave(sender As Object, e As EventArgs) Handles TtxIdClienteFacturacion.Leave
+        SetPlaceholderOnLeave(TtxIdClienteFacturacion, "Nombre Facturación")
     End Sub
 
     Private Sub TxtFechaFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtFechaFacturacion.Enter
@@ -373,12 +375,12 @@ Public Class frmPrincipal
         SetPlaceholderOnLeave(TxtIdArticulo, "ID Artículo")
     End Sub
 
-    Private Sub TxtNombreArticuloFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtNombreArticuloFacturacion.Enter
-        ClearPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
+    Private Sub TxtNombreArticuloFacturacion_Enter(sender As Object, e As EventArgs)
+        ''ClearPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")''
     End Sub
 
-    Private Sub TxtNombreArticuloFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtNombreArticuloFacturacion.Leave
-        SetPlaceholderOnLeave(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
+    Private Sub TxtNombreArticuloFacturacion_Leave(sender As Object, e As EventArgs)
+        ''SetPlaceholderOnLeave(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")''
     End Sub
 
     Private Sub TxtCantidad_Enter(sender As Object, e As EventArgs) Handles TxtCantidad.Enter
@@ -746,7 +748,41 @@ Public Class frmPrincipal
         End Try
 
     End Sub
+
 #End Region
 
+#Region "Facturacion"
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+
+        Dim id As Integer = Convert.ToInt32(TxtIdArticulo.Text)
+        Dim cantidad As Integer = Convert.ToInt32(TxtCantidad.Text)
+        Dim precio As Decimal = Convert.ToDecimal(TxtPrecioUnitarioFacturacion.Text)
+        Dim descuento As Decimal = Convert.ToDecimal(TxtDescuentoFacturacion.Text)
+
+        Dim detalle As New DetallerFactura() With
+        {
+            .IdProducto = id,
+            .Cantidad = cantidad,
+            .Precio = precio,
+            .PrecioTotal = cantidad * precio,
+            .Descuento = descuento
+        }
+
+        _detallesList.Add(detalle)
+        dtFacturacion.DataSource = Nothing
+        dtFacturacion.DataSource = _detallesList
+
+        Dim fact As New Factura() With {
+            .IdFactura = Integer.Parse(TxtIdFacturacion.Text),
+            .IdCliente = Integer.Parse(TtxIdClienteFacturacion.Text),
+            .TipoDePago = TxtTipoDePagoFacturacion.Text,
+            .IdEmpleado = Integer.Parse(TxtIdEmpleadoFacturacion.Text),
+            .Total = _detallesList.Sum(Function(d) d.PrecioTotal)
+        }
+
+        _facturaBll.CrearFactura(fact, _detallesList)
+
+    End Sub
+#End Region'String was not recognized as a valid DateTime.'
 
 End Class
