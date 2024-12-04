@@ -1,6 +1,6 @@
-﻿Imports System.Data.SqlClient
-Imports CapaEntidades
+﻿Imports CapaEntidades
 Imports DAL
+Imports System.Data.SqlClient
 
 Public Class FacturaService
     Private _factura As New FacturarDAL()
