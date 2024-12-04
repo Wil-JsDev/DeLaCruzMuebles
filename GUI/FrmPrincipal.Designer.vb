@@ -207,7 +207,7 @@ Partial Class frmPrincipal
         Me.RegistroTimer = New System.Windows.Forms.Timer(Me.components)
         Me.txtIdInventario = New System.Windows.Forms.TextBox()
         Me.Panel43 = New System.Windows.Forms.Panel()
-        Me.IdCategoriaInventario = New System.Windows.Forms.TextBox()
+        Me.txtIdCategoriaInventario = New System.Windows.Forms.TextBox()
         Me.Panel42 = New System.Windows.Forms.Panel()
         Me.txtCantidadInventario = New System.Windows.Forms.TextBox()
         Me.Panel41 = New System.Windows.Forms.Panel()
@@ -340,26 +340,27 @@ Partial Class frmPrincipal
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 600)
+        Me.Panel1.Size = New System.Drawing.Size(300, 788)
         Me.Panel1.TabIndex = 0
         '
         'pnl6
         '
         Me.pnl6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.pnl6.Location = New System.Drawing.Point(0, 199)
+        Me.pnl6.Location = New System.Drawing.Point(0, 306)
+        Me.pnl6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnl6.Name = "pnl6"
-        Me.pnl6.Size = New System.Drawing.Size(10, 53)
+        Me.pnl6.Size = New System.Drawing.Size(15, 82)
         Me.pnl6.TabIndex = 8
         Me.pnl6.Visible = False
         '
         'pnl2
         '
         Me.pnl2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.pnl2.Location = New System.Drawing.Point(0, 254)
+        Me.pnl2.Location = New System.Drawing.Point(0, 391)
+        Me.pnl2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnl2.Name = "pnl2"
-        Me.pnl2.Size = New System.Drawing.Size(10, 53)
+        Me.pnl2.Size = New System.Drawing.Size(15, 82)
         Me.pnl2.TabIndex = 9
         Me.pnl2.Visible = False
         '
@@ -367,9 +368,10 @@ Partial Class frmPrincipal
         '
         Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
-        Me.btnSalir.Location = New System.Drawing.Point(9, 7)
+        Me.btnSalir.Location = New System.Drawing.Point(14, 11)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(20, 25)
+        Me.btnSalir.Size = New System.Drawing.Size(30, 38)
         Me.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnSalir.TabIndex = 8
         Me.btnSalir.TabStop = False
@@ -383,9 +385,10 @@ Partial Class frmPrincipal
         Me.FlowLayoutContenedor2.Controls.Add(Me.btnCiudad)
         Me.FlowLayoutContenedor2.Controls.Add(Me.btnProveedor)
         Me.FlowLayoutContenedor2.Controls.Add(Me.btnEmpleado)
-        Me.FlowLayoutContenedor2.Location = New System.Drawing.Point(3, 255)
+        Me.FlowLayoutContenedor2.Location = New System.Drawing.Point(4, 392)
+        Me.FlowLayoutContenedor2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FlowLayoutContenedor2.Name = "FlowLayoutContenedor2"
-        Me.FlowLayoutContenedor2.Size = New System.Drawing.Size(253, 53)
+        Me.FlowLayoutContenedor2.Size = New System.Drawing.Size(380, 82)
         Me.FlowLayoutContenedor2.TabIndex = 13
         '
         'btnRegistros
@@ -398,9 +401,9 @@ Partial Class frmPrincipal
         Me.btnRegistros.Image = CType(resources.GetObject("btnRegistros.Image"), System.Drawing.Image)
         Me.btnRegistros.Location = New System.Drawing.Point(0, 0)
         Me.btnRegistros.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnRegistros.MinimumSize = New System.Drawing.Size(207, 53)
+        Me.btnRegistros.MinimumSize = New System.Drawing.Size(310, 82)
         Me.btnRegistros.Name = "btnRegistros"
-        Me.btnRegistros.Size = New System.Drawing.Size(207, 54)
+        Me.btnRegistros.Size = New System.Drawing.Size(310, 83)
         Me.btnRegistros.TabIndex = 6
         Me.btnRegistros.Text = "   Registros"
         Me.btnRegistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -415,10 +418,10 @@ Partial Class frmPrincipal
         Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnClientes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnClientes.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnClientes.Location = New System.Drawing.Point(0, 54)
+        Me.btnClientes.Location = New System.Drawing.Point(0, 83)
         Me.btnClientes.Margin = New System.Windows.Forms.Padding(0)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Size = New System.Drawing.Size(214, 53)
+        Me.btnClientes.Size = New System.Drawing.Size(321, 82)
         Me.btnClientes.TabIndex = 12
         Me.btnClientes.Text = "   Clientes"
         Me.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -432,10 +435,10 @@ Partial Class frmPrincipal
         Me.btnArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnArticulos.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnArticulos.Location = New System.Drawing.Point(0, 107)
+        Me.btnArticulos.Location = New System.Drawing.Point(0, 165)
         Me.btnArticulos.Margin = New System.Windows.Forms.Padding(0)
         Me.btnArticulos.Name = "btnArticulos"
-        Me.btnArticulos.Size = New System.Drawing.Size(214, 53)
+        Me.btnArticulos.Size = New System.Drawing.Size(321, 82)
         Me.btnArticulos.TabIndex = 4
         Me.btnArticulos.Text = "   Articulos"
         Me.btnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -449,10 +452,10 @@ Partial Class frmPrincipal
         Me.btnCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnCiudad.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnCiudad.Location = New System.Drawing.Point(0, 160)
+        Me.btnCiudad.Location = New System.Drawing.Point(0, 247)
         Me.btnCiudad.Margin = New System.Windows.Forms.Padding(0)
         Me.btnCiudad.Name = "btnCiudad"
-        Me.btnCiudad.Size = New System.Drawing.Size(207, 53)
+        Me.btnCiudad.Size = New System.Drawing.Size(310, 82)
         Me.btnCiudad.TabIndex = 14
         Me.btnCiudad.Text = "   Ciudad"
         Me.btnCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -466,10 +469,10 @@ Partial Class frmPrincipal
         Me.btnProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnProveedor.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnProveedor.Location = New System.Drawing.Point(0, 213)
+        Me.btnProveedor.Location = New System.Drawing.Point(0, 329)
         Me.btnProveedor.Margin = New System.Windows.Forms.Padding(0)
         Me.btnProveedor.Name = "btnProveedor"
-        Me.btnProveedor.Size = New System.Drawing.Size(214, 53)
+        Me.btnProveedor.Size = New System.Drawing.Size(321, 82)
         Me.btnProveedor.TabIndex = 15
         Me.btnProveedor.Text = "   Proveedor"
         Me.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -484,10 +487,10 @@ Partial Class frmPrincipal
         Me.btnEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnEmpleado.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnEmpleado.Location = New System.Drawing.Point(0, 266)
+        Me.btnEmpleado.Location = New System.Drawing.Point(0, 411)
         Me.btnEmpleado.Margin = New System.Windows.Forms.Padding(0)
         Me.btnEmpleado.Name = "btnEmpleado"
-        Me.btnEmpleado.Size = New System.Drawing.Size(232, 53)
+        Me.btnEmpleado.Size = New System.Drawing.Size(348, 82)
         Me.btnEmpleado.TabIndex = 13
         Me.btnEmpleado.Text = "   Empleados"
         Me.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -502,9 +505,10 @@ Partial Class frmPrincipal
         Me.FlowLayoutContenedor.Controls.Add(Me.btn5)
         Me.FlowLayoutContenedor.Controls.Add(Me.btnCategoria)
         Me.FlowLayoutContenedor.Controls.Add(Me.btnInventario)
-        Me.FlowLayoutContenedor.Location = New System.Drawing.Point(2, 199)
+        Me.FlowLayoutContenedor.Location = New System.Drawing.Point(3, 306)
+        Me.FlowLayoutContenedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FlowLayoutContenedor.Name = "FlowLayoutContenedor"
-        Me.FlowLayoutContenedor.Size = New System.Drawing.Size(200, 53)
+        Me.FlowLayoutContenedor.Size = New System.Drawing.Size(300, 82)
         Me.FlowLayoutContenedor.TabIndex = 4
         '
         'btnMantenimiento
@@ -516,9 +520,9 @@ Partial Class frmPrincipal
         Me.btnMantenimiento.Image = CType(resources.GetObject("btnMantenimiento.Image"), System.Drawing.Image)
         Me.btnMantenimiento.Location = New System.Drawing.Point(0, 0)
         Me.btnMantenimiento.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnMantenimiento.MinimumSize = New System.Drawing.Size(232, 53)
+        Me.btnMantenimiento.MinimumSize = New System.Drawing.Size(348, 82)
         Me.btnMantenimiento.Name = "btnMantenimiento"
-        Me.btnMantenimiento.Size = New System.Drawing.Size(232, 53)
+        Me.btnMantenimiento.Size = New System.Drawing.Size(348, 82)
         Me.btnMantenimiento.TabIndex = 10
         Me.btnMantenimiento.Text = "   Mantenimiento"
         Me.btnMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -533,10 +537,10 @@ Partial Class frmPrincipal
         Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnVentas.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnVentas.Location = New System.Drawing.Point(0, 53)
+        Me.btnVentas.Location = New System.Drawing.Point(0, 82)
         Me.btnVentas.Margin = New System.Windows.Forms.Padding(0)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(200, 53)
+        Me.btnVentas.Size = New System.Drawing.Size(300, 82)
         Me.btnVentas.TabIndex = 3
         Me.btnVentas.Text = "   Ventas"
         Me.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -551,10 +555,10 @@ Partial Class frmPrincipal
         Me.btn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btn5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btn5.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btn5.Location = New System.Drawing.Point(0, 106)
+        Me.btn5.Location = New System.Drawing.Point(0, 164)
         Me.btn5.Margin = New System.Windows.Forms.Padding(0)
         Me.btn5.Name = "btn5"
-        Me.btn5.Size = New System.Drawing.Size(232, 53)
+        Me.btn5.Size = New System.Drawing.Size(348, 82)
         Me.btn5.TabIndex = 5
         Me.btn5.Text = "   Facturacion"
         Me.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -569,10 +573,10 @@ Partial Class frmPrincipal
         Me.btnCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnCategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnCategoria.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnCategoria.Location = New System.Drawing.Point(0, 159)
+        Me.btnCategoria.Location = New System.Drawing.Point(0, 246)
         Me.btnCategoria.Margin = New System.Windows.Forms.Padding(0)
         Me.btnCategoria.Name = "btnCategoria"
-        Me.btnCategoria.Size = New System.Drawing.Size(232, 53)
+        Me.btnCategoria.Size = New System.Drawing.Size(348, 82)
         Me.btnCategoria.TabIndex = 11
         Me.btnCategoria.Text = "   Categoria"
         Me.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -587,10 +591,10 @@ Partial Class frmPrincipal
         Me.btnInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnInventario.Image = Global.GUI.My.Resources.Resources._2203520_circle_dot_record_round_icon__1_
-        Me.btnInventario.Location = New System.Drawing.Point(0, 212)
+        Me.btnInventario.Location = New System.Drawing.Point(0, 328)
         Me.btnInventario.Margin = New System.Windows.Forms.Padding(0)
         Me.btnInventario.Name = "btnInventario"
-        Me.btnInventario.Size = New System.Drawing.Size(232, 53)
+        Me.btnInventario.Size = New System.Drawing.Size(348, 82)
         Me.btnInventario.TabIndex = 12
         Me.btnInventario.Text = "   Inventario"
         Me.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -600,18 +604,20 @@ Partial Class frmPrincipal
         'Pnl1
         '
         Me.Pnl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Pnl1.Location = New System.Drawing.Point(0, 145)
+        Me.Pnl1.Location = New System.Drawing.Point(0, 223)
+        Me.Pnl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Pnl1.Name = "Pnl1"
-        Me.Pnl1.Size = New System.Drawing.Size(10, 53)
+        Me.Pnl1.Size = New System.Drawing.Size(15, 82)
         Me.Pnl1.TabIndex = 2
         '
         'PictureBox3
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(35, 6)
+        Me.PictureBox3.Location = New System.Drawing.Point(52, 9)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(20, 25)
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 38)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 3
         Me.PictureBox3.TabStop = False
@@ -623,10 +629,10 @@ Partial Class frmPrincipal
         Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnInicio.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnInicio.Image = CType(resources.GetObject("btnInicio.Image"), System.Drawing.Image)
-        Me.btnInicio.Location = New System.Drawing.Point(-7, 145)
+        Me.btnInicio.Location = New System.Drawing.Point(-10, 223)
         Me.btnInicio.Margin = New System.Windows.Forms.Padding(0)
         Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(204, 53)
+        Me.btnInicio.Size = New System.Drawing.Size(306, 82)
         Me.btnInicio.TabIndex = 1
         Me.btnInicio.Text = "   Inicio"
         Me.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -636,8 +642,7 @@ Partial Class frmPrincipal
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(-30, -30)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-45, -46)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(256, 256)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -648,10 +653,9 @@ Partial Class frmPrincipal
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(181, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(200, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Location = New System.Drawing.Point(300, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(690, 36)
+        Me.Panel2.Size = New System.Drawing.Size(1035, 55)
         Me.Panel2.TabIndex = 1
         '
         'pnlInicio
@@ -659,9 +663,10 @@ Partial Class frmPrincipal
         Me.pnlInicio.Controls.Add(Me.lblHora)
         Me.pnlInicio.Controls.Add(Me.lblFecha)
         Me.pnlInicio.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlInicio.Location = New System.Drawing.Point(200, 36)
+        Me.pnlInicio.Location = New System.Drawing.Point(300, 55)
+        Me.pnlInicio.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlInicio.Name = "pnlInicio"
-        Me.pnlInicio.Size = New System.Drawing.Size(690, 564)
+        Me.pnlInicio.Size = New System.Drawing.Size(1035, 733)
         Me.pnlInicio.TabIndex = 4
         '
         'lblHora
@@ -671,7 +676,8 @@ Partial Class frmPrincipal
         Me.lblHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 80.0!)
         Me.lblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblHora.Location = New System.Drawing.Point(111, 186)
+        Me.lblHora.Location = New System.Drawing.Point(166, 218)
+        Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(374, 120)
         Me.lblHora.TabIndex = 2
@@ -684,7 +690,8 @@ Partial Class frmPrincipal
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.lblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.lblFecha.Location = New System.Drawing.Point(175, 313)
+        Me.lblFecha.Location = New System.Drawing.Point(262, 414)
+        Me.lblFecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(176, 58)
         Me.lblFecha.TabIndex = 3
@@ -718,9 +725,10 @@ Partial Class frmPrincipal
         Me.pnlClientes.Controls.Add(Me.Panel3)
         Me.pnlClientes.Controls.Add(Me.txtCodigo)
         Me.pnlClientes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlClientes.Location = New System.Drawing.Point(200, 36)
+        Me.pnlClientes.Location = New System.Drawing.Point(300, 55)
+        Me.pnlClientes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlClientes.Name = "pnlClientes"
-        Me.pnlClientes.Size = New System.Drawing.Size(690, 564)
+        Me.pnlClientes.Size = New System.Drawing.Size(1035, 733)
         Me.pnlClientes.TabIndex = 4
         Me.pnlClientes.Visible = False
         '
@@ -732,10 +740,10 @@ Partial Class frmPrincipal
         Me.BtnObtenerRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnObtenerRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnObtenerRegistro.Image = CType(resources.GetObject("BtnObtenerRegistro.Image"), System.Drawing.Image)
-        Me.BtnObtenerRegistro.Location = New System.Drawing.Point(372, 214)
+        Me.BtnObtenerRegistro.Location = New System.Drawing.Point(558, 329)
         Me.BtnObtenerRegistro.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnObtenerRegistro.Name = "BtnObtenerRegistro"
-        Me.BtnObtenerRegistro.Size = New System.Drawing.Size(204, 53)
+        Me.BtnObtenerRegistro.Size = New System.Drawing.Size(306, 82)
         Me.BtnObtenerRegistro.TabIndex = 32
         Me.BtnObtenerRegistro.Text = "   Obtener"
         Me.BtnObtenerRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -750,10 +758,10 @@ Partial Class frmPrincipal
         Me.BtnEliminarRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnEliminarRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnEliminarRegistro.Image = CType(resources.GetObject("BtnEliminarRegistro.Image"), System.Drawing.Image)
-        Me.BtnEliminarRegistro.Location = New System.Drawing.Point(372, 150)
+        Me.BtnEliminarRegistro.Location = New System.Drawing.Point(558, 231)
         Me.BtnEliminarRegistro.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnEliminarRegistro.Name = "BtnEliminarRegistro"
-        Me.BtnEliminarRegistro.Size = New System.Drawing.Size(204, 53)
+        Me.BtnEliminarRegistro.Size = New System.Drawing.Size(306, 82)
         Me.BtnEliminarRegistro.TabIndex = 31
         Me.BtnEliminarRegistro.Text = "   Eliminar"
         Me.BtnEliminarRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -764,12 +772,11 @@ Partial Class frmPrincipal
         '
         Me.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistro.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdClientes, Me.nombreClientes, Me.telefonoCliente, Me.direccionClientes, Me.cedula})
-        Me.dgvRegistro.Location = New System.Drawing.Point(12, 308)
-        Me.dgvRegistro.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvRegistro.Location = New System.Drawing.Point(18, 474)
         Me.dgvRegistro.Name = "dgvRegistro"
         Me.dgvRegistro.RowHeadersWidth = 62
         Me.dgvRegistro.RowTemplate.Height = 28
-        Me.dgvRegistro.Size = New System.Drawing.Size(564, 187)
+        Me.dgvRegistro.Size = New System.Drawing.Size(846, 288)
         Me.dgvRegistro.TabIndex = 30
         '
         'IdClientes
@@ -815,10 +822,10 @@ Partial Class frmPrincipal
         Me.BtnModificarRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnModificarRegistro.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnModificarRegistro.Image = CType(resources.GetObject("BtnModificarRegistro.Image"), System.Drawing.Image)
-        Me.BtnModificarRegistro.Location = New System.Drawing.Point(372, 89)
+        Me.BtnModificarRegistro.Location = New System.Drawing.Point(558, 137)
         Me.BtnModificarRegistro.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnModificarRegistro.Name = "BtnModificarRegistro"
-        Me.BtnModificarRegistro.Size = New System.Drawing.Size(204, 53)
+        Me.BtnModificarRegistro.Size = New System.Drawing.Size(306, 82)
         Me.BtnModificarRegistro.TabIndex = 29
         Me.BtnModificarRegistro.Text = "   Modificar"
         Me.BtnModificarRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -833,10 +840,10 @@ Partial Class frmPrincipal
         Me.BtnGuardarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnGuardarR.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnGuardarR.Image = CType(resources.GetObject("BtnGuardarR.Image"), System.Drawing.Image)
-        Me.BtnGuardarR.Location = New System.Drawing.Point(372, 28)
+        Me.BtnGuardarR.Location = New System.Drawing.Point(558, 43)
         Me.BtnGuardarR.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnGuardarR.Name = "BtnGuardarR"
-        Me.BtnGuardarR.Size = New System.Drawing.Size(204, 53)
+        Me.BtnGuardarR.Size = New System.Drawing.Size(306, 82)
         Me.BtnGuardarR.TabIndex = 8
         Me.BtnGuardarR.Text = "   Agregar"
         Me.BtnGuardarR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -846,9 +853,10 @@ Partial Class frmPrincipal
         'PictureBox9
         '
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(14, 12)
+        Me.PictureBox9.Location = New System.Drawing.Point(21, 18)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox9.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 28
         Me.PictureBox9.TabStop = False
@@ -856,9 +864,10 @@ Partial Class frmPrincipal
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(13, 209)
+        Me.PictureBox4.Location = New System.Drawing.Point(20, 322)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox4.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 27
         Me.PictureBox4.TabStop = False
@@ -866,9 +875,10 @@ Partial Class frmPrincipal
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(47, 238)
+        Me.Panel7.Location = New System.Drawing.Point(70, 366)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(247, 3)
+        Me.Panel7.Size = New System.Drawing.Size(370, 5)
         Me.Panel7.TabIndex = 26
         '
         'txtCedula
@@ -877,18 +887,20 @@ Partial Class frmPrincipal
         Me.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCedula.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCedula.Location = New System.Drawing.Point(49, 212)
+        Me.txtCedula.Location = New System.Drawing.Point(74, 326)
+        Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCedula.Multiline = True
         Me.txtCedula.Name = "txtCedula"
-        Me.txtCedula.Size = New System.Drawing.Size(247, 30)
+        Me.txtCedula.Size = New System.Drawing.Size(370, 46)
         Me.txtCedula.TabIndex = 25
         '
         'PictureBox8
         '
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(12, 160)
+        Me.PictureBox8.Location = New System.Drawing.Point(18, 246)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox8.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 24
         Me.PictureBox8.TabStop = False
@@ -896,9 +908,10 @@ Partial Class frmPrincipal
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(47, 189)
+        Me.Panel8.Location = New System.Drawing.Point(70, 291)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(247, 3)
+        Me.Panel8.Size = New System.Drawing.Size(370, 5)
         Me.Panel8.TabIndex = 23
         '
         'txtDireccion
@@ -907,18 +920,20 @@ Partial Class frmPrincipal
         Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtDireccion.Location = New System.Drawing.Point(47, 163)
+        Me.txtDireccion.Location = New System.Drawing.Point(70, 251)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDireccion.Multiline = True
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(247, 30)
+        Me.txtDireccion.Size = New System.Drawing.Size(370, 46)
         Me.txtDireccion.TabIndex = 22
         '
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(13, 113)
+        Me.PictureBox6.Location = New System.Drawing.Point(20, 174)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox6.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 21
         Me.PictureBox6.TabStop = False
@@ -926,9 +941,10 @@ Partial Class frmPrincipal
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(47, 142)
+        Me.Panel5.Location = New System.Drawing.Point(70, 218)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(247, 3)
+        Me.Panel5.Size = New System.Drawing.Size(370, 5)
         Me.Panel5.TabIndex = 20
         '
         'txtTelefono
@@ -937,18 +953,20 @@ Partial Class frmPrincipal
         Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtTelefono.Location = New System.Drawing.Point(49, 116)
+        Me.txtTelefono.Location = New System.Drawing.Point(74, 178)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefono.Multiline = True
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(247, 30)
+        Me.txtTelefono.Size = New System.Drawing.Size(370, 46)
         Me.txtTelefono.TabIndex = 19
         '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(13, 62)
+        Me.PictureBox5.Location = New System.Drawing.Point(20, 95)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox5.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 15
         Me.PictureBox5.TabStop = False
@@ -956,9 +974,10 @@ Partial Class frmPrincipal
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(49, 91)
+        Me.Panel4.Location = New System.Drawing.Point(74, 140)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(247, 3)
+        Me.Panel4.Size = New System.Drawing.Size(370, 5)
         Me.Panel4.TabIndex = 14
         '
         'txtNombre
@@ -967,18 +986,20 @@ Partial Class frmPrincipal
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombre.Location = New System.Drawing.Point(49, 65)
+        Me.txtNombre.Location = New System.Drawing.Point(74, 100)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombre.Multiline = True
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(247, 30)
+        Me.txtNombre.Size = New System.Drawing.Size(370, 46)
         Me.txtNombre.TabIndex = 13
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(49, 42)
+        Me.Panel3.Location = New System.Drawing.Point(74, 65)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(247, 3)
+        Me.Panel3.Size = New System.Drawing.Size(370, 5)
         Me.Panel3.TabIndex = 11
         '
         'txtCodigo
@@ -987,10 +1008,11 @@ Partial Class frmPrincipal
         Me.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCodigo.Location = New System.Drawing.Point(49, 16)
+        Me.txtCodigo.Location = New System.Drawing.Point(74, 25)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCodigo.Multiline = True
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(247, 30)
+        Me.txtCodigo.Size = New System.Drawing.Size(370, 46)
         Me.txtCodigo.TabIndex = 1
         '
         'pnlCiudad
@@ -1004,9 +1026,10 @@ Partial Class frmPrincipal
         Me.pnlCiudad.Controls.Add(Me.txtNombreCiudad)
         Me.pnlCiudad.Controls.Add(Me.Panel37)
         Me.pnlCiudad.Controls.Add(Me.txtIdCiudad)
-        Me.pnlCiudad.Location = New System.Drawing.Point(3, 2183)
+        Me.pnlCiudad.Location = New System.Drawing.Point(4, 3361)
+        Me.pnlCiudad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlCiudad.Name = "pnlCiudad"
-        Me.pnlCiudad.Size = New System.Drawing.Size(690, 554)
+        Me.pnlCiudad.Size = New System.Drawing.Size(1035, 852)
         Me.pnlCiudad.TabIndex = 33
         '
         'btnObtenerCiudad
@@ -1017,10 +1040,10 @@ Partial Class frmPrincipal
         Me.btnObtenerCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnObtenerCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnObtenerCiudad.Image = CType(resources.GetObject("btnObtenerCiudad.Image"), System.Drawing.Image)
-        Me.btnObtenerCiudad.Location = New System.Drawing.Point(370, 82)
+        Me.btnObtenerCiudad.Location = New System.Drawing.Point(555, 126)
         Me.btnObtenerCiudad.Margin = New System.Windows.Forms.Padding(0)
         Me.btnObtenerCiudad.Name = "btnObtenerCiudad"
-        Me.btnObtenerCiudad.Size = New System.Drawing.Size(204, 53)
+        Me.btnObtenerCiudad.Size = New System.Drawing.Size(306, 82)
         Me.btnObtenerCiudad.TabIndex = 52
         Me.btnObtenerCiudad.Text = "   Obtener"
         Me.btnObtenerCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1030,12 +1053,11 @@ Partial Class frmPrincipal
         'dtCiudad
         '
         Me.dtCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtCiudad.Location = New System.Drawing.Point(10, 207)
-        Me.dtCiudad.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtCiudad.Location = New System.Drawing.Point(15, 318)
         Me.dtCiudad.Name = "dtCiudad"
         Me.dtCiudad.RowHeadersWidth = 62
         Me.dtCiudad.RowTemplate.Height = 28
-        Me.dtCiudad.Size = New System.Drawing.Size(564, 263)
+        Me.dtCiudad.Size = New System.Drawing.Size(846, 405)
         Me.dtCiudad.TabIndex = 50
         '
         'btnAgregarCiudad
@@ -1046,10 +1068,10 @@ Partial Class frmPrincipal
         Me.btnAgregarCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnAgregarCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnAgregarCiudad.Image = CType(resources.GetObject("btnAgregarCiudad.Image"), System.Drawing.Image)
-        Me.btnAgregarCiudad.Location = New System.Drawing.Point(370, 13)
+        Me.btnAgregarCiudad.Location = New System.Drawing.Point(555, 20)
         Me.btnAgregarCiudad.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAgregarCiudad.Name = "btnAgregarCiudad"
-        Me.btnAgregarCiudad.Size = New System.Drawing.Size(204, 53)
+        Me.btnAgregarCiudad.Size = New System.Drawing.Size(306, 82)
         Me.btnAgregarCiudad.TabIndex = 34
         Me.btnAgregarCiudad.Text = "   Agregar"
         Me.btnAgregarCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1059,9 +1081,10 @@ Partial Class frmPrincipal
         'PictureBox7
         '
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(14, 9)
+        Me.PictureBox7.Location = New System.Drawing.Point(21, 14)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox7.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox7.TabIndex = 48
         Me.PictureBox7.TabStop = False
@@ -1069,9 +1092,10 @@ Partial Class frmPrincipal
         'PictureBox29
         '
         Me.PictureBox29.Image = CType(resources.GetObject("PictureBox29.Image"), System.Drawing.Image)
-        Me.PictureBox29.Location = New System.Drawing.Point(13, 59)
+        Me.PictureBox29.Location = New System.Drawing.Point(20, 91)
+        Me.PictureBox29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox29.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox29.TabIndex = 38
         Me.PictureBox29.TabStop = False
@@ -1079,9 +1103,10 @@ Partial Class frmPrincipal
         'Panel36
         '
         Me.Panel36.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel36.Location = New System.Drawing.Point(49, 88)
+        Me.Panel36.Location = New System.Drawing.Point(74, 135)
+        Me.Panel36.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(247, 3)
+        Me.Panel36.Size = New System.Drawing.Size(370, 5)
         Me.Panel36.TabIndex = 37
         '
         'txtNombreCiudad
@@ -1090,18 +1115,20 @@ Partial Class frmPrincipal
         Me.txtNombreCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombreCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombreCiudad.Location = New System.Drawing.Point(49, 62)
+        Me.txtNombreCiudad.Location = New System.Drawing.Point(74, 95)
+        Me.txtNombreCiudad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreCiudad.Multiline = True
         Me.txtNombreCiudad.Name = "txtNombreCiudad"
-        Me.txtNombreCiudad.Size = New System.Drawing.Size(247, 30)
+        Me.txtNombreCiudad.Size = New System.Drawing.Size(370, 46)
         Me.txtNombreCiudad.TabIndex = 36
         '
         'Panel37
         '
         Me.Panel37.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel37.Location = New System.Drawing.Point(49, 39)
+        Me.Panel37.Location = New System.Drawing.Point(74, 60)
+        Me.Panel37.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(247, 3)
+        Me.Panel37.Size = New System.Drawing.Size(370, 5)
         Me.Panel37.TabIndex = 35
         '
         'txtIdCiudad
@@ -1110,10 +1137,11 @@ Partial Class frmPrincipal
         Me.txtIdCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdCiudad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdCiudad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdCiudad.Location = New System.Drawing.Point(49, 13)
+        Me.txtIdCiudad.Location = New System.Drawing.Point(74, 20)
+        Me.txtIdCiudad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdCiudad.Multiline = True
         Me.txtIdCiudad.Name = "txtIdCiudad"
-        Me.txtIdCiudad.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdCiudad.Size = New System.Drawing.Size(370, 46)
         Me.txtIdCiudad.TabIndex = 33
         '
         'pnlCategoria
@@ -1127,9 +1155,10 @@ Partial Class frmPrincipal
         Me.pnlCategoria.Controls.Add(Me.txtNombreCategoria)
         Me.pnlCategoria.Controls.Add(Me.Panel39)
         Me.pnlCategoria.Controls.Add(Me.txtIdCategoria)
-        Me.pnlCategoria.Location = New System.Drawing.Point(3, 1623)
+        Me.pnlCategoria.Location = New System.Drawing.Point(4, 2499)
+        Me.pnlCategoria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlCategoria.Name = "pnlCategoria"
-        Me.pnlCategoria.Size = New System.Drawing.Size(690, 554)
+        Me.pnlCategoria.Size = New System.Drawing.Size(1035, 852)
         Me.pnlCategoria.TabIndex = 53
         '
         'btnObtenerCategoria
@@ -1140,10 +1169,10 @@ Partial Class frmPrincipal
         Me.btnObtenerCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnObtenerCategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnObtenerCategoria.Image = CType(resources.GetObject("btnObtenerCategoria.Image"), System.Drawing.Image)
-        Me.btnObtenerCategoria.Location = New System.Drawing.Point(318, 86)
+        Me.btnObtenerCategoria.Location = New System.Drawing.Point(477, 132)
         Me.btnObtenerCategoria.Margin = New System.Windows.Forms.Padding(0)
         Me.btnObtenerCategoria.Name = "btnObtenerCategoria"
-        Me.btnObtenerCategoria.Size = New System.Drawing.Size(204, 53)
+        Me.btnObtenerCategoria.Size = New System.Drawing.Size(306, 82)
         Me.btnObtenerCategoria.TabIndex = 49
         Me.btnObtenerCategoria.Text = "   Obtener"
         Me.btnObtenerCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1153,12 +1182,11 @@ Partial Class frmPrincipal
         'dtCategoria
         '
         Me.dtCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtCategoria.Location = New System.Drawing.Point(11, 196)
-        Me.dtCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtCategoria.Location = New System.Drawing.Point(16, 302)
         Me.dtCategoria.Name = "dtCategoria"
         Me.dtCategoria.RowHeadersWidth = 62
         Me.dtCategoria.RowTemplate.Height = 28
-        Me.dtCategoria.Size = New System.Drawing.Size(512, 272)
+        Me.dtCategoria.Size = New System.Drawing.Size(768, 418)
         Me.dtCategoria.TabIndex = 50
         '
         'btnAgregarCategoria
@@ -1169,10 +1197,10 @@ Partial Class frmPrincipal
         Me.btnAgregarCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnAgregarCategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnAgregarCategoria.Image = CType(resources.GetObject("btnAgregarCategoria.Image"), System.Drawing.Image)
-        Me.btnAgregarCategoria.Location = New System.Drawing.Point(318, 25)
+        Me.btnAgregarCategoria.Location = New System.Drawing.Point(477, 38)
         Me.btnAgregarCategoria.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAgregarCategoria.Name = "btnAgregarCategoria"
-        Me.btnAgregarCategoria.Size = New System.Drawing.Size(204, 53)
+        Me.btnAgregarCategoria.Size = New System.Drawing.Size(306, 82)
         Me.btnAgregarCategoria.TabIndex = 34
         Me.btnAgregarCategoria.Text = "   Agregar"
         Me.btnAgregarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1182,9 +1210,10 @@ Partial Class frmPrincipal
         'PictureBox15
         '
         Me.PictureBox15.Image = CType(resources.GetObject("PictureBox15.Image"), System.Drawing.Image)
-        Me.PictureBox15.Location = New System.Drawing.Point(13, 8)
+        Me.PictureBox15.Location = New System.Drawing.Point(20, 12)
+        Me.PictureBox15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox15.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox15.TabIndex = 48
         Me.PictureBox15.TabStop = False
@@ -1192,9 +1221,10 @@ Partial Class frmPrincipal
         'PictureBox39
         '
         Me.PictureBox39.Image = CType(resources.GetObject("PictureBox39.Image"), System.Drawing.Image)
-        Me.PictureBox39.Location = New System.Drawing.Point(12, 58)
+        Me.PictureBox39.Location = New System.Drawing.Point(18, 89)
+        Me.PictureBox39.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox39.Name = "PictureBox39"
-        Me.PictureBox39.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox39.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox39.TabIndex = 38
         Me.PictureBox39.TabStop = False
@@ -1202,9 +1232,10 @@ Partial Class frmPrincipal
         'Panel38
         '
         Me.Panel38.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel38.Location = New System.Drawing.Point(48, 87)
+        Me.Panel38.Location = New System.Drawing.Point(72, 134)
+        Me.Panel38.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel38.Name = "Panel38"
-        Me.Panel38.Size = New System.Drawing.Size(247, 3)
+        Me.Panel38.Size = New System.Drawing.Size(370, 5)
         Me.Panel38.TabIndex = 37
         '
         'txtNombreCategoria
@@ -1213,18 +1244,20 @@ Partial Class frmPrincipal
         Me.txtNombreCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombreCategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombreCategoria.Location = New System.Drawing.Point(48, 61)
+        Me.txtNombreCategoria.Location = New System.Drawing.Point(72, 94)
+        Me.txtNombreCategoria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreCategoria.Multiline = True
         Me.txtNombreCategoria.Name = "txtNombreCategoria"
-        Me.txtNombreCategoria.Size = New System.Drawing.Size(247, 30)
+        Me.txtNombreCategoria.Size = New System.Drawing.Size(370, 46)
         Me.txtNombreCategoria.TabIndex = 36
         '
         'Panel39
         '
         Me.Panel39.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel39.Location = New System.Drawing.Point(48, 38)
+        Me.Panel39.Location = New System.Drawing.Point(72, 58)
+        Me.Panel39.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel39.Name = "Panel39"
-        Me.Panel39.Size = New System.Drawing.Size(247, 3)
+        Me.Panel39.Size = New System.Drawing.Size(370, 5)
         Me.Panel39.TabIndex = 35
         '
         'txtIdCategoria
@@ -1233,10 +1266,11 @@ Partial Class frmPrincipal
         Me.txtIdCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdCategoria.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdCategoria.Location = New System.Drawing.Point(48, 12)
+        Me.txtIdCategoria.Location = New System.Drawing.Point(72, 18)
+        Me.txtIdCategoria.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdCategoria.Multiline = True
         Me.txtIdCategoria.Name = "txtIdCategoria"
-        Me.txtIdCategoria.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdCategoria.Size = New System.Drawing.Size(370, 46)
         Me.txtIdCategoria.TabIndex = 33
         '
         'pnlVentas
@@ -1269,21 +1303,21 @@ Partial Class frmPrincipal
         Me.pnlVentas.Controls.Add(Me.Panel15)
         Me.pnlVentas.Controls.Add(Me.txtIdVentas)
         Me.pnlVentas.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlVentas.Location = New System.Drawing.Point(200, 36)
+        Me.pnlVentas.Location = New System.Drawing.Point(300, 55)
+        Me.pnlVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlVentas.Name = "pnlVentas"
-        Me.pnlVentas.Size = New System.Drawing.Size(690, 564)
+        Me.pnlVentas.Size = New System.Drawing.Size(1035, 733)
         Me.pnlVentas.TabIndex = 32
         Me.pnlVentas.Visible = False
         '
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(40, 356)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridView2.Location = New System.Drawing.Point(60, 548)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 62
         Me.DataGridView2.RowTemplate.Height = 28
-        Me.DataGridView2.Size = New System.Drawing.Size(566, 143)
+        Me.DataGridView2.Size = New System.Drawing.Size(849, 220)
         Me.DataGridView2.TabIndex = 32
         '
         'BtnCancelar
@@ -1294,10 +1328,10 @@ Partial Class frmPrincipal
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
-        Me.BtnCancelar.Location = New System.Drawing.Point(402, 118)
+        Me.BtnCancelar.Location = New System.Drawing.Point(603, 182)
         Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(204, 53)
+        Me.BtnCancelar.Size = New System.Drawing.Size(306, 82)
         Me.BtnCancelar.TabIndex = 8
         Me.BtnCancelar.Text = "   Cancelar"
         Me.BtnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1312,10 +1346,10 @@ Partial Class frmPrincipal
         Me.BtnRealizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnRealizar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnRealizar.Image = CType(resources.GetObject("BtnRealizar.Image"), System.Drawing.Image)
-        Me.BtnRealizar.Location = New System.Drawing.Point(402, 43)
+        Me.BtnRealizar.Location = New System.Drawing.Point(603, 66)
         Me.BtnRealizar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnRealizar.Name = "BtnRealizar"
-        Me.BtnRealizar.Size = New System.Drawing.Size(204, 53)
+        Me.BtnRealizar.Size = New System.Drawing.Size(306, 82)
         Me.BtnRealizar.TabIndex = 8
         Me.BtnRealizar.Text = "   Realizar"
         Me.BtnRealizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1325,9 +1359,10 @@ Partial Class frmPrincipal
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(100, 13)
+        Me.PictureBox2.Location = New System.Drawing.Point(150, 20)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 28
         Me.PictureBox2.TabStop = False
@@ -1335,9 +1370,10 @@ Partial Class frmPrincipal
         'PictureBox37
         '
         Me.PictureBox37.Image = Global.GUI.My.Resources.Resources.etiqueta
-        Me.PictureBox37.Location = New System.Drawing.Point(330, 316)
+        Me.PictureBox37.Location = New System.Drawing.Point(495, 486)
+        Me.PictureBox37.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox37.Name = "PictureBox37"
-        Me.PictureBox37.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox37.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox37.TabIndex = 27
         Me.PictureBox37.TabStop = False
@@ -1345,17 +1381,19 @@ Partial Class frmPrincipal
         'Panel22
         '
         Me.Panel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel22.Location = New System.Drawing.Point(364, 344)
+        Me.Panel22.Location = New System.Drawing.Point(546, 529)
+        Me.Panel22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel22.Name = "Panel22"
-        Me.Panel22.Size = New System.Drawing.Size(247, 3)
+        Me.Panel22.Size = New System.Drawing.Size(370, 5)
         Me.Panel22.TabIndex = 26
         '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio
-        Me.PictureBox10.Location = New System.Drawing.Point(34, 313)
+        Me.PictureBox10.Location = New System.Drawing.Point(51, 482)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox10.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 27
         Me.PictureBox10.TabStop = False
@@ -1366,18 +1404,20 @@ Partial Class frmPrincipal
         Me.TxtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtTotal.Location = New System.Drawing.Point(366, 318)
+        Me.TxtTotal.Location = New System.Drawing.Point(549, 489)
+        Me.TxtTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtTotal.Multiline = True
         Me.TxtTotal.Name = "TxtTotal"
-        Me.TxtTotal.Size = New System.Drawing.Size(247, 30)
+        Me.TxtTotal.Size = New System.Drawing.Size(370, 46)
         Me.TxtTotal.TabIndex = 25
         '
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(69, 342)
+        Me.Panel10.Location = New System.Drawing.Point(104, 526)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(247, 3)
+        Me.Panel10.Size = New System.Drawing.Size(370, 5)
         Me.Panel10.TabIndex = 26
         '
         'txtPrecioPorPago
@@ -1386,18 +1426,20 @@ Partial Class frmPrincipal
         Me.txtPrecioPorPago.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPrecioPorPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtPrecioPorPago.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtPrecioPorPago.Location = New System.Drawing.Point(70, 316)
+        Me.txtPrecioPorPago.Location = New System.Drawing.Point(105, 486)
+        Me.txtPrecioPorPago.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPrecioPorPago.Multiline = True
         Me.txtPrecioPorPago.Name = "txtPrecioPorPago"
-        Me.txtPrecioPorPago.Size = New System.Drawing.Size(247, 30)
+        Me.txtPrecioPorPago.Size = New System.Drawing.Size(370, 46)
         Me.txtPrecioPorPago.TabIndex = 25
         '
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.GUI.My.Resources.Resources.mano
-        Me.PictureBox11.Location = New System.Drawing.Point(99, 209)
+        Me.PictureBox11.Location = New System.Drawing.Point(148, 322)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox11.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 24
         Me.PictureBox11.TabStop = False
@@ -1405,9 +1447,10 @@ Partial Class frmPrincipal
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(134, 238)
+        Me.Panel11.Location = New System.Drawing.Point(201, 366)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(247, 3)
+        Me.Panel11.Size = New System.Drawing.Size(370, 5)
         Me.Panel11.TabIndex = 23
         '
         'TxtTipoDePagoVentas
@@ -1416,18 +1459,20 @@ Partial Class frmPrincipal
         Me.TxtTipoDePagoVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTipoDePagoVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtTipoDePagoVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtTipoDePagoVentas.Location = New System.Drawing.Point(134, 212)
+        Me.TxtTipoDePagoVentas.Location = New System.Drawing.Point(201, 326)
+        Me.TxtTipoDePagoVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtTipoDePagoVentas.Multiline = True
         Me.TxtTipoDePagoVentas.Name = "TxtTipoDePagoVentas"
-        Me.TxtTipoDePagoVentas.Size = New System.Drawing.Size(247, 30)
+        Me.TxtTipoDePagoVentas.Size = New System.Drawing.Size(370, 46)
         Me.TxtTipoDePagoVentas.TabIndex = 22
         '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.GUI.My.Resources.Resources.numerico
-        Me.PictureBox12.Location = New System.Drawing.Point(100, 162)
+        Me.PictureBox12.Location = New System.Drawing.Point(150, 249)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox12.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 21
         Me.PictureBox12.TabStop = False
@@ -1435,9 +1480,10 @@ Partial Class frmPrincipal
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel12.Location = New System.Drawing.Point(134, 191)
+        Me.Panel12.Location = New System.Drawing.Point(201, 294)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(247, 3)
+        Me.Panel12.Size = New System.Drawing.Size(370, 5)
         Me.Panel12.TabIndex = 20
         '
         'txtNumeroReciboVentas
@@ -1446,18 +1492,20 @@ Partial Class frmPrincipal
         Me.txtNumeroReciboVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNumeroReciboVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNumeroReciboVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNumeroReciboVentas.Location = New System.Drawing.Point(136, 165)
+        Me.txtNumeroReciboVentas.Location = New System.Drawing.Point(204, 254)
+        Me.txtNumeroReciboVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNumeroReciboVentas.Multiline = True
         Me.txtNumeroReciboVentas.Name = "txtNumeroReciboVentas"
-        Me.txtNumeroReciboVentas.Size = New System.Drawing.Size(247, 30)
+        Me.txtNumeroReciboVentas.Size = New System.Drawing.Size(370, 46)
         Me.txtNumeroReciboVentas.TabIndex = 19
         '
         'PictureBox13
         '
         Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
-        Me.PictureBox13.Location = New System.Drawing.Point(99, 113)
+        Me.PictureBox13.Location = New System.Drawing.Point(148, 174)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox13.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox13.TabIndex = 18
         Me.PictureBox13.TabStop = False
@@ -1465,9 +1513,10 @@ Partial Class frmPrincipal
         'Panel13
         '
         Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel13.Location = New System.Drawing.Point(134, 142)
+        Me.Panel13.Location = New System.Drawing.Point(201, 218)
+        Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(247, 3)
+        Me.Panel13.Size = New System.Drawing.Size(370, 5)
         Me.Panel13.TabIndex = 17
         '
         'TxtFechaVentas
@@ -1476,18 +1525,20 @@ Partial Class frmPrincipal
         Me.TxtFechaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtFechaVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtFechaVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtFechaVentas.Location = New System.Drawing.Point(134, 116)
+        Me.TxtFechaVentas.Location = New System.Drawing.Point(201, 178)
+        Me.TxtFechaVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtFechaVentas.Multiline = True
         Me.TxtFechaVentas.Name = "TxtFechaVentas"
-        Me.TxtFechaVentas.Size = New System.Drawing.Size(247, 30)
+        Me.TxtFechaVentas.Size = New System.Drawing.Size(370, 46)
         Me.TxtFechaVentas.TabIndex = 16
         '
         'PictureBox38
         '
         Me.PictureBox38.Image = CType(resources.GetObject("PictureBox38.Image"), System.Drawing.Image)
-        Me.PictureBox38.Location = New System.Drawing.Point(100, 254)
+        Me.PictureBox38.Location = New System.Drawing.Point(150, 391)
+        Me.PictureBox38.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox38.Name = "PictureBox38"
-        Me.PictureBox38.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox38.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox38.TabIndex = 15
         Me.PictureBox38.TabStop = False
@@ -1495,17 +1546,19 @@ Partial Class frmPrincipal
         'Panel35
         '
         Me.Panel35.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel35.Location = New System.Drawing.Point(135, 283)
+        Me.Panel35.Location = New System.Drawing.Point(202, 435)
+        Me.Panel35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel35.Name = "Panel35"
-        Me.Panel35.Size = New System.Drawing.Size(247, 3)
+        Me.Panel35.Size = New System.Drawing.Size(370, 5)
         Me.Panel35.TabIndex = 14
         '
         'PictureBox14
         '
         Me.PictureBox14.Image = CType(resources.GetObject("PictureBox14.Image"), System.Drawing.Image)
-        Me.PictureBox14.Location = New System.Drawing.Point(99, 63)
+        Me.PictureBox14.Location = New System.Drawing.Point(148, 97)
+        Me.PictureBox14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox14.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox14.TabIndex = 15
         Me.PictureBox14.TabStop = False
@@ -1516,18 +1569,20 @@ Partial Class frmPrincipal
         Me.TxtIdEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdEmpleado.Location = New System.Drawing.Point(135, 257)
+        Me.TxtIdEmpleado.Location = New System.Drawing.Point(202, 395)
+        Me.TxtIdEmpleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdEmpleado.Multiline = True
         Me.TxtIdEmpleado.Name = "TxtIdEmpleado"
-        Me.TxtIdEmpleado.Size = New System.Drawing.Size(247, 30)
+        Me.TxtIdEmpleado.Size = New System.Drawing.Size(370, 46)
         Me.TxtIdEmpleado.TabIndex = 13
         '
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel14.Location = New System.Drawing.Point(134, 92)
+        Me.Panel14.Location = New System.Drawing.Point(201, 142)
+        Me.Panel14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(247, 3)
+        Me.Panel14.Size = New System.Drawing.Size(370, 5)
         Me.Panel14.TabIndex = 14
         '
         'TxtNombreVentas
@@ -1536,18 +1591,20 @@ Partial Class frmPrincipal
         Me.TxtNombreVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtNombreVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtNombreVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtNombreVentas.Location = New System.Drawing.Point(134, 66)
+        Me.TxtNombreVentas.Location = New System.Drawing.Point(201, 102)
+        Me.TxtNombreVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtNombreVentas.Multiline = True
         Me.TxtNombreVentas.Name = "TxtNombreVentas"
-        Me.TxtNombreVentas.Size = New System.Drawing.Size(247, 30)
+        Me.TxtNombreVentas.Size = New System.Drawing.Size(370, 46)
         Me.TxtNombreVentas.TabIndex = 13
         '
         'Panel15
         '
         Me.Panel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel15.Location = New System.Drawing.Point(134, 43)
+        Me.Panel15.Location = New System.Drawing.Point(201, 66)
+        Me.Panel15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(247, 3)
+        Me.Panel15.Size = New System.Drawing.Size(370, 5)
         Me.Panel15.TabIndex = 11
         '
         'txtIdVentas
@@ -1556,10 +1613,11 @@ Partial Class frmPrincipal
         Me.txtIdVentas.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdVentas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdVentas.Location = New System.Drawing.Point(134, 17)
+        Me.txtIdVentas.Location = New System.Drawing.Point(201, 26)
+        Me.txtIdVentas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdVentas.Multiline = True
         Me.txtIdVentas.Name = "txtIdVentas"
-        Me.txtIdVentas.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdVentas.Size = New System.Drawing.Size(370, 46)
         Me.txtIdVentas.TabIndex = 1
         '
         'pnlEmpleados
@@ -1584,10 +1642,9 @@ Partial Class frmPrincipal
         Me.pnlEmpleados.Controls.Add(Me.txtNombreEmpleado)
         Me.pnlEmpleados.Controls.Add(Me.Panel54)
         Me.pnlEmpleados.Controls.Add(Me.txtIdEmpleados)
-        Me.pnlEmpleados.Location = New System.Drawing.Point(2, 572)
-        Me.pnlEmpleados.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlEmpleados.Location = New System.Drawing.Point(3, 1759)
         Me.pnlEmpleados.Name = "pnlEmpleados"
-        Me.pnlEmpleados.Size = New System.Drawing.Size(690, 476)
+        Me.pnlEmpleados.Size = New System.Drawing.Size(1035, 732)
         Me.pnlEmpleados.TabIndex = 33
         '
         'btnObtenerEmpleado
@@ -1598,10 +1655,10 @@ Partial Class frmPrincipal
         Me.btnObtenerEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnObtenerEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnObtenerEmpleado.Image = CType(resources.GetObject("btnObtenerEmpleado.Image"), System.Drawing.Image)
-        Me.btnObtenerEmpleado.Location = New System.Drawing.Point(445, 266)
+        Me.btnObtenerEmpleado.Location = New System.Drawing.Point(668, 409)
         Me.btnObtenerEmpleado.Margin = New System.Windows.Forms.Padding(0)
         Me.btnObtenerEmpleado.Name = "btnObtenerEmpleado"
-        Me.btnObtenerEmpleado.Size = New System.Drawing.Size(204, 53)
+        Me.btnObtenerEmpleado.Size = New System.Drawing.Size(306, 82)
         Me.btnObtenerEmpleado.TabIndex = 62
         Me.btnObtenerEmpleado.Text = "   Obtener"
         Me.btnObtenerEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1616,10 +1673,10 @@ Partial Class frmPrincipal
         Me.btnEliminarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnEliminarEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnEliminarEmpleado.Image = CType(resources.GetObject("btnEliminarEmpleado.Image"), System.Drawing.Image)
-        Me.btnEliminarEmpleado.Location = New System.Drawing.Point(445, 187)
+        Me.btnEliminarEmpleado.Location = New System.Drawing.Point(668, 288)
         Me.btnEliminarEmpleado.Margin = New System.Windows.Forms.Padding(0)
         Me.btnEliminarEmpleado.Name = "btnEliminarEmpleado"
-        Me.btnEliminarEmpleado.Size = New System.Drawing.Size(204, 53)
+        Me.btnEliminarEmpleado.Size = New System.Drawing.Size(306, 82)
         Me.btnEliminarEmpleado.TabIndex = 63
         Me.btnEliminarEmpleado.Text = "   Eliminar"
         Me.btnEliminarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1634,10 +1691,10 @@ Partial Class frmPrincipal
         Me.btnModificarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnModificarEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnModificarEmpleado.Image = CType(resources.GetObject("btnModificarEmpleado.Image"), System.Drawing.Image)
-        Me.btnModificarEmpleado.Location = New System.Drawing.Point(445, 113)
+        Me.btnModificarEmpleado.Location = New System.Drawing.Point(668, 174)
         Me.btnModificarEmpleado.Margin = New System.Windows.Forms.Padding(0)
         Me.btnModificarEmpleado.Name = "btnModificarEmpleado"
-        Me.btnModificarEmpleado.Size = New System.Drawing.Size(204, 53)
+        Me.btnModificarEmpleado.Size = New System.Drawing.Size(306, 82)
         Me.btnModificarEmpleado.TabIndex = 64
         Me.btnModificarEmpleado.Text = "   Modificar"
         Me.btnModificarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1652,10 +1709,10 @@ Partial Class frmPrincipal
         Me.btnAgregarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnAgregarEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnAgregarEmpleado.Image = CType(resources.GetObject("btnAgregarEmpleado.Image"), System.Drawing.Image)
-        Me.btnAgregarEmpleado.Location = New System.Drawing.Point(445, 42)
+        Me.btnAgregarEmpleado.Location = New System.Drawing.Point(668, 65)
         Me.btnAgregarEmpleado.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAgregarEmpleado.Name = "btnAgregarEmpleado"
-        Me.btnAgregarEmpleado.Size = New System.Drawing.Size(204, 53)
+        Me.btnAgregarEmpleado.Size = New System.Drawing.Size(306, 82)
         Me.btnAgregarEmpleado.TabIndex = 61
         Me.btnAgregarEmpleado.Text = "   Agregar"
         Me.btnAgregarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1665,9 +1722,10 @@ Partial Class frmPrincipal
         'PictureBox52
         '
         Me.PictureBox52.Image = Global.GUI.My.Resources.Resources.numerico
-        Me.PictureBox52.Location = New System.Drawing.Point(85, 140)
+        Me.PictureBox52.Location = New System.Drawing.Point(128, 215)
+        Me.PictureBox52.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox52.Name = "PictureBox52"
-        Me.PictureBox52.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox52.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox52.TabIndex = 60
         Me.PictureBox52.TabStop = False
@@ -1675,20 +1733,20 @@ Partial Class frmPrincipal
         'dtEmpleado
         '
         Me.dtEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtEmpleado.Location = New System.Drawing.Point(83, 342)
-        Me.dtEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtEmpleado.Location = New System.Drawing.Point(124, 526)
         Me.dtEmpleado.Name = "dtEmpleado"
         Me.dtEmpleado.RowHeadersWidth = 62
         Me.dtEmpleado.RowTemplate.Height = 28
-        Me.dtEmpleado.Size = New System.Drawing.Size(566, 94)
+        Me.dtEmpleado.Size = New System.Drawing.Size(849, 145)
         Me.dtEmpleado.TabIndex = 59
         '
         'PictureBox22
         '
         Me.PictureBox22.Image = CType(resources.GetObject("PictureBox22.Image"), System.Drawing.Image)
-        Me.PictureBox22.Location = New System.Drawing.Point(85, 36)
+        Me.PictureBox22.Location = New System.Drawing.Point(128, 55)
+        Me.PictureBox22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox22.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox22.TabIndex = 58
         Me.PictureBox22.TabStop = False
@@ -1696,9 +1754,10 @@ Partial Class frmPrincipal
         'PictureBox48
         '
         Me.PictureBox48.Image = Global.GUI.My.Resources.Resources.numerico
-        Me.PictureBox48.Location = New System.Drawing.Point(85, 185)
+        Me.PictureBox48.Location = New System.Drawing.Point(128, 285)
+        Me.PictureBox48.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox48.Name = "PictureBox48"
-        Me.PictureBox48.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox48.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox48.TabIndex = 48
         Me.PictureBox48.TabStop = False
@@ -1706,9 +1765,10 @@ Partial Class frmPrincipal
         'Panel44
         '
         Me.Panel44.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel44.Location = New System.Drawing.Point(119, 214)
+        Me.Panel44.Location = New System.Drawing.Point(178, 329)
+        Me.Panel44.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel44.Name = "Panel44"
-        Me.Panel44.Size = New System.Drawing.Size(247, 3)
+        Me.Panel44.Size = New System.Drawing.Size(370, 5)
         Me.Panel44.TabIndex = 47
         '
         'txtDireccionEmpleado
@@ -1717,18 +1777,20 @@ Partial Class frmPrincipal
         Me.txtDireccionEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDireccionEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtDireccionEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtDireccionEmpleado.Location = New System.Drawing.Point(121, 188)
+        Me.txtDireccionEmpleado.Location = New System.Drawing.Point(182, 289)
+        Me.txtDireccionEmpleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDireccionEmpleado.Multiline = True
         Me.txtDireccionEmpleado.Name = "txtDireccionEmpleado"
-        Me.txtDireccionEmpleado.Size = New System.Drawing.Size(247, 30)
+        Me.txtDireccionEmpleado.Size = New System.Drawing.Size(370, 46)
         Me.txtDireccionEmpleado.TabIndex = 46
         '
         'Panel46
         '
         Me.Panel46.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel46.Location = New System.Drawing.Point(119, 164)
+        Me.Panel46.Location = New System.Drawing.Point(178, 252)
+        Me.Panel46.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel46.Name = "Panel46"
-        Me.Panel46.Size = New System.Drawing.Size(247, 3)
+        Me.Panel46.Size = New System.Drawing.Size(370, 5)
         Me.Panel46.TabIndex = 44
         '
         'txtTelefonoEmpleado
@@ -1737,18 +1799,20 @@ Partial Class frmPrincipal
         Me.txtTelefonoEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTelefonoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtTelefonoEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtTelefonoEmpleado.Location = New System.Drawing.Point(119, 138)
+        Me.txtTelefonoEmpleado.Location = New System.Drawing.Point(178, 212)
+        Me.txtTelefonoEmpleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefonoEmpleado.Multiline = True
         Me.txtTelefonoEmpleado.Name = "txtTelefonoEmpleado"
-        Me.txtTelefonoEmpleado.Size = New System.Drawing.Size(247, 30)
+        Me.txtTelefonoEmpleado.Size = New System.Drawing.Size(370, 46)
         Me.txtTelefonoEmpleado.TabIndex = 43
         '
         'PictureBox53
         '
         Me.PictureBox53.Image = CType(resources.GetObject("PictureBox53.Image"), System.Drawing.Image)
-        Me.PictureBox53.Location = New System.Drawing.Point(83, 234)
+        Me.PictureBox53.Location = New System.Drawing.Point(124, 360)
+        Me.PictureBox53.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox53.Name = "PictureBox53"
-        Me.PictureBox53.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox53.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox53.TabIndex = 42
         Me.PictureBox53.TabStop = False
@@ -1756,17 +1820,19 @@ Partial Class frmPrincipal
         'Panel51
         '
         Me.Panel51.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel51.Location = New System.Drawing.Point(118, 263)
+        Me.Panel51.Location = New System.Drawing.Point(177, 405)
+        Me.Panel51.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel51.Name = "Panel51"
-        Me.Panel51.Size = New System.Drawing.Size(247, 3)
+        Me.Panel51.Size = New System.Drawing.Size(370, 5)
         Me.Panel51.TabIndex = 40
         '
         'PictureBox54
         '
         Me.PictureBox54.Image = CType(resources.GetObject("PictureBox54.Image"), System.Drawing.Image)
-        Me.PictureBox54.Location = New System.Drawing.Point(83, 86)
+        Me.PictureBox54.Location = New System.Drawing.Point(124, 132)
+        Me.PictureBox54.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox54.Name = "PictureBox54"
-        Me.PictureBox54.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox54.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox54.TabIndex = 41
         Me.PictureBox54.TabStop = False
@@ -1777,18 +1843,20 @@ Partial Class frmPrincipal
         Me.txtCedulaEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCedulaEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCedulaEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCedulaEmpleado.Location = New System.Drawing.Point(118, 237)
+        Me.txtCedulaEmpleado.Location = New System.Drawing.Point(177, 365)
+        Me.txtCedulaEmpleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCedulaEmpleado.Multiline = True
         Me.txtCedulaEmpleado.Name = "txtCedulaEmpleado"
-        Me.txtCedulaEmpleado.Size = New System.Drawing.Size(247, 30)
+        Me.txtCedulaEmpleado.Size = New System.Drawing.Size(370, 46)
         Me.txtCedulaEmpleado.TabIndex = 38
         '
         'Panel53
         '
         Me.Panel53.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel53.Location = New System.Drawing.Point(119, 115)
+        Me.Panel53.Location = New System.Drawing.Point(178, 177)
+        Me.Panel53.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel53.Name = "Panel53"
-        Me.Panel53.Size = New System.Drawing.Size(247, 3)
+        Me.Panel53.Size = New System.Drawing.Size(370, 5)
         Me.Panel53.TabIndex = 39
         '
         'txtNombreEmpleado
@@ -1797,18 +1865,20 @@ Partial Class frmPrincipal
         Me.txtNombreEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombreEmpleado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombreEmpleado.Location = New System.Drawing.Point(119, 89)
+        Me.txtNombreEmpleado.Location = New System.Drawing.Point(178, 137)
+        Me.txtNombreEmpleado.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreEmpleado.Multiline = True
         Me.txtNombreEmpleado.Name = "txtNombreEmpleado"
-        Me.txtNombreEmpleado.Size = New System.Drawing.Size(247, 30)
+        Me.txtNombreEmpleado.Size = New System.Drawing.Size(370, 46)
         Me.txtNombreEmpleado.TabIndex = 37
         '
         'Panel54
         '
         Me.Panel54.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel54.Location = New System.Drawing.Point(119, 66)
+        Me.Panel54.Location = New System.Drawing.Point(178, 102)
+        Me.Panel54.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel54.Name = "Panel54"
-        Me.Panel54.Size = New System.Drawing.Size(247, 3)
+        Me.Panel54.Size = New System.Drawing.Size(370, 5)
         Me.Panel54.TabIndex = 36
         '
         'txtIdEmpleados
@@ -1817,10 +1887,11 @@ Partial Class frmPrincipal
         Me.txtIdEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdEmpleados.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdEmpleados.Location = New System.Drawing.Point(119, 40)
+        Me.txtIdEmpleados.Location = New System.Drawing.Point(178, 62)
+        Me.txtIdEmpleados.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdEmpleados.Multiline = True
         Me.txtIdEmpleados.Name = "txtIdEmpleados"
-        Me.txtIdEmpleados.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdEmpleados.Size = New System.Drawing.Size(370, 46)
         Me.txtIdEmpleados.TabIndex = 33
         '
         'pnlFacturacion
@@ -1858,29 +1929,30 @@ Partial Class frmPrincipal
         Me.pnlFacturacion.Controls.Add(Me.TxtNumeroFactura)
         Me.pnlFacturacion.Controls.Add(Me.Panel34)
         Me.pnlFacturacion.Controls.Add(Me.TxtIdFacturacion)
-        Me.pnlFacturacion.Location = New System.Drawing.Point(3, 3)
+        Me.pnlFacturacion.Location = New System.Drawing.Point(4, 5)
+        Me.pnlFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlFacturacion.Name = "pnlFacturacion"
-        Me.pnlFacturacion.Size = New System.Drawing.Size(690, 564)
+        Me.pnlFacturacion.Size = New System.Drawing.Size(1035, 868)
         Me.pnlFacturacion.TabIndex = 36
         Me.pnlFacturacion.Visible = False
         '
         'dtFacturacion
         '
         Me.dtFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtFacturacion.Location = New System.Drawing.Point(34, 402)
-        Me.dtFacturacion.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtFacturacion.Location = New System.Drawing.Point(51, 618)
         Me.dtFacturacion.Name = "dtFacturacion"
         Me.dtFacturacion.RowHeadersWidth = 62
         Me.dtFacturacion.RowTemplate.Height = 28
-        Me.dtFacturacion.Size = New System.Drawing.Size(636, 126)
+        Me.dtFacturacion.Size = New System.Drawing.Size(954, 194)
         Me.dtFacturacion.TabIndex = 42
         '
         'PictureBox20
         '
         Me.PictureBox20.Image = Global.GUI.My.Resources.Resources.precios
-        Me.PictureBox20.Location = New System.Drawing.Point(371, 140)
+        Me.PictureBox20.Location = New System.Drawing.Point(556, 215)
+        Me.PictureBox20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox20.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox20.TabIndex = 41
         Me.PictureBox20.TabStop = False
@@ -1888,9 +1960,10 @@ Partial Class frmPrincipal
         'Panel19
         '
         Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel19.Location = New System.Drawing.Point(405, 169)
+        Me.Panel19.Location = New System.Drawing.Point(608, 260)
+        Me.Panel19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(247, 3)
+        Me.Panel19.Size = New System.Drawing.Size(370, 5)
         Me.Panel19.TabIndex = 40
         '
         'TxtDescuentoFacturacion
@@ -1899,18 +1972,20 @@ Partial Class frmPrincipal
         Me.TxtDescuentoFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtDescuentoFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtDescuentoFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtDescuentoFacturacion.Location = New System.Drawing.Point(407, 143)
+        Me.TxtDescuentoFacturacion.Location = New System.Drawing.Point(610, 220)
+        Me.TxtDescuentoFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtDescuentoFacturacion.Multiline = True
         Me.TxtDescuentoFacturacion.Name = "TxtDescuentoFacturacion"
-        Me.TxtDescuentoFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtDescuentoFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtDescuentoFacturacion.TabIndex = 39
         '
         'PictureBox19
         '
         Me.PictureBox19.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio1
-        Me.PictureBox19.Location = New System.Drawing.Point(371, 90)
+        Me.PictureBox19.Location = New System.Drawing.Point(556, 138)
+        Me.PictureBox19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox19.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox19.TabIndex = 38
         Me.PictureBox19.TabStop = False
@@ -1918,9 +1993,10 @@ Partial Class frmPrincipal
         'Panel18
         '
         Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel18.Location = New System.Drawing.Point(405, 119)
+        Me.Panel18.Location = New System.Drawing.Point(608, 183)
+        Me.Panel18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(247, 3)
+        Me.Panel18.Size = New System.Drawing.Size(370, 5)
         Me.Panel18.TabIndex = 37
         '
         'TxtPrecioUnitarioFacturacion
@@ -1929,18 +2005,20 @@ Partial Class frmPrincipal
         Me.TxtPrecioUnitarioFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPrecioUnitarioFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtPrecioUnitarioFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtPrecioUnitarioFacturacion.Location = New System.Drawing.Point(407, 93)
+        Me.TxtPrecioUnitarioFacturacion.Location = New System.Drawing.Point(610, 143)
+        Me.TxtPrecioUnitarioFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtPrecioUnitarioFacturacion.Multiline = True
         Me.TxtPrecioUnitarioFacturacion.Name = "TxtPrecioUnitarioFacturacion"
-        Me.TxtPrecioUnitarioFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtPrecioUnitarioFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtPrecioUnitarioFacturacion.TabIndex = 36
         '
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.GUI.My.Resources.Resources.cantidad
-        Me.PictureBox18.Location = New System.Drawing.Point(34, 320)
+        Me.PictureBox18.Location = New System.Drawing.Point(51, 492)
+        Me.PictureBox18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox18.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox18.TabIndex = 35
         Me.PictureBox18.TabStop = False
@@ -1948,9 +2026,10 @@ Partial Class frmPrincipal
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel17.Location = New System.Drawing.Point(69, 348)
+        Me.Panel17.Location = New System.Drawing.Point(104, 535)
+        Me.Panel17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(247, 3)
+        Me.Panel17.Size = New System.Drawing.Size(370, 5)
         Me.Panel17.TabIndex = 34
         '
         'TxtCantidad
@@ -1959,10 +2038,11 @@ Partial Class frmPrincipal
         Me.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtCantidad.Location = New System.Drawing.Point(70, 322)
+        Me.TxtCantidad.Location = New System.Drawing.Point(105, 495)
+        Me.TxtCantidad.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtCantidad.Multiline = True
         Me.TxtCantidad.Name = "TxtCantidad"
-        Me.TxtCantidad.Size = New System.Drawing.Size(247, 30)
+        Me.TxtCantidad.Size = New System.Drawing.Size(370, 46)
         Me.TxtCantidad.TabIndex = 33
         '
         'BtnModificar
@@ -1973,10 +2053,10 @@ Partial Class frmPrincipal
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
-        Me.BtnModificar.Location = New System.Drawing.Point(523, 345)
+        Me.BtnModificar.Location = New System.Drawing.Point(784, 531)
         Me.BtnModificar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(147, 44)
+        Me.BtnModificar.Size = New System.Drawing.Size(220, 68)
         Me.BtnModificar.TabIndex = 29
         Me.BtnModificar.Text = "   Modificar"
         Me.BtnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1991,10 +2071,10 @@ Partial Class frmPrincipal
         Me.BtnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnFacturar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnFacturar.Image = CType(resources.GetObject("BtnFacturar.Image"), System.Drawing.Image)
-        Me.BtnFacturar.Location = New System.Drawing.Point(347, 346)
+        Me.BtnFacturar.Location = New System.Drawing.Point(520, 532)
         Me.BtnFacturar.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnFacturar.Name = "BtnFacturar"
-        Me.BtnFacturar.Size = New System.Drawing.Size(150, 44)
+        Me.BtnFacturar.Size = New System.Drawing.Size(225, 68)
         Me.BtnFacturar.TabIndex = 8
         Me.BtnFacturar.Text = "   Facturar"
         Me.BtnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2004,9 +2084,10 @@ Partial Class frmPrincipal
         'PictureBox16
         '
         Me.PictureBox16.Image = Global.GUI.My.Resources.Resources.simbolo_de_numero
-        Me.PictureBox16.Location = New System.Drawing.Point(371, 19)
+        Me.PictureBox16.Location = New System.Drawing.Point(556, 29)
+        Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox16.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox16.TabIndex = 28
         Me.PictureBox16.TabStop = False
@@ -2014,9 +2095,10 @@ Partial Class frmPrincipal
         'PictureBox30
         '
         Me.PictureBox30.Image = CType(resources.GetObject("PictureBox30.Image"), System.Drawing.Image)
-        Me.PictureBox30.Location = New System.Drawing.Point(35, 16)
+        Me.PictureBox30.Location = New System.Drawing.Point(52, 25)
+        Me.PictureBox30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox30.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox30.TabIndex = 28
         Me.PictureBox30.TabStop = False
@@ -2024,9 +2106,10 @@ Partial Class frmPrincipal
         'PictureBox31
         '
         Me.PictureBox31.Image = Global.GUI.My.Resources.Resources.tarjeta_de_identificacion
-        Me.PictureBox31.Location = New System.Drawing.Point(35, 261)
+        Me.PictureBox31.Location = New System.Drawing.Point(52, 402)
+        Me.PictureBox31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox31.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox31.TabIndex = 27
         Me.PictureBox31.TabStop = False
@@ -2034,9 +2117,10 @@ Partial Class frmPrincipal
         'Panel29
         '
         Me.Panel29.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel29.Location = New System.Drawing.Point(69, 290)
+        Me.Panel29.Location = New System.Drawing.Point(104, 446)
+        Me.Panel29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel29.Name = "Panel29"
-        Me.Panel29.Size = New System.Drawing.Size(247, 3)
+        Me.Panel29.Size = New System.Drawing.Size(370, 5)
         Me.Panel29.TabIndex = 26
         '
         'TxtIdArticulo
@@ -2045,18 +2129,20 @@ Partial Class frmPrincipal
         Me.TxtIdArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdArticulo.Location = New System.Drawing.Point(71, 264)
+        Me.TxtIdArticulo.Location = New System.Drawing.Point(106, 406)
+        Me.TxtIdArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdArticulo.Multiline = True
         Me.TxtIdArticulo.Name = "TxtIdArticulo"
-        Me.TxtIdArticulo.Size = New System.Drawing.Size(247, 30)
+        Me.TxtIdArticulo.Size = New System.Drawing.Size(370, 46)
         Me.TxtIdArticulo.TabIndex = 25
         '
         'PictureBox32
         '
         Me.PictureBox32.Image = CType(resources.GetObject("PictureBox32.Image"), System.Drawing.Image)
-        Me.PictureBox32.Location = New System.Drawing.Point(34, 212)
+        Me.PictureBox32.Location = New System.Drawing.Point(51, 326)
+        Me.PictureBox32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox32.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox32.TabIndex = 24
         Me.PictureBox32.TabStop = False
@@ -2064,9 +2150,10 @@ Partial Class frmPrincipal
         'Panel30
         '
         Me.Panel30.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel30.Location = New System.Drawing.Point(69, 241)
+        Me.Panel30.Location = New System.Drawing.Point(104, 371)
+        Me.Panel30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel30.Name = "Panel30"
-        Me.Panel30.Size = New System.Drawing.Size(247, 3)
+        Me.Panel30.Size = New System.Drawing.Size(370, 5)
         Me.Panel30.TabIndex = 23
         '
         'TxtIdEmpleadoFacturacion
@@ -2075,18 +2162,20 @@ Partial Class frmPrincipal
         Me.TxtIdEmpleadoFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdEmpleadoFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdEmpleadoFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdEmpleadoFacturacion.Location = New System.Drawing.Point(69, 215)
+        Me.TxtIdEmpleadoFacturacion.Location = New System.Drawing.Point(104, 331)
+        Me.TxtIdEmpleadoFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdEmpleadoFacturacion.Multiline = True
         Me.TxtIdEmpleadoFacturacion.Name = "TxtIdEmpleadoFacturacion"
-        Me.TxtIdEmpleadoFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtIdEmpleadoFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtIdEmpleadoFacturacion.TabIndex = 22
         '
         'PictureBox33
         '
         Me.PictureBox33.Image = CType(resources.GetObject("PictureBox33.Image"), System.Drawing.Image)
-        Me.PictureBox33.Location = New System.Drawing.Point(35, 165)
+        Me.PictureBox33.Location = New System.Drawing.Point(52, 254)
+        Me.PictureBox33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox33.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox33.TabIndex = 21
         Me.PictureBox33.TabStop = False
@@ -2094,9 +2183,10 @@ Partial Class frmPrincipal
         'Panel31
         '
         Me.Panel31.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel31.Location = New System.Drawing.Point(69, 194)
+        Me.Panel31.Location = New System.Drawing.Point(104, 298)
+        Me.Panel31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel31.Name = "Panel31"
-        Me.Panel31.Size = New System.Drawing.Size(247, 3)
+        Me.Panel31.Size = New System.Drawing.Size(370, 5)
         Me.Panel31.TabIndex = 20
         '
         'TxtTipoDePagoFacturacion
@@ -2105,18 +2195,20 @@ Partial Class frmPrincipal
         Me.TxtTipoDePagoFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtTipoDePagoFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtTipoDePagoFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtTipoDePagoFacturacion.Location = New System.Drawing.Point(71, 168)
+        Me.TxtTipoDePagoFacturacion.Location = New System.Drawing.Point(106, 258)
+        Me.TxtTipoDePagoFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtTipoDePagoFacturacion.Multiline = True
         Me.TxtTipoDePagoFacturacion.Name = "TxtTipoDePagoFacturacion"
-        Me.TxtTipoDePagoFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtTipoDePagoFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtTipoDePagoFacturacion.TabIndex = 19
         '
         'PictureBox34
         '
         Me.PictureBox34.Image = Global.GUI.My.Resources.Resources.calendario
-        Me.PictureBox34.Location = New System.Drawing.Point(34, 116)
+        Me.PictureBox34.Location = New System.Drawing.Point(51, 178)
+        Me.PictureBox34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox34.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox34.TabIndex = 18
         Me.PictureBox34.TabStop = False
@@ -2124,9 +2216,10 @@ Partial Class frmPrincipal
         'Panel32
         '
         Me.Panel32.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel32.Location = New System.Drawing.Point(69, 145)
+        Me.Panel32.Location = New System.Drawing.Point(104, 223)
+        Me.Panel32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(247, 3)
+        Me.Panel32.Size = New System.Drawing.Size(370, 5)
         Me.Panel32.TabIndex = 17
         '
         'TxtFechaFacturacion
@@ -2135,18 +2228,20 @@ Partial Class frmPrincipal
         Me.TxtFechaFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtFechaFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtFechaFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtFechaFacturacion.Location = New System.Drawing.Point(69, 119)
+        Me.TxtFechaFacturacion.Location = New System.Drawing.Point(104, 183)
+        Me.TxtFechaFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtFechaFacturacion.Multiline = True
         Me.TxtFechaFacturacion.Name = "TxtFechaFacturacion"
-        Me.TxtFechaFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtFechaFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtFechaFacturacion.TabIndex = 16
         '
         'PictureBox35
         '
         Me.PictureBox35.Image = CType(resources.GetObject("PictureBox35.Image"), System.Drawing.Image)
-        Me.PictureBox35.Location = New System.Drawing.Point(34, 66)
+        Me.PictureBox35.Location = New System.Drawing.Point(51, 102)
+        Me.PictureBox35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox35.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox35.TabIndex = 15
         Me.PictureBox35.TabStop = False
@@ -2154,17 +2249,19 @@ Partial Class frmPrincipal
         'Panel33
         '
         Me.Panel33.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel33.Location = New System.Drawing.Point(69, 95)
+        Me.Panel33.Location = New System.Drawing.Point(104, 146)
+        Me.Panel33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(247, 3)
+        Me.Panel33.Size = New System.Drawing.Size(370, 5)
         Me.Panel33.TabIndex = 14
         '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel9.Location = New System.Drawing.Point(405, 49)
+        Me.Panel9.Location = New System.Drawing.Point(608, 75)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(247, 3)
+        Me.Panel9.Size = New System.Drawing.Size(370, 5)
         Me.Panel9.TabIndex = 11
         '
         'TtxIdClienteFacturacion
@@ -2173,10 +2270,11 @@ Partial Class frmPrincipal
         Me.TtxIdClienteFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TtxIdClienteFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TtxIdClienteFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TtxIdClienteFacturacion.Location = New System.Drawing.Point(69, 69)
+        Me.TtxIdClienteFacturacion.Location = New System.Drawing.Point(104, 106)
+        Me.TtxIdClienteFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TtxIdClienteFacturacion.Multiline = True
         Me.TtxIdClienteFacturacion.Name = "TtxIdClienteFacturacion"
-        Me.TtxIdClienteFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TtxIdClienteFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TtxIdClienteFacturacion.TabIndex = 13
         '
         'TxtNumeroFactura
@@ -2185,18 +2283,20 @@ Partial Class frmPrincipal
         Me.TxtNumeroFactura.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtNumeroFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtNumeroFactura.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtNumeroFactura.Location = New System.Drawing.Point(405, 23)
+        Me.TxtNumeroFactura.Location = New System.Drawing.Point(608, 35)
+        Me.TxtNumeroFactura.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtNumeroFactura.Multiline = True
         Me.TxtNumeroFactura.Name = "TxtNumeroFactura"
-        Me.TxtNumeroFactura.Size = New System.Drawing.Size(247, 30)
+        Me.TxtNumeroFactura.Size = New System.Drawing.Size(370, 46)
         Me.TxtNumeroFactura.TabIndex = 1
         '
         'Panel34
         '
         Me.Panel34.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel34.Location = New System.Drawing.Point(69, 46)
+        Me.Panel34.Location = New System.Drawing.Point(104, 71)
+        Me.Panel34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel34.Name = "Panel34"
-        Me.Panel34.Size = New System.Drawing.Size(247, 3)
+        Me.Panel34.Size = New System.Drawing.Size(370, 5)
         Me.Panel34.TabIndex = 11
         '
         'TxtIdFacturacion
@@ -2205,10 +2305,11 @@ Partial Class frmPrincipal
         Me.TxtIdFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdFacturacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdFacturacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdFacturacion.Location = New System.Drawing.Point(69, 20)
+        Me.TxtIdFacturacion.Location = New System.Drawing.Point(104, 31)
+        Me.TxtIdFacturacion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdFacturacion.Multiline = True
         Me.TxtIdFacturacion.Name = "TxtIdFacturacion"
-        Me.TxtIdFacturacion.Size = New System.Drawing.Size(247, 30)
+        Me.TxtIdFacturacion.Size = New System.Drawing.Size(370, 46)
         Me.TxtIdFacturacion.TabIndex = 1
         '
         'pnlArticulos
@@ -2237,21 +2338,21 @@ Partial Class frmPrincipal
         Me.pnlArticulos.Controls.Add(Me.Panel28)
         Me.pnlArticulos.Controls.Add(Me.TxtIdCodigoArticulo)
         Me.pnlArticulos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlArticulos.Location = New System.Drawing.Point(200, 36)
+        Me.pnlArticulos.Location = New System.Drawing.Point(300, 55)
+        Me.pnlArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlArticulos.Name = "pnlArticulos"
-        Me.pnlArticulos.Size = New System.Drawing.Size(690, 564)
+        Me.pnlArticulos.Size = New System.Drawing.Size(1035, 733)
         Me.pnlArticulos.TabIndex = 37
         Me.pnlArticulos.Visible = False
         '
         'dgvArticulos
         '
         Me.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvArticulos.Location = New System.Drawing.Point(22, 308)
-        Me.dgvArticulos.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvArticulos.Location = New System.Drawing.Point(33, 474)
         Me.dgvArticulos.Name = "dgvArticulos"
         Me.dgvArticulos.RowHeadersWidth = 62
         Me.dgvArticulos.RowTemplate.Height = 28
-        Me.dgvArticulos.Size = New System.Drawing.Size(637, 188)
+        Me.dgvArticulos.Size = New System.Drawing.Size(956, 289)
         Me.dgvArticulos.TabIndex = 30
         '
         'BtnObtenerArticulos
@@ -2262,10 +2363,10 @@ Partial Class frmPrincipal
         Me.BtnObtenerArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnObtenerArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnObtenerArticulos.Image = CType(resources.GetObject("BtnObtenerArticulos.Image"), System.Drawing.Image)
-        Me.BtnObtenerArticulos.Location = New System.Drawing.Point(455, 246)
+        Me.BtnObtenerArticulos.Location = New System.Drawing.Point(682, 378)
         Me.BtnObtenerArticulos.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnObtenerArticulos.Name = "BtnObtenerArticulos"
-        Me.BtnObtenerArticulos.Size = New System.Drawing.Size(204, 53)
+        Me.BtnObtenerArticulos.Size = New System.Drawing.Size(306, 82)
         Me.BtnObtenerArticulos.TabIndex = 29
         Me.BtnObtenerArticulos.Text = "   Obtener"
         Me.BtnObtenerArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2280,10 +2381,10 @@ Partial Class frmPrincipal
         Me.BtnEliminarArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnEliminarArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnEliminarArticulo.Image = CType(resources.GetObject("BtnEliminarArticulo.Image"), System.Drawing.Image)
-        Me.BtnEliminarArticulo.Location = New System.Drawing.Point(455, 166)
+        Me.BtnEliminarArticulo.Location = New System.Drawing.Point(682, 255)
         Me.BtnEliminarArticulo.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnEliminarArticulo.Name = "BtnEliminarArticulo"
-        Me.BtnEliminarArticulo.Size = New System.Drawing.Size(204, 53)
+        Me.BtnEliminarArticulo.Size = New System.Drawing.Size(306, 82)
         Me.BtnEliminarArticulo.TabIndex = 29
         Me.BtnEliminarArticulo.Text = "   Eliminar"
         Me.BtnEliminarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2298,10 +2399,10 @@ Partial Class frmPrincipal
         Me.BtnModificarArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnModificarArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnModificarArticulo.Image = CType(resources.GetObject("BtnModificarArticulo.Image"), System.Drawing.Image)
-        Me.BtnModificarArticulo.Location = New System.Drawing.Point(455, 92)
+        Me.BtnModificarArticulo.Location = New System.Drawing.Point(682, 142)
         Me.BtnModificarArticulo.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnModificarArticulo.Name = "BtnModificarArticulo"
-        Me.BtnModificarArticulo.Size = New System.Drawing.Size(204, 53)
+        Me.BtnModificarArticulo.Size = New System.Drawing.Size(306, 82)
         Me.BtnModificarArticulo.TabIndex = 29
         Me.BtnModificarArticulo.Text = "   Modificar"
         Me.BtnModificarArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2316,10 +2417,10 @@ Partial Class frmPrincipal
         Me.BtnGuardarArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.BtnGuardarArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.BtnGuardarArticulos.Image = CType(resources.GetObject("BtnGuardarArticulos.Image"), System.Drawing.Image)
-        Me.BtnGuardarArticulos.Location = New System.Drawing.Point(455, 21)
+        Me.BtnGuardarArticulos.Location = New System.Drawing.Point(682, 32)
         Me.BtnGuardarArticulos.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnGuardarArticulos.Name = "BtnGuardarArticulos"
-        Me.BtnGuardarArticulos.Size = New System.Drawing.Size(204, 53)
+        Me.BtnGuardarArticulos.Size = New System.Drawing.Size(306, 82)
         Me.BtnGuardarArticulos.TabIndex = 8
         Me.BtnGuardarArticulos.Text = "   Agregar"
         Me.BtnGuardarArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2329,9 +2430,10 @@ Partial Class frmPrincipal
         'PictureBox23
         '
         Me.PictureBox23.Image = CType(resources.GetObject("PictureBox23.Image"), System.Drawing.Image)
-        Me.PictureBox23.Location = New System.Drawing.Point(21, 8)
+        Me.PictureBox23.Location = New System.Drawing.Point(32, 12)
+        Me.PictureBox23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox23.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox23.TabIndex = 28
         Me.PictureBox23.TabStop = False
@@ -2339,9 +2441,10 @@ Partial Class frmPrincipal
         'PictureBox24
         '
         Me.PictureBox24.Image = Global.GUI.My.Resources.Resources.cheque
-        Me.PictureBox24.Location = New System.Drawing.Point(21, 253)
+        Me.PictureBox24.Location = New System.Drawing.Point(32, 389)
+        Me.PictureBox24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox24.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox24.TabIndex = 27
         Me.PictureBox24.TabStop = False
@@ -2349,9 +2452,10 @@ Partial Class frmPrincipal
         'Panel23
         '
         Me.Panel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel23.Location = New System.Drawing.Point(55, 282)
+        Me.Panel23.Location = New System.Drawing.Point(82, 434)
+        Me.Panel23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel23.Name = "Panel23"
-        Me.Panel23.Size = New System.Drawing.Size(247, 3)
+        Me.Panel23.Size = New System.Drawing.Size(370, 5)
         Me.Panel23.TabIndex = 26
         '
         'txtCantidadArticulo
@@ -2360,18 +2464,20 @@ Partial Class frmPrincipal
         Me.txtCantidadArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCantidadArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCantidadArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCantidadArticulo.Location = New System.Drawing.Point(57, 256)
+        Me.txtCantidadArticulo.Location = New System.Drawing.Point(86, 394)
+        Me.txtCantidadArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCantidadArticulo.Multiline = True
         Me.txtCantidadArticulo.Name = "txtCantidadArticulo"
-        Me.txtCantidadArticulo.Size = New System.Drawing.Size(247, 30)
+        Me.txtCantidadArticulo.Size = New System.Drawing.Size(370, 46)
         Me.txtCantidadArticulo.TabIndex = 25
         '
         'PictureBox25
         '
         Me.PictureBox25.Image = Global.GUI.My.Resources.Resources.etiqueta_del_precio
-        Me.PictureBox25.Location = New System.Drawing.Point(20, 204)
+        Me.PictureBox25.Location = New System.Drawing.Point(30, 314)
+        Me.PictureBox25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox25.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox25.TabIndex = 24
         Me.PictureBox25.TabStop = False
@@ -2379,9 +2485,10 @@ Partial Class frmPrincipal
         'Panel24
         '
         Me.Panel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel24.Location = New System.Drawing.Point(55, 233)
+        Me.Panel24.Location = New System.Drawing.Point(82, 358)
+        Me.Panel24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel24.Name = "Panel24"
-        Me.Panel24.Size = New System.Drawing.Size(247, 3)
+        Me.Panel24.Size = New System.Drawing.Size(370, 5)
         Me.Panel24.TabIndex = 23
         '
         'TxtPrecioArticulos
@@ -2390,18 +2497,20 @@ Partial Class frmPrincipal
         Me.TxtPrecioArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtPrecioArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtPrecioArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtPrecioArticulos.Location = New System.Drawing.Point(55, 207)
+        Me.TxtPrecioArticulos.Location = New System.Drawing.Point(82, 318)
+        Me.TxtPrecioArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtPrecioArticulos.Multiline = True
         Me.TxtPrecioArticulos.Name = "TxtPrecioArticulos"
-        Me.TxtPrecioArticulos.Size = New System.Drawing.Size(247, 30)
+        Me.TxtPrecioArticulos.Size = New System.Drawing.Size(370, 46)
         Me.TxtPrecioArticulos.TabIndex = 22
         '
         'PictureBox26
         '
         Me.PictureBox26.Image = Global.GUI.My.Resources.Resources.categorizacion
-        Me.PictureBox26.Location = New System.Drawing.Point(21, 157)
+        Me.PictureBox26.Location = New System.Drawing.Point(32, 242)
+        Me.PictureBox26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox26.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox26.TabIndex = 21
         Me.PictureBox26.TabStop = False
@@ -2409,9 +2518,10 @@ Partial Class frmPrincipal
         'Panel25
         '
         Me.Panel25.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel25.Location = New System.Drawing.Point(55, 186)
+        Me.Panel25.Location = New System.Drawing.Point(82, 286)
+        Me.Panel25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel25.Name = "Panel25"
-        Me.Panel25.Size = New System.Drawing.Size(247, 3)
+        Me.Panel25.Size = New System.Drawing.Size(370, 5)
         Me.Panel25.TabIndex = 20
         '
         'TxtCategoriaArticulos
@@ -2420,18 +2530,20 @@ Partial Class frmPrincipal
         Me.TxtCategoriaArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtCategoriaArticulos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtCategoriaArticulos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtCategoriaArticulos.Location = New System.Drawing.Point(57, 160)
+        Me.TxtCategoriaArticulos.Location = New System.Drawing.Point(86, 246)
+        Me.TxtCategoriaArticulos.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtCategoriaArticulos.Multiline = True
         Me.TxtCategoriaArticulos.Name = "TxtCategoriaArticulos"
-        Me.TxtCategoriaArticulos.Size = New System.Drawing.Size(247, 30)
+        Me.TxtCategoriaArticulos.Size = New System.Drawing.Size(370, 46)
         Me.TxtCategoriaArticulos.TabIndex = 19
         '
         'PictureBox27
         '
         Me.PictureBox27.Image = Global.GUI.My.Resources.Resources.proveedor
-        Me.PictureBox27.Location = New System.Drawing.Point(20, 108)
+        Me.PictureBox27.Location = New System.Drawing.Point(30, 166)
+        Me.PictureBox27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox27.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox27.TabIndex = 18
         Me.PictureBox27.TabStop = False
@@ -2439,9 +2551,10 @@ Partial Class frmPrincipal
         'Panel26
         '
         Me.Panel26.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel26.Location = New System.Drawing.Point(55, 137)
+        Me.Panel26.Location = New System.Drawing.Point(82, 211)
+        Me.Panel26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel26.Name = "Panel26"
-        Me.Panel26.Size = New System.Drawing.Size(247, 3)
+        Me.Panel26.Size = New System.Drawing.Size(370, 5)
         Me.Panel26.TabIndex = 17
         '
         'TxtProveedorArticulo
@@ -2450,18 +2563,20 @@ Partial Class frmPrincipal
         Me.TxtProveedorArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtProveedorArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtProveedorArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtProveedorArticulo.Location = New System.Drawing.Point(55, 111)
+        Me.TxtProveedorArticulo.Location = New System.Drawing.Point(82, 171)
+        Me.TxtProveedorArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtProveedorArticulo.Multiline = True
         Me.TxtProveedorArticulo.Name = "TxtProveedorArticulo"
-        Me.TxtProveedorArticulo.Size = New System.Drawing.Size(247, 30)
+        Me.TxtProveedorArticulo.Size = New System.Drawing.Size(370, 46)
         Me.TxtProveedorArticulo.TabIndex = 16
         '
         'PictureBox28
         '
         Me.PictureBox28.Image = CType(resources.GetObject("PictureBox28.Image"), System.Drawing.Image)
-        Me.PictureBox28.Location = New System.Drawing.Point(20, 58)
+        Me.PictureBox28.Location = New System.Drawing.Point(30, 89)
+        Me.PictureBox28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox28.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox28.TabIndex = 15
         Me.PictureBox28.TabStop = False
@@ -2469,9 +2584,10 @@ Partial Class frmPrincipal
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel27.Location = New System.Drawing.Point(55, 87)
+        Me.Panel27.Location = New System.Drawing.Point(82, 134)
+        Me.Panel27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel27.Name = "Panel27"
-        Me.Panel27.Size = New System.Drawing.Size(247, 3)
+        Me.Panel27.Size = New System.Drawing.Size(370, 5)
         Me.Panel27.TabIndex = 14
         '
         'TxtNombreArticulo
@@ -2480,18 +2596,20 @@ Partial Class frmPrincipal
         Me.TxtNombreArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtNombreArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtNombreArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtNombreArticulo.Location = New System.Drawing.Point(55, 61)
+        Me.TxtNombreArticulo.Location = New System.Drawing.Point(82, 94)
+        Me.TxtNombreArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtNombreArticulo.Multiline = True
         Me.TxtNombreArticulo.Name = "TxtNombreArticulo"
-        Me.TxtNombreArticulo.Size = New System.Drawing.Size(247, 30)
+        Me.TxtNombreArticulo.Size = New System.Drawing.Size(370, 46)
         Me.TxtNombreArticulo.TabIndex = 13
         '
         'Panel28
         '
         Me.Panel28.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel28.Location = New System.Drawing.Point(55, 38)
+        Me.Panel28.Location = New System.Drawing.Point(82, 58)
+        Me.Panel28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel28.Name = "Panel28"
-        Me.Panel28.Size = New System.Drawing.Size(247, 3)
+        Me.Panel28.Size = New System.Drawing.Size(370, 5)
         Me.Panel28.TabIndex = 11
         '
         'TxtIdCodigoArticulo
@@ -2500,10 +2618,11 @@ Partial Class frmPrincipal
         Me.TxtIdCodigoArticulo.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtIdCodigoArticulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.TxtIdCodigoArticulo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TxtIdCodigoArticulo.Location = New System.Drawing.Point(55, 12)
+        Me.TxtIdCodigoArticulo.Location = New System.Drawing.Point(82, 18)
+        Me.TxtIdCodigoArticulo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TxtIdCodigoArticulo.Multiline = True
         Me.TxtIdCodigoArticulo.Name = "TxtIdCodigoArticulo"
-        Me.TxtIdCodigoArticulo.Size = New System.Drawing.Size(247, 30)
+        Me.TxtIdCodigoArticulo.Size = New System.Drawing.Size(370, 46)
         Me.TxtIdCodigoArticulo.TabIndex = 1
         '
         'MantenimientoTimer
@@ -2520,38 +2639,42 @@ Partial Class frmPrincipal
         Me.txtIdInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdInventario.Location = New System.Drawing.Point(69, 65)
+        Me.txtIdInventario.Location = New System.Drawing.Point(104, 100)
+        Me.txtIdInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdInventario.Multiline = True
         Me.txtIdInventario.Name = "txtIdInventario"
-        Me.txtIdInventario.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdInventario.Size = New System.Drawing.Size(370, 46)
         Me.txtIdInventario.TabIndex = 1
         '
         'Panel43
         '
         Me.Panel43.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel43.Location = New System.Drawing.Point(69, 91)
+        Me.Panel43.Location = New System.Drawing.Point(104, 140)
+        Me.Panel43.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel43.Name = "Panel43"
-        Me.Panel43.Size = New System.Drawing.Size(247, 3)
+        Me.Panel43.Size = New System.Drawing.Size(370, 5)
         Me.Panel43.TabIndex = 11
         '
-        'IdCategoriaInventario
+        'txtIdCategoriaInventario
         '
-        Me.IdCategoriaInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.IdCategoriaInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.IdCategoriaInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.IdCategoriaInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.IdCategoriaInventario.Location = New System.Drawing.Point(69, 114)
-        Me.IdCategoriaInventario.Multiline = True
-        Me.IdCategoriaInventario.Name = "IdCategoriaInventario"
-        Me.IdCategoriaInventario.Size = New System.Drawing.Size(247, 30)
-        Me.IdCategoriaInventario.TabIndex = 13
+        Me.txtIdCategoriaInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.txtIdCategoriaInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtIdCategoriaInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.txtIdCategoriaInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.txtIdCategoriaInventario.Location = New System.Drawing.Point(104, 175)
+        Me.txtIdCategoriaInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtIdCategoriaInventario.Multiline = True
+        Me.txtIdCategoriaInventario.Name = "txtIdCategoriaInventario"
+        Me.txtIdCategoriaInventario.Size = New System.Drawing.Size(370, 46)
+        Me.txtIdCategoriaInventario.TabIndex = 13
         '
         'Panel42
         '
         Me.Panel42.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel42.Location = New System.Drawing.Point(69, 140)
+        Me.Panel42.Location = New System.Drawing.Point(104, 215)
+        Me.Panel42.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel42.Name = "Panel42"
-        Me.Panel42.Size = New System.Drawing.Size(247, 3)
+        Me.Panel42.Size = New System.Drawing.Size(370, 5)
         Me.Panel42.TabIndex = 14
         '
         'txtCantidadInventario
@@ -2560,26 +2683,29 @@ Partial Class frmPrincipal
         Me.txtCantidadInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtCantidadInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtCantidadInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtCantidadInventario.Location = New System.Drawing.Point(69, 164)
+        Me.txtCantidadInventario.Location = New System.Drawing.Point(104, 252)
+        Me.txtCantidadInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCantidadInventario.Multiline = True
         Me.txtCantidadInventario.Name = "txtCantidadInventario"
-        Me.txtCantidadInventario.Size = New System.Drawing.Size(247, 30)
+        Me.txtCantidadInventario.Size = New System.Drawing.Size(370, 46)
         Me.txtCantidadInventario.TabIndex = 16
         '
         'Panel41
         '
         Me.Panel41.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel41.Location = New System.Drawing.Point(69, 190)
+        Me.Panel41.Location = New System.Drawing.Point(104, 292)
+        Me.Panel41.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel41.Name = "Panel41"
-        Me.Panel41.Size = New System.Drawing.Size(247, 3)
+        Me.Panel41.Size = New System.Drawing.Size(370, 5)
         Me.Panel41.TabIndex = 17
         '
         'PictureBox41
         '
         Me.PictureBox41.Image = Global.GUI.My.Resources.Resources.proveedor
-        Me.PictureBox41.Location = New System.Drawing.Point(34, 161)
+        Me.PictureBox41.Location = New System.Drawing.Point(51, 248)
+        Me.PictureBox41.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox41.Name = "PictureBox41"
-        Me.PictureBox41.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox41.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox41.TabIndex = 18
         Me.PictureBox41.TabStop = False
@@ -2590,26 +2716,29 @@ Partial Class frmPrincipal
         Me.txtIdProductoInventario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdProductoInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdProductoInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdProductoInventario.Location = New System.Drawing.Point(71, 213)
+        Me.txtIdProductoInventario.Location = New System.Drawing.Point(106, 328)
+        Me.txtIdProductoInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdProductoInventario.Multiline = True
         Me.txtIdProductoInventario.Name = "txtIdProductoInventario"
-        Me.txtIdProductoInventario.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdProductoInventario.Size = New System.Drawing.Size(370, 46)
         Me.txtIdProductoInventario.TabIndex = 19
         '
         'Panel40
         '
         Me.Panel40.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel40.Location = New System.Drawing.Point(69, 239)
+        Me.Panel40.Location = New System.Drawing.Point(104, 368)
+        Me.Panel40.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel40.Name = "Panel40"
-        Me.Panel40.Size = New System.Drawing.Size(247, 3)
+        Me.Panel40.Size = New System.Drawing.Size(370, 5)
         Me.Panel40.TabIndex = 20
         '
         'PictureBox40
         '
         Me.PictureBox40.Image = Global.GUI.My.Resources.Resources.categorizacion
-        Me.PictureBox40.Location = New System.Drawing.Point(35, 210)
+        Me.PictureBox40.Location = New System.Drawing.Point(52, 323)
+        Me.PictureBox40.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox40.Name = "PictureBox40"
-        Me.PictureBox40.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox40.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox40.TabIndex = 21
         Me.PictureBox40.TabStop = False
@@ -2617,9 +2746,10 @@ Partial Class frmPrincipal
         'PictureBox21
         '
         Me.PictureBox21.Image = CType(resources.GetObject("PictureBox21.Image"), System.Drawing.Image)
-        Me.PictureBox21.Location = New System.Drawing.Point(35, 61)
+        Me.PictureBox21.Location = New System.Drawing.Point(52, 94)
+        Me.PictureBox21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox21.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox21.TabIndex = 28
         Me.PictureBox21.TabStop = False
@@ -2632,10 +2762,10 @@ Partial Class frmPrincipal
         Me.btnAgregarInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnAgregarInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnAgregarInventario.Image = CType(resources.GetObject("btnAgregarInventario.Image"), System.Drawing.Image)
-        Me.btnAgregarInventario.Location = New System.Drawing.Point(397, 16)
+        Me.btnAgregarInventario.Location = New System.Drawing.Point(596, 25)
         Me.btnAgregarInventario.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAgregarInventario.Name = "btnAgregarInventario"
-        Me.btnAgregarInventario.Size = New System.Drawing.Size(204, 53)
+        Me.btnAgregarInventario.Size = New System.Drawing.Size(306, 82)
         Me.btnAgregarInventario.TabIndex = 8
         Me.btnAgregarInventario.Text = "   Agregar"
         Me.btnAgregarInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2650,10 +2780,10 @@ Partial Class frmPrincipal
         Me.btnModificarInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnModificarInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnModificarInventario.Image = CType(resources.GetObject("btnModificarInventario.Image"), System.Drawing.Image)
-        Me.btnModificarInventario.Location = New System.Drawing.Point(397, 87)
+        Me.btnModificarInventario.Location = New System.Drawing.Point(596, 134)
         Me.btnModificarInventario.Margin = New System.Windows.Forms.Padding(0)
         Me.btnModificarInventario.Name = "btnModificarInventario"
-        Me.btnModificarInventario.Size = New System.Drawing.Size(204, 53)
+        Me.btnModificarInventario.Size = New System.Drawing.Size(306, 82)
         Me.btnModificarInventario.TabIndex = 29
         Me.btnModificarInventario.Text = "   Modificar"
         Me.btnModificarInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2668,10 +2798,10 @@ Partial Class frmPrincipal
         Me.btnEliminarInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnEliminarInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnEliminarInventario.Image = CType(resources.GetObject("btnEliminarInventario.Image"), System.Drawing.Image)
-        Me.btnEliminarInventario.Location = New System.Drawing.Point(397, 161)
+        Me.btnEliminarInventario.Location = New System.Drawing.Point(596, 248)
         Me.btnEliminarInventario.Margin = New System.Windows.Forms.Padding(0)
         Me.btnEliminarInventario.Name = "btnEliminarInventario"
-        Me.btnEliminarInventario.Size = New System.Drawing.Size(204, 53)
+        Me.btnEliminarInventario.Size = New System.Drawing.Size(306, 82)
         Me.btnEliminarInventario.TabIndex = 29
         Me.btnEliminarInventario.Text = "   Eliminar"
         Me.btnEliminarInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2686,10 +2816,10 @@ Partial Class frmPrincipal
         Me.btnObtenerInventario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnObtenerInventario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnObtenerInventario.Image = CType(resources.GetObject("btnObtenerInventario.Image"), System.Drawing.Image)
-        Me.btnObtenerInventario.Location = New System.Drawing.Point(397, 235)
+        Me.btnObtenerInventario.Location = New System.Drawing.Point(596, 362)
         Me.btnObtenerInventario.Margin = New System.Windows.Forms.Padding(0)
         Me.btnObtenerInventario.Name = "btnObtenerInventario"
-        Me.btnObtenerInventario.Size = New System.Drawing.Size(204, 53)
+        Me.btnObtenerInventario.Size = New System.Drawing.Size(306, 82)
         Me.btnObtenerInventario.TabIndex = 29
         Me.btnObtenerInventario.Text = "   Obtener"
         Me.btnObtenerInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2700,12 +2830,11 @@ Partial Class frmPrincipal
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idInventario, Me.idcategoriaa, Me.idProductoInventario, Me.cantidadInventario})
-        Me.DataGridView3.Location = New System.Drawing.Point(37, 304)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
+        Me.DataGridView3.Location = New System.Drawing.Point(56, 468)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 62
         Me.DataGridView3.RowTemplate.Height = 28
-        Me.DataGridView3.Size = New System.Drawing.Size(566, 188)
+        Me.DataGridView3.Size = New System.Drawing.Size(849, 289)
         Me.DataGridView3.TabIndex = 30
         '
         'idInventario
@@ -2752,22 +2881,24 @@ Partial Class frmPrincipal
         Me.pnlInventario.Controls.Add(Me.Panel41)
         Me.pnlInventario.Controls.Add(Me.txtCantidadInventario)
         Me.pnlInventario.Controls.Add(Me.Panel42)
-        Me.pnlInventario.Controls.Add(Me.IdCategoriaInventario)
+        Me.pnlInventario.Controls.Add(Me.txtIdCategoriaInventario)
         Me.pnlInventario.Controls.Add(Me.Panel43)
         Me.pnlInventario.Controls.Add(Me.txtIdInventario)
         Me.pnlInventario.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlInventario.Location = New System.Drawing.Point(200, 36)
+        Me.pnlInventario.Location = New System.Drawing.Point(300, 55)
+        Me.pnlInventario.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlInventario.Name = "pnlInventario"
-        Me.pnlInventario.Size = New System.Drawing.Size(690, 564)
+        Me.pnlInventario.Size = New System.Drawing.Size(1035, 733)
         Me.pnlInventario.TabIndex = 38
         Me.pnlInventario.Visible = False
         '
         'PictureBox42
         '
         Me.PictureBox42.Image = CType(resources.GetObject("PictureBox42.Image"), System.Drawing.Image)
-        Me.PictureBox42.Location = New System.Drawing.Point(35, 110)
+        Me.PictureBox42.Location = New System.Drawing.Point(52, 169)
+        Me.PictureBox42.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox42.Name = "PictureBox42"
-        Me.PictureBox42.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox42.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox42.TabIndex = 31
         Me.PictureBox42.TabStop = False
@@ -2795,29 +2926,30 @@ Partial Class frmPrincipal
         Me.pnlProveedor.Controls.Add(Me.txtNombreProveedor)
         Me.pnlProveedor.Controls.Add(Me.Panel52)
         Me.pnlProveedor.Controls.Add(Me.txtIdProveedor)
-        Me.pnlProveedor.Location = New System.Drawing.Point(3, 1053)
+        Me.pnlProveedor.Location = New System.Drawing.Point(4, 883)
+        Me.pnlProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlProveedor.Name = "pnlProveedor"
-        Me.pnlProveedor.Size = New System.Drawing.Size(690, 564)
+        Me.pnlProveedor.Size = New System.Drawing.Size(1035, 868)
         Me.pnlProveedor.TabIndex = 39
         Me.pnlProveedor.Visible = False
         '
         'dtProveedor
         '
         Me.dtProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtProveedor.Location = New System.Drawing.Point(35, 228)
-        Me.dtProveedor.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtProveedor.Location = New System.Drawing.Point(52, 351)
         Me.dtProveedor.Name = "dtProveedor"
         Me.dtProveedor.RowHeadersWidth = 62
         Me.dtProveedor.RowTemplate.Height = 28
-        Me.dtProveedor.Size = New System.Drawing.Size(610, 260)
+        Me.dtProveedor.Size = New System.Drawing.Size(915, 400)
         Me.dtProveedor.TabIndex = 42
         '
         'PictureBox44
         '
         Me.PictureBox44.Image = Global.GUI.My.Resources.Resources.web
-        Me.PictureBox44.Location = New System.Drawing.Point(348, 86)
+        Me.PictureBox44.Location = New System.Drawing.Point(522, 132)
+        Me.PictureBox44.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox44.Name = "PictureBox44"
-        Me.PictureBox44.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox44.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox44.TabIndex = 32
         Me.PictureBox44.TabStop = False
@@ -2825,9 +2957,10 @@ Partial Class frmPrincipal
         'Panel45
         '
         Me.Panel45.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel45.Location = New System.Drawing.Point(382, 115)
+        Me.Panel45.Location = New System.Drawing.Point(573, 177)
+        Me.Panel45.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel45.Name = "Panel45"
-        Me.Panel45.Size = New System.Drawing.Size(247, 3)
+        Me.Panel45.Size = New System.Drawing.Size(370, 5)
         Me.Panel45.TabIndex = 31
         '
         'txtIdCiudadProveedor
@@ -2836,10 +2969,11 @@ Partial Class frmPrincipal
         Me.txtIdCiudadProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdCiudadProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdCiudadProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdCiudadProveedor.Location = New System.Drawing.Point(384, 89)
+        Me.txtIdCiudadProveedor.Location = New System.Drawing.Point(576, 137)
+        Me.txtIdCiudadProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdCiudadProveedor.Multiline = True
         Me.txtIdCiudadProveedor.Name = "txtIdCiudadProveedor"
-        Me.txtIdCiudadProveedor.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdCiudadProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtIdCiudadProveedor.TabIndex = 30
         '
         'btnModificarProveedor
@@ -2850,10 +2984,10 @@ Partial Class frmPrincipal
         Me.btnModificarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnModificarProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnModificarProveedor.Image = CType(resources.GetObject("btnModificarProveedor.Image"), System.Drawing.Image)
-        Me.btnModificarProveedor.Location = New System.Drawing.Point(498, 154)
+        Me.btnModificarProveedor.Location = New System.Drawing.Point(747, 237)
         Me.btnModificarProveedor.Margin = New System.Windows.Forms.Padding(0)
         Me.btnModificarProveedor.Name = "btnModificarProveedor"
-        Me.btnModificarProveedor.Size = New System.Drawing.Size(135, 44)
+        Me.btnModificarProveedor.Size = New System.Drawing.Size(202, 68)
         Me.btnModificarProveedor.TabIndex = 29
         Me.btnModificarProveedor.Text = "   Modificar"
         Me.btnModificarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2868,10 +3002,10 @@ Partial Class frmPrincipal
         Me.btnFacturarProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.5!)
         Me.btnFacturarProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnFacturarProveedor.Image = CType(resources.GetObject("btnFacturarProveedor.Image"), System.Drawing.Image)
-        Me.btnFacturarProveedor.Location = New System.Drawing.Point(351, 155)
+        Me.btnFacturarProveedor.Location = New System.Drawing.Point(526, 238)
         Me.btnFacturarProveedor.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFacturarProveedor.Name = "btnFacturarProveedor"
-        Me.btnFacturarProveedor.Size = New System.Drawing.Size(137, 44)
+        Me.btnFacturarProveedor.Size = New System.Drawing.Size(206, 68)
         Me.btnFacturarProveedor.TabIndex = 8
         Me.btnFacturarProveedor.Text = "   Facturar"
         Me.btnFacturarProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2881,9 +3015,10 @@ Partial Class frmPrincipal
         'PictureBox45
         '
         Me.PictureBox45.Image = Global.GUI.My.Resources.Resources.simbolo_de_numero
-        Me.PictureBox45.Location = New System.Drawing.Point(349, 16)
+        Me.PictureBox45.Location = New System.Drawing.Point(524, 25)
+        Me.PictureBox45.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox45.Name = "PictureBox45"
-        Me.PictureBox45.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox45.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox45.TabIndex = 28
         Me.PictureBox45.TabStop = False
@@ -2891,9 +3026,10 @@ Partial Class frmPrincipal
         'PictureBox46
         '
         Me.PictureBox46.Image = CType(resources.GetObject("PictureBox46.Image"), System.Drawing.Image)
-        Me.PictureBox46.Location = New System.Drawing.Point(35, 16)
+        Me.PictureBox46.Location = New System.Drawing.Point(52, 25)
+        Me.PictureBox46.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox46.Name = "PictureBox46"
-        Me.PictureBox46.Size = New System.Drawing.Size(33, 33)
+        Me.PictureBox46.Size = New System.Drawing.Size(50, 51)
         Me.PictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox46.TabIndex = 28
         Me.PictureBox46.TabStop = False
@@ -2901,9 +3037,10 @@ Partial Class frmPrincipal
         'Panel47
         '
         Me.Panel47.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel47.Location = New System.Drawing.Point(384, 43)
+        Me.Panel47.Location = New System.Drawing.Point(576, 66)
+        Me.Panel47.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel47.Name = "Panel47"
-        Me.Panel47.Size = New System.Drawing.Size(247, 3)
+        Me.Panel47.Size = New System.Drawing.Size(370, 5)
         Me.Panel47.TabIndex = 23
         '
         'txtTelefonoProveedor
@@ -2912,18 +3049,20 @@ Partial Class frmPrincipal
         Me.txtTelefonoProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtTelefonoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtTelefonoProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtTelefonoProveedor.Location = New System.Drawing.Point(384, 17)
+        Me.txtTelefonoProveedor.Location = New System.Drawing.Point(576, 26)
+        Me.txtTelefonoProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtTelefonoProveedor.Multiline = True
         Me.txtTelefonoProveedor.Name = "txtTelefonoProveedor"
-        Me.txtTelefonoProveedor.Size = New System.Drawing.Size(247, 30)
+        Me.txtTelefonoProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtTelefonoProveedor.TabIndex = 22
         '
         'PictureBox49
         '
-        Me.PictureBox49.Image = CType(resources.GetObject("PictureBox49.Image"), System.Drawing.Image)
-        Me.PictureBox49.Location = New System.Drawing.Point(35, 165)
+        Me.PictureBox49.Image = Global.GUI.My.Resources.Resources.tarjeta_de_identificacion
+        Me.PictureBox49.Location = New System.Drawing.Point(52, 254)
+        Me.PictureBox49.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox49.Name = "PictureBox49"
-        Me.PictureBox49.Size = New System.Drawing.Size(31, 32)
+        Me.PictureBox49.Size = New System.Drawing.Size(46, 49)
         Me.PictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox49.TabIndex = 21
         Me.PictureBox49.TabStop = False
@@ -2931,9 +3070,10 @@ Partial Class frmPrincipal
         'Panel48
         '
         Me.Panel48.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel48.Location = New System.Drawing.Point(69, 194)
+        Me.Panel48.Location = New System.Drawing.Point(104, 298)
+        Me.Panel48.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel48.Name = "Panel48"
-        Me.Panel48.Size = New System.Drawing.Size(247, 3)
+        Me.Panel48.Size = New System.Drawing.Size(370, 5)
         Me.Panel48.TabIndex = 20
         '
         'txtRnc
@@ -2942,18 +3082,20 @@ Partial Class frmPrincipal
         Me.txtRnc.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRnc.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtRnc.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtRnc.Location = New System.Drawing.Point(71, 168)
+        Me.txtRnc.Location = New System.Drawing.Point(106, 258)
+        Me.txtRnc.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtRnc.Multiline = True
         Me.txtRnc.Name = "txtRnc"
-        Me.txtRnc.Size = New System.Drawing.Size(247, 30)
+        Me.txtRnc.Size = New System.Drawing.Size(370, 46)
         Me.txtRnc.TabIndex = 19
         '
         'PictureBox50
         '
         Me.PictureBox50.Image = Global.GUI.My.Resources.Resources.calendario
-        Me.PictureBox50.Location = New System.Drawing.Point(34, 116)
+        Me.PictureBox50.Location = New System.Drawing.Point(51, 178)
+        Me.PictureBox50.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox50.Name = "PictureBox50"
-        Me.PictureBox50.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox50.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox50.TabIndex = 18
         Me.PictureBox50.TabStop = False
@@ -2961,9 +3103,10 @@ Partial Class frmPrincipal
         'Panel49
         '
         Me.Panel49.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel49.Location = New System.Drawing.Point(69, 145)
+        Me.Panel49.Location = New System.Drawing.Point(104, 223)
+        Me.Panel49.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel49.Name = "Panel49"
-        Me.Panel49.Size = New System.Drawing.Size(247, 3)
+        Me.Panel49.Size = New System.Drawing.Size(370, 5)
         Me.Panel49.TabIndex = 17
         '
         'txtDireccionProveedor
@@ -2972,18 +3115,20 @@ Partial Class frmPrincipal
         Me.txtDireccionProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDireccionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtDireccionProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtDireccionProveedor.Location = New System.Drawing.Point(69, 119)
+        Me.txtDireccionProveedor.Location = New System.Drawing.Point(104, 183)
+        Me.txtDireccionProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDireccionProveedor.Multiline = True
         Me.txtDireccionProveedor.Name = "txtDireccionProveedor"
-        Me.txtDireccionProveedor.Size = New System.Drawing.Size(247, 30)
+        Me.txtDireccionProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtDireccionProveedor.TabIndex = 16
         '
         'PictureBox51
         '
         Me.PictureBox51.Image = CType(resources.GetObject("PictureBox51.Image"), System.Drawing.Image)
-        Me.PictureBox51.Location = New System.Drawing.Point(34, 66)
+        Me.PictureBox51.Location = New System.Drawing.Point(51, 102)
+        Me.PictureBox51.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox51.Name = "PictureBox51"
-        Me.PictureBox51.Size = New System.Drawing.Size(35, 33)
+        Me.PictureBox51.Size = New System.Drawing.Size(52, 51)
         Me.PictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox51.TabIndex = 15
         Me.PictureBox51.TabStop = False
@@ -2991,9 +3136,10 @@ Partial Class frmPrincipal
         'Panel50
         '
         Me.Panel50.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel50.Location = New System.Drawing.Point(69, 95)
+        Me.Panel50.Location = New System.Drawing.Point(104, 146)
+        Me.Panel50.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel50.Name = "Panel50"
-        Me.Panel50.Size = New System.Drawing.Size(247, 3)
+        Me.Panel50.Size = New System.Drawing.Size(370, 5)
         Me.Panel50.TabIndex = 14
         '
         'txtNombreProveedor
@@ -3002,18 +3148,20 @@ Partial Class frmPrincipal
         Me.txtNombreProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombreProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtNombreProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtNombreProveedor.Location = New System.Drawing.Point(69, 69)
+        Me.txtNombreProveedor.Location = New System.Drawing.Point(104, 106)
+        Me.txtNombreProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNombreProveedor.Multiline = True
         Me.txtNombreProveedor.Name = "txtNombreProveedor"
-        Me.txtNombreProveedor.Size = New System.Drawing.Size(247, 30)
+        Me.txtNombreProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtNombreProveedor.TabIndex = 13
         '
         'Panel52
         '
         Me.Panel52.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel52.Location = New System.Drawing.Point(69, 46)
+        Me.Panel52.Location = New System.Drawing.Point(104, 71)
+        Me.Panel52.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel52.Name = "Panel52"
-        Me.Panel52.Size = New System.Drawing.Size(247, 3)
+        Me.Panel52.Size = New System.Drawing.Size(370, 5)
         Me.Panel52.TabIndex = 11
         '
         'txtIdProveedor
@@ -3022,30 +3170,33 @@ Partial Class frmPrincipal
         Me.txtIdProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtIdProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
         Me.txtIdProveedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.txtIdProveedor.Location = New System.Drawing.Point(69, 20)
+        Me.txtIdProveedor.Location = New System.Drawing.Point(104, 31)
+        Me.txtIdProveedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtIdProveedor.Multiline = True
         Me.txtIdProveedor.Name = "txtIdProveedor"
-        Me.txtIdProveedor.Size = New System.Drawing.Size(247, 30)
+        Me.txtIdProveedor.Size = New System.Drawing.Size(370, 46)
         Me.txtIdProveedor.TabIndex = 1
         '
         'contenedor
         '
         Me.contenedor.Controls.Add(Me.pnlFacturacion)
-        Me.contenedor.Controls.Add(Me.pnlEmpleados)
         Me.contenedor.Controls.Add(Me.pnlProveedor)
+        Me.contenedor.Controls.Add(Me.pnlEmpleados)
         Me.contenedor.Controls.Add(Me.pnlCategoria)
         Me.contenedor.Controls.Add(Me.pnlCiudad)
-        Me.contenedor.Location = New System.Drawing.Point(202, 36)
+        Me.contenedor.Location = New System.Drawing.Point(303, 55)
+        Me.contenedor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.contenedor.Name = "contenedor"
-        Me.contenedor.Size = New System.Drawing.Size(690, 540)
+        Me.contenedor.Size = New System.Drawing.Size(1035, 831)
         Me.contenedor.TabIndex = 51
         '
         'frmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(212, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(890, 600)
+        Me.ClientSize = New System.Drawing.Size(1335, 788)
         Me.Controls.Add(Me.pnlArticulos)
         Me.Controls.Add(Me.pnlVentas)
         Me.Controls.Add(Me.pnlInventario)
@@ -3055,7 +3206,6 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
@@ -3302,7 +3452,7 @@ Partial Class frmPrincipal
     Friend WithEvents txtIdCategoria As TextBox
     Friend WithEvents txtIdInventario As TextBox
     Friend WithEvents Panel43 As Panel
-    Friend WithEvents IdCategoriaInventario As TextBox
+    Friend WithEvents txtIdCategoriaInventario As TextBox
     Friend WithEvents Panel42 As Panel
     Friend WithEvents txtCantidadInventario As TextBox
     Friend WithEvents Panel41 As Panel
