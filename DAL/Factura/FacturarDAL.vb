@@ -15,7 +15,7 @@ Public Class FacturarDAL
             cmd.Parameters.AddWithValue("@Id_Cliente", factura.IdCliente)
             cmd.Parameters.AddWithValue("@Tipo_De_Pago", factura.TipoDePago)
             cmd.Parameters.AddWithValue("@Id_Empleado", factura.IdEmpleado)
-            'cmd.Parameters.AddWithValue("@Fecha", factura.Fecha)
+            cmd.Parameters.AddWithValue("@Fecha", factura.Fecha)
 
             Dim detalleFactura = cmd.Parameters.AddWithValue("@Detalles", ConvertToTable(detalles))
             detalleFactura.SqlDbType = SqlDbType.Structured
