@@ -776,6 +776,7 @@ Public Class frmPrincipal
             .IdFactura = Integer.Parse(TxtIdFacturacion.Text),
             .IdCliente = Integer.Parse(TtxIdClienteFacturacion.Text),
             .TipoDePago = TxtTipoDePagoFacturacion.Text,
+            .Fecha = DateTime.Now,
             .IdEmpleado = Integer.Parse(TxtIdEmpleadoFacturacion.Text),
             .Total = _detallesList.Sum(Function(d) d.PrecioTotal)
         }
