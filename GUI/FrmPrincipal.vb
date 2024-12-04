@@ -67,9 +67,6 @@ Public Class frmPrincipal
 #End Region
 
 #Region "Mostrar Panel Mantenimiento"
-    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        MostrarPanel(pnl6, pnlVentas)
-    End Sub
 
     Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
         MostrarPanel(pnl6, pnlFacturacion)
@@ -93,7 +90,7 @@ Public Class frmPrincipal
 
 
     Private Sub MostrarPanel(panel1 As Panel, panel2 As Panel)
-        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlVentas, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario, pnlEmpleados}
+        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario, pnlEmpleados}
 
         For Each pnl In paneles
             pnl.Visible = False
@@ -113,25 +110,15 @@ Public Class frmPrincipal
         Me.Size = New Size(900, 600)
 
         ' Configurar los TextBox de Clientes
-        ConfigureTextBox(txtCodigo, "Id Cliente")
+        ConfigureTextBox(txtCodigo, "ID Cliente")
         ConfigureTextBox(txtNombre, "Nombre Cliente")
         ConfigureTextBox(txtTelefono, "Telefono Cliente")
         ConfigureTextBox(txtDireccion, "Direccion Cliente")
         ConfigureTextBox(txtCedula, "Cedula Cliente")
 
-        ' Configurar los TextBox de ventas
-        ConfigureTextBox(txtIdVentas, "Id Ventas")
-        ConfigureTextBox(TxtNombreVentas, "Nombre Ventas")
-        ConfigureTextBox(TxtFechaVentas, "Fecha Ventas")
-        ConfigureTextBox(txtNumeroReciboVentas, "Número Recibo Ventas")
-        ConfigureTextBox(TxtTipoDePagoVentas, "Tipo de Pago Ventas")
-        ConfigureTextBox(TxtIdEmpleado, "ID Empleado")
-        ConfigureTextBox(txtPrecioPorPago, "Precio por Pago")
-        ConfigureTextBox(TxtTotal, "Total")
-
         ' Configurar los TextBox de articulos o productos
-        ConfigureTextBox(TxtIdCodigoArticulo, "ID Artículo")
-        ConfigureTextBox(TxtNombreArticulo, "Nombre Artículo")
+        ConfigureTextBox(TxtIdCodigoArticulo, "ID Articulo")
+        ConfigureTextBox(TxtNombreArticulo, "Nombre Articulo")
         ConfigureTextBox(TxtProveedorArticulo, "ID Proveedor Articulo")
         ConfigureTextBox(TxtPrecioArticulos, "Precio Artículos")
         ConfigureTextBox(txtCantidadArticulo, "Cantidad Artículo")
@@ -140,16 +127,15 @@ Public Class frmPrincipal
 
 
         ' Configurar los TextBox de facturacion
-        ConfigureTextBox(TxtIdFacturacion, "ID Facturación")
-        ConfigureTextBox(TtxIdClienteFacturacion, "Nombre Facturación")
-        ConfigureTextBox(TxtFechaFacturacion, "Fecha Facturación")
-        ConfigureTextBox(TxtTipoDePagoFacturacion, "Tipo de Pago Facturación")
-        ConfigureTextBox(TxtIdEmpleadoFacturacion, "ID Empleado Facturación")
-        ConfigureTextBox(TxtIdArticulo, "ID Artículo")
+        ConfigureTextBox(TxtIdFacturacion, "ID Facturacion")
+        ConfigureTextBox(TtxIdClienteFacturacion, "ID Cliente")
+        ConfigureTextBox(TxtTipoDePagoFacturacion, "Tipo de Pago Facturacion")
+        ConfigureTextBox(TxtIdEmpleadoFacturacion, "ID Empleado Facturacion")
+        ConfigureTextBox(TxtIdArticulo, "ID Articulo")
         ConfigureTextBox(TxtCantidad, "Cantidad")
         ConfigureTextBox(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
         ConfigureTextBox(TxtDescuentoFacturacion, "Descuento Facturación")
-        ConfigureTextBox(TxtNumeroFactura, "Número de Factura")
+        ConfigureTextBox(TxtNumeroFactura, "Numero de Factura")
 
         ' Configurar los TextBox de categoria
         ConfigureTextBox(txtIdCategoria, "ID Categoria")
@@ -338,9 +324,11 @@ Public Class frmPrincipal
 
     Private Sub LimpiarTextos(ParamArray textBoxes() As TextBox)
         For Each txt In textBoxes
-            txt.Text = ""
+            txt.Text = CStr(txt.Tag)
+            txt.ForeColor = ColorTranslator.FromHtml("#603F26")
         Next
     End Sub
+
 
     Dim MantenimientoMenu As Boolean = False
     Dim RegistroMenu As Boolean = False
@@ -348,7 +336,7 @@ Public Class frmPrincipal
     Private Sub MantenimientoTimer_Tick(sender As Object, e As EventArgs) Handles MantenimientoTimer.Tick
         If Not MantenimientoMenu Then
             FlowLayoutContenedor.Height += 10
-            If FlowLayoutContenedor.Height >= 262 Then
+            If FlowLayoutContenedor.Height >= 210 Then
                 MantenimientoTimer.Stop()
                 MantenimientoMenu = True
             End If
@@ -393,6 +381,7 @@ Public Class frmPrincipal
             }
             _bllCiudad.InsertarCiudadService(ciudad)
             dtCiudad.DataSource = _bllCiudad.ObtenerCiudadService()
+            LimpiarTextos(txtIdCiudad, txtNombreCiudad)
 
         Catch Ex As Exception
             MessageBox.Show("Debe de llenar el campo Id")
@@ -414,6 +403,7 @@ Public Class frmPrincipal
                 }
             _bllCategoria.InsertarCategoriaService(categoria)
             dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
+            LimpiarTextos(txtIdCategoria, txtNombreCategoria)
         Catch ex As Exception
             MessageBox.Show("No pueden estar vacios los campos")
         End Try
@@ -440,6 +430,7 @@ Public Class frmPrincipal
                 }
         _bllProveedor.InsertarProveedorService(proveedor)
         dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+        LimpiarTextos(txtIdProveedor, txtNombreProveedor, txtDireccionProveedor, txtRnc, txtTelefono, txtIdCiudadProveedor)
 
     End Sub
 
@@ -454,6 +445,7 @@ Public Class frmPrincipal
                 }
         _bllProveedor.ActualizarProveedorService(proveedor)
         dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+        LimpiarTextos(txtIdProveedor, txtNombreProveedor, txtDireccionProveedor, txtRnc, txtTelefono, txtIdCiudadProveedor)
     End Sub
 
 
@@ -551,6 +543,12 @@ Public Class frmPrincipal
         }
 
         _facturaBll.CrearFactura(fact, _detallesList)
+        LimpiarTextos(TxtIdFacturacion, TtxIdClienteFacturacion, TxtTipoDePagoFacturacion, TxtIdEmpleadoFacturacion)
+
+
+    End Sub
+
+    Private Sub btnAgregarInventario_Click(sender As Object, e As EventArgs) Handles btnAgregarInventario.Click
 
     End Sub
 #End Region
