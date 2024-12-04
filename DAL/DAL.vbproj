@@ -70,6 +70,7 @@
     <Compile Include="Conexion\Conexion.vb" />
     <Compile Include="Empleado\EmpleadoCrud.vb" />
     <Compile Include="Factura\FacturarDAL.vb" />
+    <Compile Include="Inventario\InventarioDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

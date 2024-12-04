@@ -84,6 +84,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Services\FacturaService.vb" />
+    <Compile Include="Services\InventarioService.vb" />
     <Compile Include="Services\ProductoService.vb" />
     <Compile Include="Services\ProveedorService.vb" />
     <Compile Include="UsuarioService.vb" />
