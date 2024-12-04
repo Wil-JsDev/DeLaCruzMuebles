@@ -11,6 +11,7 @@ Public Class frmPrincipal
     Private _bllEmpleado As New EmpleadoService()
     Private _detallesList As New List(Of DetallerFactura)
     Private _facturaBll As New FacturaService()
+    Private _inventarioService As New InventarioService()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -547,10 +548,23 @@ Public Class frmPrincipal
 
 
     End Sub
+#End Region
 
     Private Sub btnAgregarInventario_Click(sender As Object, e As EventArgs) Handles btnAgregarInventario.Click
 
-    End Sub
-#End Region
+        Dim producto As New Inventario With {
+            .IdInventario = txtIdInventario.Text,
+            .Cantidad = txtCantidadInventario.Text,
+            .IdCategoria = txtIdCategoriaInventario.Text,
+            .IdProducto = txtIdProductoInventario.Text
+        }
 
+        _inventarioService.InsertarProductoInventario(producto)
+        DtInventario.DataSource = _inventarioService.ObtenerProducto()
+
+    End Sub
+
+    Private Sub btnObtenerInventario_Click(sender As Object, e As EventArgs) Handles btnObtenerInventario.Click
+
+    End Sub
 End Class
