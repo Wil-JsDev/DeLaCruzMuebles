@@ -8,16 +8,18 @@ Public Class FacturarDAL
     Public Sub InsertarFactra(factura As Factura, detalles As List(Of DetallerFactura))
 
         Using sqlConnection As SqlConnection = conexion.ObtenerConexion
+            sqlConnection.Open()
             Dim cmd As New SqlCommand("InsertarFactura", sqlConnection)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@IdFactura", factura.IdFactura)
-            cmd.Parameters.AddWithValue("@IdCliente", factura.IdCliente)
-            cmd.Parameters.AddWithValue("@@Tipo_De_Pago", factura.TipoDePago)
-            cmd.Parameters.AddWithValue("@IdEmpleado", factura.IdEmpleado)
-            cmd.Parameters.AddWithValue("@Fecha", factura.Fecha)
+            cmd.Parameters.AddWithValue("@Id_Cliente", factura.IdCliente)
+            cmd.Parameters.AddWithValue("@Tipo_De_Pago", factura.TipoDePago)
+            cmd.Parameters.AddWithValue("@Id_Empleado", factura.IdEmpleado)
+            'cmd.Parameters.AddWithValue("@Fecha", factura.Fecha)
 
-            ''Dim detalleFactura = cmd.Parameters.AddWithValue("@DetallesFactura",)''
-
+            Dim detalleFactura = cmd.Parameters.AddWithValue("@Detalles", ConvertToTable(detalles))
+            detalleFactura.SqlDbType = SqlDbType.Structured
+            cmd.ExecuteNonQuery()
         End Using
     End Sub
 
