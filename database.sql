@@ -96,12 +96,57 @@ CREATE TYPE DetalleFacturaType AS TABLE
 	PRECIO DECIMAL(10,2)
 );
 
+-- Usuario
+
+INSERT INTO Usuarios (NombreUsuario, Password, Email, Estatus)
+VALUES ('Admin', 'Muebles', 'admin@muebleria.com', 'Activo');
+
+
+CREATE TABLE Usuarios (
+    UsuarioId INT IDENTITY(1,1) PRIMARY KEY,
+    NombreUsuario VARCHAR(30) NOT NULL UNIQUE,
+    Password VARCHAR(30) NOT NULL,
+    Email VARCHAR(200) NOT NULL,
+    Estatus VARCHAR(10) NOT NULL
+);
+
 
 SELECT * FROM DETALLE_FACTURA
 SELECT * FROM FACTURA
 SELECT * FROM CLIENTE
 SELECT * FROM PRODUCTO
 SELECT * FROM PRODUCTO
+
+-- Usuarios
+
+CREATE PROCEDURE UsuariosCRUD
+    @Opcion INT,
+    @nombre VARCHAR(30),
+    @contrasena VARCHAR(30)
+AS
+BEGIN
+    IF @Opcion = 5 
+    BEGIN
+        SELECT * 
+        FROM Usuarios 
+        WHERE NombreUsuario = @nombre AND Password = @contrasena;
+    END
+END;
+
+-- Empleados
+
+CREATE PROCEDURE LeerEmpleados
+AS 
+BEGIN
+SELECT * FROM EMPLEADO
+END
+
+CREATE PROCEDURE EliminarEmpleado(@IdEmpleado INT)
+AS 
+BEGIN
+DELETE FROM EMPLEADO 
+        WHERE ID_EMPLEADO = @IdEmpleado;
+END
 
 CREATE PROCEDURE InsertarFactura
 (
