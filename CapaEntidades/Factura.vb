@@ -2,7 +2,7 @@
 
     Public Property IdFactura As Integer
 
-    Public Property Fecha As String
+    Public Property Fecha As DateTime = DateTime.UtcNow
 
     Public Property TipoDePago As String
 
