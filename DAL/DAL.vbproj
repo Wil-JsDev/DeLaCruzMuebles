@@ -69,6 +69,8 @@
     <Compile Include="Cliente\ClienteCrud.vb" />
     <Compile Include="Conexion\Conexion.vb" />
     <Compile Include="Empleado\EmpleadoCrud.vb" />
+    <Compile Include="Factura\FacturarDAL.vb" />
+    <Compile Include="Inventario\InventarioDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -86,6 +88,7 @@
     </Compile>
     <Compile Include="Producto\ProductoCrud.vb" />
     <Compile Include="Proveedor\ProveedorCrud.vb" />
+    <Compile Include="Usuario\UsuarioCrud.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

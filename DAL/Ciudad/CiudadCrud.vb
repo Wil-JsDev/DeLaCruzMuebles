@@ -10,6 +10,7 @@ Public Class CiudadCrud
             Dim cmd As New SqlCommand("CiudadCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdCiudad", ciudad.IdCiudad)
             cmd.Parameters.AddWithValue("@Nombre", ciudad.Nombre)
 
             conexionSql.Open()
@@ -25,16 +26,17 @@ Public Class CiudadCrud
     Public Function ObtenerCiudad() As List(Of Ciudad)
         Dim Ciudad As New List(Of Ciudad)
         Using conexionSql As SqlConnection = conexionString.ObtenerConexion()
-            Dim cmd As New SqlCommand("CiudadCRUD", conexionSql)
+            Dim cmd As New SqlCommand("LeerCiudad", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@opcion", 2)''
+
+            conexionSql.Open()
 
             Dim leer As SqlDataReader = cmd.ExecuteReader()
 
-            conexionSql.Open()
             While leer.Read()
                 Ciudad.Add(New Ciudad With {
-                           .IdCiudad = Convert.ToInt32(leer("IdCiudad")),
+                           .IdCiudad = Convert.ToInt32(leer("Ciudad_ID")),
                            .Nombre = leer("Nombre")
                 })
 

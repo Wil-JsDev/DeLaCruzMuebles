@@ -2,8 +2,16 @@
 Imports CapaEntidades
 
 Public Class frmPrincipal
+
     Private _bll As New ClienteService()
     Private _bllProducto As New ProductoService()
+    Private _bllCiudad As New CiudadService()
+    Private _bllCategoria As New CategoriaServices()
+    Private _bllProveedor As New ProveedorService()
+    Private _bllEmpleado As New EmpleadoService()
+    Private _detallesList As New List(Of DetallerFactura)
+    Private _facturaBll As New FacturaService()
+    Private _inventarioService As New InventarioService()
 
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
@@ -23,22 +31,11 @@ Public Class frmPrincipal
         lblFecha.Text = DateTime.Now.ToString("ddd MMM yyy")
     End Sub
 
-
     Private Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
         MostrarPanel(Pnl1, pnlInicio)
     End Sub
 
-    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
-        MostrarPanel(pnl6, pnlVentas)
-    End Sub
-
-    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
-        MostrarPanel(pnl2, pnlArticulos)
-    End Sub
-
-    Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
-        MostrarPanel(pnl6, pnlFacturacion)
-    End Sub
+#Region "Mostrar Panel Registro"
     Private Sub btnRegistros_Click(sender As Object, e As EventArgs) Handles btnRegistros.Click
         RegistroTimer.Start()
         MostrarPanel(pnl2, pnlInicio)
@@ -54,12 +51,28 @@ Public Class frmPrincipal
 
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
         MostrarPanel(pnl2, pnlCiudad)
+    End Sub
 
+    Private Sub btnEmpleado_Click(sender As Object, e As EventArgs) Handles btnEmpleado.Click
+        MostrarPanel(pnl2, pnlEmpleados)
     End Sub
 
     Private Sub btnProveedor_Click(sender As Object, e As EventArgs) Handles btnProveedor.Click
         MostrarPanel(pnl2, pnlProveedor)
     End Sub
+
+    Private Sub btnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+        MostrarPanel(pnl2, pnlArticulos)
+    End Sub
+
+#End Region
+
+#Region "Mostrar Panel Mantenimiento"
+
+    Private Sub btnFacturacion_Click(sender As Object, e As EventArgs) Handles btn5.Click
+        MostrarPanel(pnl6, pnlFacturacion)
+    End Sub
+
 
     Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
         MostrarPanel(pnl6, pnlCategoria)
@@ -74,8 +87,11 @@ Public Class frmPrincipal
         MostrarPanel(pnl6, pnlInicio)
     End Sub
 
+#End Region
+
+
     Private Sub MostrarPanel(panel1 As Panel, panel2 As Panel)
-        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlVentas, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario}
+        Dim paneles As Panel() = {Pnl1, pnl2, pnl6, pnlInicio, pnlClientes, pnlArticulos, pnlFacturacion, pnlCiudad, pnlProveedor, pnlCategoria, pnlInventario, pnlEmpleados}
 
         For Each pnl In paneles
             pnl.Visible = False
@@ -89,340 +105,98 @@ Public Class frmPrincipal
 
 
 
-#Region "label Eventos"
+#Region "Eventos de TextBox"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetPlaceholder(txtCodigo, "Codigo")
-        SetPlaceholder(txtNombre, "Nombre")
-        SetPlaceholder(txtTelefono, "Telefono")
-        SetPlaceholder(txtDireccion, "Direccion")
-        SetPlaceholder(txtCedula, "Cedula")
-    End Sub
-
-
-    Private Sub txtCodigo_Enter(sender As Object, e As EventArgs) Handles txtCodigo.Enter
-        ClearPlaceholder(txtCodigo, "Codigo")
-    End Sub
-
-    Private Sub txtNombre_Enter(sender As Object, e As EventArgs) Handles txtNombre.Enter
-        ClearPlaceholder(txtNombre, "Nombre")
-    End Sub
-
-    Private Sub txtSexo_Enter(sender As Object, e As EventArgs)
-    End Sub
-
-    Private Sub txtTelefono_Enter(sender As Object, e As EventArgs) Handles txtTelefono.Enter
-        ClearPlaceholder(txtTelefono, "Telefono")
-    End Sub
-
-    Private Sub txtDireccion_Enter(sender As Object, e As EventArgs) Handles txtDireccion.Enter
-        ClearPlaceholder(txtDireccion, "Direccion")
-    End Sub
-
-    Private Sub txtCedula_Enter(sender As Object, e As EventArgs) Handles txtCedula.Enter
-        ClearPlaceholder(txtCedula, "Cedula")
-    End Sub
-
-    Private Sub txtCodigo_Leave(sender As Object, e As EventArgs) Handles txtCodigo.Leave
-        SetPlaceholderOnLeave(txtCodigo, "Codigo")
-    End Sub
-
-    Private Sub txtNombre_Leave(sender As Object, e As EventArgs) Handles txtNombre.Leave
-        SetPlaceholderOnLeave(txtNombre, "Nombre")
-    End Sub
-
-    Private Sub txtSexo_Leave(sender As Object, e As EventArgs)
-    End Sub
-
-    Private Sub txtTelefono_Leave(sender As Object, e As EventArgs) Handles txtTelefono.Leave
-        SetPlaceholderOnLeave(txtTelefono, "Telefono")
-    End Sub
-
-    Private Sub txtDireccion_Leave(sender As Object, e As EventArgs) Handles txtDireccion.Leave
-        SetPlaceholderOnLeave(txtDireccion, "Direccion")
-    End Sub
-
-    Private Sub txtCedula_Leave(sender As Object, e As EventArgs) Handles txtCedula.Leave
-        SetPlaceholderOnLeave(txtCedula, "Cedula")
-    End Sub
-
-#Region "Panel Ventas"
-    Private Sub Form1_Load2(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        SetPlaceholderOnLeave(txtDireccion, "Direccion")
-        SetPlaceholderOnLeave(txtCedula, "Cedula")
-        SetPlaceholderOnLeave(txtCodigo, "Codigo")
-        SetPlaceholderOnLeave(txtIdVentas, "Id Ventas")
-        SetPlaceholderOnLeave(TxtNombreVentas, "Nombre Ventas")
-        SetPlaceholderOnLeave(TxtFechaVentas, "Fecha Ventas")
-        SetPlaceholderOnLeave(txtNumeroReciboVentas, "Número Recibo Ventas")
-        SetPlaceholderOnLeave(TxtTipoDePagoVentas, "Tipo de Pago Ventas")
-        SetPlaceholderOnLeave(TxtIdEmpleado, "ID Empleado")
-        SetPlaceholderOnLeave(txtPrecioPorPago, "Precio por Pago")
-        SetPlaceholderOnLeave(TxtTotal, "Total")
-    End Sub
-
-
-    Private Sub txtIdVentas_Enter(sender As Object, e As EventArgs) Handles txtIdVentas.Enter
-        ClearPlaceholder(txtIdVentas, "Id Ventas")
-    End Sub
-
-    Private Sub txtIdVentas_Leave(sender As Object, e As EventArgs) Handles txtIdVentas.Leave
-        SetPlaceholderOnLeave(txtIdVentas, "Id Ventas")
-    End Sub
-
-    Private Sub TxtNombreVentas_Enter(sender As Object, e As EventArgs) Handles TxtNombreVentas.Enter
-        ClearPlaceholder(TxtNombreVentas, "Nombre Ventas")
-    End Sub
-
-    Private Sub TxtNombreVentas_Leave(sender As Object, e As EventArgs) Handles TxtNombreVentas.Leave
-        SetPlaceholderOnLeave(TxtNombreVentas, "Nombre Ventas")
-    End Sub
-    Private Sub TxtFechaVentas_Enter(sender As Object, e As EventArgs) Handles TxtFechaVentas.Enter
-        ClearPlaceholder(TxtFechaVentas, "Fecha Ventas")
-    End Sub
-
-    Private Sub TxtFechaVentas_Leave(sender As Object, e As EventArgs) Handles TxtFechaVentas.Leave
-        SetPlaceholderOnLeave(TxtFechaVentas, "Fecha Ventas")
-    End Sub
-
-    Private Sub txtNumeroReciboVentas_Enter(sender As Object, e As EventArgs) Handles txtNumeroReciboVentas.Enter
-        ClearPlaceholder(txtNumeroReciboVentas, "Número Recibo Ventas")
-    End Sub
-
-    Private Sub txtNumeroReciboVentas_Leave(sender As Object, e As EventArgs) Handles txtNumeroReciboVentas.Leave
-        SetPlaceholderOnLeave(txtNumeroReciboVentas, "Número Recibo Ventas")
-    End Sub
-
-    Private Sub TxtTipoDePagoVentas_Enter(sender As Object, e As EventArgs) Handles TxtTipoDePagoVentas.Enter
-        ClearPlaceholder(TxtTipoDePagoVentas, "Tipo de Pago Ventas")
-    End Sub
-
-    Private Sub TxtTipoDePagoVentas_Leave(sender As Object, e As EventArgs) Handles TxtTipoDePagoVentas.Leave
-        SetPlaceholderOnLeave(TxtTipoDePagoVentas, "Tipo de Pago Ventas")
-    End Sub
-
-    Private Sub TxtIdEmpleado_Enter(sender As Object, e As EventArgs) Handles TxtIdEmpleado.Enter
-        ClearPlaceholder(TxtIdEmpleado, "ID Empleado")
-    End Sub
-
-    Private Sub TxtIdEmpleado_Leave(sender As Object, e As EventArgs) Handles TxtIdEmpleado.Leave
-        SetPlaceholderOnLeave(TxtIdEmpleado, "ID Empleado")
-    End Sub
-
-    Private Sub txtPrecioPorPago_Enter(sender As Object, e As EventArgs) Handles txtPrecioPorPago.Enter
-        ClearPlaceholder(txtPrecioPorPago, "Precio por Pago")
-    End Sub
-
-    Private Sub txtPrecioPorPago_Leave(sender As Object, e As EventArgs) Handles txtPrecioPorPago.Leave
-        SetPlaceholderOnLeave(txtPrecioPorPago, "Precio por Pago")
-    End Sub
-
-    Private Sub TxtTotal_Enter(sender As Object, e As EventArgs) Handles TxtTotal.Enter
-        ClearPlaceholder(TxtTotal, "Total")
-    End Sub
-
-    Private Sub TxtTotal_Leave(sender As Object, e As EventArgs) Handles TxtTotal.Leave
-        SetPlaceholderOnLeave(TxtTotal, "Total")
-    End Sub
-
-#End Region
-
-#Region "Articulo"
-
-    Private Sub Form1_Load_Articulo(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        SetPlaceholderOnLeave(TxtIdCodigoArticulo, "ID Código Artículo")
-        SetPlaceholderOnLeave(TxtNombreArticulo, "Nombre Artículo")
-        SetPlaceholderOnLeave(TxtProveedorArticulo, "Proveedor Artículo")
-        SetPlaceholderOnLeave(TxtCategoriaArticulos, "Categoría Artículos")
-        SetPlaceholderOnLeave(TxtPrecioArticulos, "Precio Artículos")
-        SetPlaceholderOnLeave(txtCantidadArticulo, "Cantidad Artículo")
-    End Sub
-
-    Private Sub TxtIdCodigoArticulo_Enter(sender As Object, e As EventArgs) Handles TxtIdCodigoArticulo.Enter
-        ClearPlaceholder(TxtIdCodigoArticulo, "ID Código Artículo")
-    End Sub
-
-    Private Sub TxtIdCodigoArticulo_Leave(sender As Object, e As EventArgs) Handles TxtIdCodigoArticulo.Leave
-        SetPlaceholderOnLeave(TxtIdCodigoArticulo, "ID Código Artículo")
-    End Sub
-
-    Private Sub TxtNombreArticulo_Enter(sender As Object, e As EventArgs) Handles TxtNombreArticulo.Enter
-        ClearPlaceholder(TxtNombreArticulo, "Nombre Artículo")
-    End Sub
-
-    Private Sub TxtNombreArticulo_Leave(sender As Object, e As EventArgs) Handles TxtNombreArticulo.Leave
-        SetPlaceholderOnLeave(TxtNombreArticulo, "Nombre Artículo")
-    End Sub
-
-    Private Sub TxtProveedorArticulo_Enter(sender As Object, e As EventArgs) Handles TxtProveedorArticulo.Enter
-        ClearPlaceholder(TxtProveedorArticulo, "Proveedor Artículo")
-    End Sub
-
-    Private Sub TxtProveedorArticulo_Leave(sender As Object, e As EventArgs) Handles TxtProveedorArticulo.Leave
-        SetPlaceholderOnLeave(TxtProveedorArticulo, "Proveedor Artículo")
-    End Sub
-
-    Private Sub TxtCategoriaArticulos_Enter(sender As Object, e As EventArgs) Handles TxtCategoriaArticulos.Enter
-        ClearPlaceholder(TxtCategoriaArticulos, "Categoría Artículos")
-    End Sub
-
-    Private Sub TxtCategoriaArticulos_Leave(sender As Object, e As EventArgs) Handles TxtCategoriaArticulos.Leave
-        SetPlaceholderOnLeave(TxtCategoriaArticulos, "Categoría Artículos")
-    End Sub
-
-    Private Sub TxtPrecioArticulos_Enter(sender As Object, e As EventArgs) Handles TxtPrecioArticulos.Enter
-        ClearPlaceholder(TxtPrecioArticulos, "Precio Artículos")
-    End Sub
-
-    Private Sub TxtPrecioArticulos_Leave(sender As Object, e As EventArgs) Handles TxtPrecioArticulos.Leave
-        SetPlaceholderOnLeave(TxtPrecioArticulos, "Precio Artículos")
-    End Sub
-
-    Private Sub txtEstadosArticulo_Enter(sender As Object, e As EventArgs) Handles txtCantidadArticulo.Enter
-        ClearPlaceholder(txtCantidadArticulo, "Cantidad Artículo")
-    End Sub
-
-    Private Sub txtEstadosArticulo_Leave(sender As Object, e As EventArgs) Handles txtCantidadArticulo.Leave
-        SetPlaceholderOnLeave(txtCantidadArticulo, "Cantidad Artículo")
-    End Sub
-
-#End Region
-
-#Region "Facturacion"
-
-    Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        SetPlaceholder(TxtIdFacturacion, "ID Facturación")
-        SetPlaceholder(TtxNombreFacturacion, "Nombre Facturación")
-        SetPlaceholder(TxtFechaFacturacion, "Fecha Facturación")
-        SetPlaceholder(TxtTipoDePagoFacturacion, "Tipo de Pago Facturación")
-        SetPlaceholder(TxtIdEmpleadoFacturacion, "ID Empleado Facturación")
-        SetPlaceholder(TxtIdArticulo, "ID Artículo")
-        SetPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
-        SetPlaceholder(TxtCantidad, "Cantidad")
-        SetPlaceholder(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
-        SetPlaceholder(TxtDescuentoFacturacion, "Descuento Facturación")
-        SetPlaceholder(TxtNumeroFactura, "Número de Factura")
-
-
-    End Sub
-
-    Private Sub TxtIdFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtIdFacturacion.Enter
-        ClearPlaceholder(TxtIdFacturacion, "ID Facturación")
-    End Sub
-
-    Private Sub TxtIdFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtIdFacturacion.Leave
-        SetPlaceholderOnLeave(TxtIdFacturacion, "ID Facturación")
-    End Sub
-
-    Private Sub TtxNombreFacturacion_Enter(sender As Object, e As EventArgs) Handles TtxNombreFacturacion.Enter
-        ClearPlaceholder(TtxNombreFacturacion, "Nombre Facturación")
-    End Sub
-
-    Private Sub TtxNombreFacturacion_Leave(sender As Object, e As EventArgs) Handles TtxNombreFacturacion.Leave
-        SetPlaceholderOnLeave(TtxNombreFacturacion, "Nombre Facturación")
-    End Sub
-
-    Private Sub TxtFechaFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtFechaFacturacion.Enter
-        ClearPlaceholder(TxtFechaFacturacion, "Fecha Facturación")
-    End Sub
-
-    Private Sub TxtFechaFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtFechaFacturacion.Leave
-        SetPlaceholderOnLeave(TxtFechaFacturacion, "Fecha Facturación")
-    End Sub
-
-    Private Sub TxtTipoDePagoFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtTipoDePagoFacturacion.Enter
-        ClearPlaceholder(TxtTipoDePagoFacturacion, "Tipo de Pago Facturación")
-    End Sub
-
-    Private Sub TxtTipoDePagoFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtTipoDePagoFacturacion.Leave
-        SetPlaceholderOnLeave(TxtTipoDePagoFacturacion, "Tipo de Pago Facturación")
-    End Sub
-
-    Private Sub TxtIdEmpleadoFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtIdEmpleadoFacturacion.Enter
-        ClearPlaceholder(TxtIdEmpleadoFacturacion, "ID Empleado Facturación")
-    End Sub
-
-    Private Sub TxtIdEmpleadoFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtIdEmpleadoFacturacion.Leave
-        SetPlaceholderOnLeave(TxtIdEmpleadoFacturacion, "ID Empleado Facturación")
-    End Sub
-
-    Private Sub TxtIdArticulo_Enter(sender As Object, e As EventArgs) Handles TxtIdArticulo.Enter
-        ClearPlaceholder(TxtIdArticulo, "ID Artículo")
-    End Sub
-
-    Private Sub TxtIdArticulo_Leave(sender As Object, e As EventArgs) Handles TxtIdArticulo.Leave
-        SetPlaceholderOnLeave(TxtIdArticulo, "ID Artículo")
-    End Sub
-
-    Private Sub TxtNombreArticuloFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtNombreArticuloFacturacion.Enter
-        ClearPlaceholder(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
-    End Sub
-
-    Private Sub TxtNombreArticuloFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtNombreArticuloFacturacion.Leave
-        SetPlaceholderOnLeave(TxtNombreArticuloFacturacion, "Nombre Artículo Facturación")
-    End Sub
-
-    Private Sub TxtCantidad_Enter(sender As Object, e As EventArgs) Handles TxtCantidad.Enter
-        ClearPlaceholder(TxtCantidad, "Cantidad")
-    End Sub
-
-    Private Sub TxtCantidad_Leave(sender As Object, e As EventArgs) Handles TxtCantidad.Leave
-        SetPlaceholderOnLeave(TxtCantidad, "Cantidad")
-    End Sub
-
-    Private Sub TxtPrecioUnitarioFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtPrecioUnitarioFacturacion.Enter
-        ClearPlaceholder(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
-    End Sub
-
-    Private Sub TxtPrecioUnitarioFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtPrecioUnitarioFacturacion.Leave
-        SetPlaceholderOnLeave(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
-    End Sub
-
-    Private Sub TxtDescuentoFacturacion_Enter(sender As Object, e As EventArgs) Handles TxtDescuentoFacturacion.Enter
-        ClearPlaceholder(TxtDescuentoFacturacion, "Descuento Facturación")
-    End Sub
-
-    Private Sub TxtDescuentoFacturacion_Leave(sender As Object, e As EventArgs) Handles TxtDescuentoFacturacion.Leave
-        SetPlaceholderOnLeave(TxtDescuentoFacturacion, "Descuento Facturación")
-    End Sub
-
-    Private Sub TxtNumeroFactura_Enter(sender As Object, e As EventArgs) Handles TxtNumeroFactura.Enter
-        ClearPlaceholder(TxtNumeroFactura, "Número de Factura")
-    End Sub
-
-    Private Sub TxtNumeroFactura_Leave(sender As Object, e As EventArgs) Handles TxtNumeroFactura.Leave
-        SetPlaceholderOnLeave(TxtNumeroFactura, "Número de Factura")
-    End Sub
-
-
-#End Region
-
-#Region "Private Methods"
-    Private Sub SetPlaceholder(txtBox As TextBox, placeholder As String)
-        txtBox.Text = placeholder
-        txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
-    End Sub
-
-    Private Sub ClearPlaceholder(txtBox As TextBox, placeholder As String)
-        If txtBox.Text = placeholder Then
+        Me.Size = New Size(900, 600)
+
+        ' Configurar los TextBox de Clientes
+        ConfigureTextBox(txtCodigo, "ID Cliente")
+        ConfigureTextBox(txtNombre, "Nombre Cliente")
+        ConfigureTextBox(txtTelefono, "Telefono Cliente")
+        ConfigureTextBox(txtDireccion, "Direccion Cliente")
+        ConfigureTextBox(txtCedula, "Cedula Cliente")
+
+        ' Configurar los TextBox de articulos o productos
+        ConfigureTextBox(TxtIdCodigoArticulo, "ID Articulo")
+        ConfigureTextBox(TxtNombreArticulo, "Nombre Articulo")
+        ConfigureTextBox(TxtProveedorArticulo, "ID Proveedor Articulo")
+        ConfigureTextBox(TxtPrecioArticulos, "Precio Artículos")
+        ConfigureTextBox(txtCantidadArticulo, "Cantidad Artículo")
+        ConfigureTextBox(TxtCategoriaArticulos, "ID Categoría Artículos")
+
+
+
+        ' Configurar los TextBox de facturacion
+        ConfigureTextBox(TxtIdFacturacion, "ID Facturacion")
+        ConfigureTextBox(TtxIdClienteFacturacion, "ID Cliente")
+        ConfigureTextBox(TxtTipoDePagoFacturacion, "Tipo de Pago Facturacion")
+        ConfigureTextBox(TxtIdEmpleadoFacturacion, "ID Empleado Facturacion")
+        ConfigureTextBox(TxtIdArticulo, "ID Articulo")
+        ConfigureTextBox(TxtCantidad, "Cantidad")
+        ConfigureTextBox(TxtPrecioUnitarioFacturacion, "Precio Unitario Facturación")
+        ConfigureTextBox(TxtDescuentoFacturacion, "Descuento Facturación")
+        ConfigureTextBox(TxtNumeroFactura, "Numero de Factura")
+
+        ' Configurar los TextBox de categoria
+        ConfigureTextBox(txtIdCategoria, "ID Categoria")
+        ConfigureTextBox(txtNombreCategoria, "Nombre Categoria")
+
+        ' Configurar los TextBox de Inventario
+        ConfigureTextBox(txtIdInventario, "ID Inventario")
+        ConfigureTextBox(txtIdCategoriaInventario, "ID Categoria Inventario")
+        ConfigureTextBox(txtCantidadInventario, "ID Cantidad Inventario")
+        ConfigureTextBox(txtIdProductoInventario, "ID Producto Inventario")
+
+        ' Configurar los TextBox de Ciudad
+        ConfigureTextBox(txtIdCiudad, "ID Ciudad")
+        ConfigureTextBox(txtNombreCiudad, "Nombre Ciudad")
+
+        ' Configurar los TextBox de Proveedor
+        ConfigureTextBox(txtIdProveedor, "ID Proveedor")
+        ConfigureTextBox(txtNombreProveedor, "Nombre Proveedor")
+        ConfigureTextBox(txtDireccionProveedor, "Proveedor Direccion")
+        ConfigureTextBox(txtRnc, "RNC")
+        ConfigureTextBox(txtTelefonoProveedor, "Telefono Proveedor")
+        ConfigureTextBox(txtIdCiudadProveedor, "ID Ciudad Proveedor")
+
+        ' Configurar los TextBox de Empleados
+        ConfigureTextBox(txtIdEmpleados, "ID Empleado")
+        ConfigureTextBox(txtNombreEmpleado, "Nombre Empleado")
+        ConfigureTextBox(txtTelefonoEmpleado, "Telefono Empleado")
+        ConfigureTextBox(txtDireccionEmpleado, "Direccion Empleado")
+        ConfigureTextBox(txtCedulaEmpleado, "Cedula Empleado")
+
+    End Sub
+
+    Private Sub TextBox_Enter(sender As Object, e As EventArgs)
+        Dim txtBox As TextBox = DirectCast(sender, TextBox)
+        If txtBox.Text = CStr(txtBox.Tag) Then
             txtBox.Text = ""
             txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
         End If
     End Sub
 
-    Private Sub SetPlaceholderOnLeave(txtBox As TextBox, placeholder As String)
-        If txtBox.Text = "" Then
-            txtBox.Text = placeholder
+    Private Sub TextBox_Leave(sender As Object, e As EventArgs)
+        Dim txtBox As TextBox = DirectCast(sender, TextBox)
+        If String.IsNullOrWhiteSpace(txtBox.Text) Then
+            txtBox.Text = CStr(txtBox.Tag)
             txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
         End If
     End Sub
 
-#End Region
+    Private Sub ConfigureTextBox(txtBox As TextBox, placeholder As String)
+        ' Configura el TextBox con el marcador de posición y asigna los eventos
+        txtBox.Tag = placeholder
+        txtBox.Text = placeholder
+        txtBox.ForeColor = ColorTranslator.FromHtml("#603F26")
+        AddHandler txtBox.Enter, AddressOf TextBox_Enter
+        AddHandler txtBox.Leave, AddressOf TextBox_Leave
+    End Sub
 
 #End Region
+
+
 
 #Region "btn Registro"
     Private Sub BtnGuardarR_Click(sender As Object, e As EventArgs) Handles BtnGuardarR.Click
@@ -551,9 +325,11 @@ Public Class frmPrincipal
 
     Private Sub LimpiarTextos(ParamArray textBoxes() As TextBox)
         For Each txt In textBoxes
-            txt.Text = ""
+            txt.Text = CStr(txt.Tag)
+            txt.ForeColor = ColorTranslator.FromHtml("#603F26")
         Next
     End Sub
+
 
     Dim MantenimientoMenu As Boolean = False
     Dim RegistroMenu As Boolean = False
@@ -561,7 +337,7 @@ Public Class frmPrincipal
     Private Sub MantenimientoTimer_Tick(sender As Object, e As EventArgs) Handles MantenimientoTimer.Tick
         If Not MantenimientoMenu Then
             FlowLayoutContenedor.Height += 10
-            If FlowLayoutContenedor.Height >= 262 Then
+            If FlowLayoutContenedor.Height >= 210 Then
                 MantenimientoTimer.Stop()
                 MantenimientoMenu = True
             End If
@@ -595,4 +371,200 @@ Public Class frmPrincipal
 
 
 #End Region
+
+#Region "Ciudad"
+    Private Sub btnAgregarCiudad_Click(sender As Object, e As EventArgs) Handles btnAgregarCiudad.Click
+
+        Try
+            Dim ciudad As New Ciudad With {
+            .IdCiudad = txtIdCiudad.Text,
+            .Nombre = txtNombreCiudad.Text
+            }
+            _bllCiudad.InsertarCiudadService(ciudad)
+            dtCiudad.DataSource = _bllCiudad.ObtenerCiudadService()
+            LimpiarTextos(txtIdCiudad, txtNombreCiudad)
+
+        Catch Ex As Exception
+            MessageBox.Show("Debe de llenar el campo Id")
+        End Try
+    End Sub
+
+    Private Sub btnObtenerCiudad_Click(sender As Object, e As EventArgs) Handles btnObtenerCiudad.Click
+        _bllCiudad.ObtenerCiudadService()
+        dtCiudad.DataSource = _bllCiudad.ObtenerCiudadService()
+    End Sub
+#End Region
+
+#Region "Categoria"
+    Private Sub btnAgregarCategoria_Click(sender As Object, e As EventArgs) Handles btnAgregarCategoria.Click
+        Try
+            Dim categoria As New Categoria With {
+                .IdCategoria = txtIdCategoria.Text,
+                .Nombre = txtNombreCategoria.Text
+                }
+            _bllCategoria.InsertarCategoriaService(categoria)
+            dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
+            LimpiarTextos(txtIdCategoria, txtNombreCategoria)
+        Catch ex As Exception
+            MessageBox.Show("No pueden estar vacios los campos")
+        End Try
+
+
+    End Sub
+
+    Private Sub btnObtenerCategoria_Click(sender As Object, e As EventArgs) Handles btnObtenerCategoria.Click
+        _bllCategoria.ObtenerCategoriaService()
+        dtCategoria.DataSource = _bllCategoria.ObtenerCategoriaService()
+    End Sub
+
+#End Region
+
+#Region "Proveedor"
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnFacturarProveedor.Click 'Facturar Proveedor'
+        Dim proveedor As New Proveedor With {
+                .IdProveedor = txtIdProveedor.Text,
+                .Nombre = txtNombreProveedor.Text,
+                .Direccion = txtDireccionProveedor.Text,
+                .Rnc = txtRnc.Text,
+                .Telefono = txtTelefonoProveedor.Text,
+                .IdCiudad = txtIdCiudadProveedor.Text
+                }
+        _bllProveedor.InsertarProveedorService(proveedor)
+        dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+        LimpiarTextos(txtIdProveedor, txtNombreProveedor, txtDireccionProveedor, txtRnc, txtTelefono, txtIdCiudadProveedor)
+
+    End Sub
+
+    Private Sub btnModificarProveedor_Click(sender As Object, e As EventArgs) Handles btnModificarProveedor.Click
+        Dim proveedor As New Proveedor With {
+                .IdProveedor = txtIdProveedor.Text,
+                .Nombre = txtNombreProveedor.Text,
+                .Direccion = txtDireccionProveedor.Text,
+                .Rnc = txtRnc.Text,
+                .Telefono = txtTelefonoProveedor.Text,
+                .IdCiudad = txtIdCiudadProveedor.Text
+                }
+        _bllProveedor.ActualizarProveedorService(proveedor)
+        dtProveedor.DataSource = _bllProveedor.ObtenerProveedorService()
+        LimpiarTextos(txtIdProveedor, txtNombreProveedor, txtDireccionProveedor, txtRnc, txtTelefono, txtIdCiudadProveedor)
+    End Sub
+
+
+#End Region
+
+#Region "Empleados"
+    Private Sub btnAgregarEmpleado_Click(sender As Object, e As EventArgs) Handles btnAgregarEmpleado.Click
+        Try
+            Dim empleado As New Empleados With {
+            .Nombre = txtNombreEmpleado.Text,
+            .Telefono = txtTelefonoEmpleado.Text,
+            .Direccion = txtDireccionEmpleado.Text,
+            .Cedula = txtCedulaEmpleado.Text
+            }
+            _bllEmpleado.InsertarEmpleadoService(empleado)
+
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados, txtNombreEmpleado, txtDireccionEmpleado, txtTelefonoEmpleado, txtCedulaEmpleado)
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+
+    End Sub
+
+
+    Private Sub btnObtenerEmpleado_Click(sender As Object, e As EventArgs) Handles btnObtenerEmpleado.Click
+        _bllEmpleado.ObtenerEmpleadoService()
+        dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+
+    End Sub
+
+    Private Sub btnEliminarEmpleado_Click(sender As Object, e As EventArgs) Handles btnEliminarEmpleado.Click
+        Try
+
+            Dim id As Integer = CInt(txtIdEmpleados.Text)
+            _bllEmpleado.EliminarEmpleadoService(id)
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados)
+
+        Catch Ex As Exception
+            MessageBox.Show("Debe de llenar el campo Id")
+        End Try
+    End Sub
+
+    Private Sub btnModificarEmpleado_Click(sender As Object, e As EventArgs) Handles btnModificarEmpleado.Click
+        Try
+            Dim empleado As New Empleados With {
+        .IdEmpleado = txtIdEmpleados.Text,
+        .Nombre = txtNombreEmpleado.Text,
+        .Telefono = txtTelefonoEmpleado.Text,
+        .Direccion = txtDireccionEmpleado.Text,
+        .Cedula = txtCedulaEmpleado.Text
+        }
+
+            _bllEmpleado.ActualizarEmpleadoService(empleado)
+            dtEmpleado.DataSource = _bllEmpleado.ObtenerEmpleadoService()
+            LimpiarTextos(txtIdEmpleados, txtNombreEmpleado, txtDireccionEmpleado, txtTelefonoEmpleado, txtCedulaEmpleado)
+
+        Catch ex As Exception
+            MessageBox.Show("Los campos no pueden estar vacios")
+        End Try
+
+    End Sub
+
+#End Region
+
+#Region "Facturacion"
+    Private Sub BtnFacturar_Click(sender As Object, e As EventArgs) Handles BtnFacturar.Click
+
+        Dim id As Integer = Convert.ToInt32(TxtIdArticulo.Text)
+        Dim cantidad As Integer = Convert.ToInt32(TxtCantidad.Text)
+        Dim precio As Decimal = Convert.ToDecimal(TxtPrecioUnitarioFacturacion.Text)
+        Dim descuento As Decimal = Convert.ToDecimal(TxtDescuentoFacturacion.Text)
+
+        Dim detalle As New DetallerFactura() With
+        {
+            .IdProducto = id,
+            .Cantidad = cantidad,
+            .Precio = precio,
+            .PrecioTotal = cantidad * precio,
+            .Descuento = descuento
+        }
+
+        _detallesList.Add(detalle)
+        dtFacturacion.DataSource = Nothing
+        dtFacturacion.DataSource = _detallesList
+
+        Dim fact As New Factura() With {
+            .IdFactura = Integer.Parse(TxtIdFacturacion.Text),
+            .IdCliente = Integer.Parse(TtxIdClienteFacturacion.Text),
+            .TipoDePago = TxtTipoDePagoFacturacion.Text,
+            .Fecha = DateTime.Now,
+            .IdEmpleado = Integer.Parse(TxtIdEmpleadoFacturacion.Text),
+            .Total = _detallesList.Sum(Function(d) d.PrecioTotal)
+        }
+
+        _facturaBll.CrearFactura(fact, _detallesList)
+        LimpiarTextos(TxtIdFacturacion, TtxIdClienteFacturacion, TxtTipoDePagoFacturacion, TxtIdEmpleadoFacturacion)
+
+
+    End Sub
+#End Region
+
+    Private Sub btnAgregarInventario_Click(sender As Object, e As EventArgs) Handles btnAgregarInventario.Click
+
+        Dim producto As New Inventario With {
+            .IdInventario = txtIdInventario.Text,
+            .Cantidad = txtCantidadInventario.Text,
+            .IdCategoria = txtIdCategoriaInventario.Text,
+            .IdProducto = txtIdProductoInventario.Text
+        }
+
+        _inventarioService.InsertarProductoInventario(producto)
+        DtInventario.DataSource = _inventarioService.ObtenerProducto()
+
+    End Sub
+
+    Private Sub btnObtenerInventario_Click(sender As Object, e As EventArgs) Handles btnObtenerInventario.Click
+
+    End Sub
 End Class

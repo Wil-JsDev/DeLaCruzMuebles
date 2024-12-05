@@ -10,8 +10,8 @@
 
     Public Property PrecioTotal As Decimal
 
-    Public Property Descuento As Decimal
+    Public Property Precio As Decimal
 
-    Public Property IdCliente As Integer
+    Public Property Descuento As Decimal
 
 End Class

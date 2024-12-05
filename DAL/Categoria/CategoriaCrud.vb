@@ -11,6 +11,7 @@ Public Class CategoriaCrud
             Dim cmd As New SqlCommand("CategoriaCRUD", conexionSql)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@opcion", 1)
+            cmd.Parameters.AddWithValue("@IdCategoria", categoria.IdCategoria)
             cmd.Parameters.AddWithValue("@Nombre", categoria.Nombre)
 
             conexionSql.Open()
@@ -26,16 +27,16 @@ Public Class CategoriaCrud
     Public Function ObtenerCategoria() As List(Of Categoria)
         Dim categoria As New List(Of Categoria)
         Using conexionsql As SqlConnection = conexionString.ObtenerConexion
-            Dim cmd As New SqlCommand("CategoriaCRUD", conexionsql)
+            Dim cmd As New SqlCommand("LeerCategoria", conexionsql)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@opcion", 2)
+            ''cmd.Parameters.AddWithValue("@opcion", 2)''
             conexionsql.Open()
             Dim leer As SqlDataReader = cmd.ExecuteReader
 
             While leer.Read()
                 categoria.Add(New Categoria With {
-                             .IdCategoria = Convert.ToInt32(leer("IdCategoria")),
-                             .Nombre = leer("Nombre")
+                             .IdCategoria = Convert.ToInt32(leer("Id_Categoria")),
+                             .Nombre = leer("Nombre_Categoria")
                 })
             End While
 
